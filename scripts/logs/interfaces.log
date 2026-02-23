@@ -1,0 +1,811 @@
+  INFO root [2026-02-23 03:55:20,325] - 
+  INFO root [2026-02-23 03:55:20,325] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 03:55:20,326] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 03:55:20,326] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 03:55:20,327] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 03:55:20,327] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 03:55:20,338] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 03:55:20,338] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 03:55:20,338] - server-configs:
+  INFO root [2026-02-23 03:55:20,338] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 03:55:20,338] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 03:55:20,338] - 	componentID : 3000
+  INFO root [2026-02-23 03:55:20,342] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 3540 ----
+  INFO root [2026-02-23 03:55:20,342] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 03:55:20,342] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 03:55:20,342] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 03:55:20,444] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 03:55:20,611] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 03:55:20,612] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 03:55:21,105] - [asyncio] Event loop started
+S_INFO root [2026-02-23 03:55:21,106] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 03:55:21,107] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 03:55:21,368] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 03:55:21,368] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 03:55:27,791] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:7033, extaddr:nonsupport, extport:0,  from 127.0.0.1:7049/0/0/0.
+  INFO root [2026-02-23 03:55:27,791] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 03:55:27,791] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 03:55:27,792] - TCPPacketReceiver::processPendingEvents(192.168.36.1:7054): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 03:55:28,882] - Components::process(): Found all the components!
+  WARN root [2026-02-23 03:55:35,228] - TCPPacketReceiver::processPendingEvents(127.0.0.1:7049): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 03:55:35,229] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 03:56:14,211] - 
+  INFO root [2026-02-23 03:56:14,211] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 03:56:14,213] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 03:56:14,213] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 03:56:14,213] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 03:56:14,213] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 03:56:14,227] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 03:56:14,227] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 03:56:14,227] - server-configs:
+  INFO root [2026-02-23 03:56:14,227] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 03:56:14,227] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 03:56:14,228] - 	componentID : 3000
+  INFO root [2026-02-23 03:56:14,232] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 16892 ----
+  INFO root [2026-02-23 03:56:14,232] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 03:56:14,232] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 03:56:14,233] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 03:56:14,345] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 03:56:14,562] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 03:56:14,562] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 03:56:15,087] - [asyncio] Event loop started
+S_INFO root [2026-02-23 03:56:15,089] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 03:56:15,090] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 03:56:15,381] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 03:56:15,382] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 03:56:21,845] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:3688, extaddr:nonsupport, extport:0,  from 127.0.0.1:3698/0/0/0.
+  INFO root [2026-02-23 03:56:21,845] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 03:56:21,845] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 03:56:21,846] - TCPPacketReceiver::processPendingEvents(192.168.36.1:3705): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 03:56:23,019] - Components::process(): Found all the components!
+  WARN root [2026-02-23 03:56:49,528] - TCPPacketReceiver::processPendingEvents(127.0.0.1:3698): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 03:56:49,529] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 04:00:11,346] - 
+  INFO root [2026-02-23 04:00:11,346] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 04:00:11,348] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 04:00:11,348] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 04:00:11,348] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 04:00:11,348] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 04:00:11,360] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 04:00:11,361] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 04:00:11,361] - server-configs:
+  INFO root [2026-02-23 04:00:11,361] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 04:00:11,361] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 04:00:11,361] - 	componentID : 3000
+  INFO root [2026-02-23 04:00:11,365] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 25000 ----
+  INFO root [2026-02-23 04:00:11,365] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 04:00:11,366] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 04:00:11,366] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 04:00:11,470] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 04:00:11,664] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 04:00:11,664] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 04:00:12,130] - [asyncio] Event loop started
+S_INFO root [2026-02-23 04:00:12,131] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 04:00:12,133] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 04:00:12,451] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 04:00:12,451] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 04:00:18,915] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:9856, extaddr:nonsupport, extport:0,  from 127.0.0.1:9866/0/0/0.
+  INFO root [2026-02-23 04:00:18,916] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 04:00:18,916] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 04:00:18,918] - TCPPacketReceiver::processPendingEvents(192.168.36.1:9867): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 04:00:19,957] - Components::process(): Found all the components!
+  WARN root [2026-02-23 04:00:44,501] - TCPPacketReceiver::processPendingEvents(127.0.0.1:9866): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 04:00:44,501] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 04:00:51,502] - 
+  INFO root [2026-02-23 04:00:51,502] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 04:00:51,505] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 04:00:51,505] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 04:00:51,505] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 04:00:51,505] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 04:00:51,516] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 04:00:51,516] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 04:00:51,516] - server-configs:
+  INFO root [2026-02-23 04:00:51,516] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 04:00:51,517] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 04:00:51,517] - 	componentID : 3000
+  INFO root [2026-02-23 04:00:51,526] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 24016 ----
+  INFO root [2026-02-23 04:00:51,526] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 04:00:51,526] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 04:00:51,527] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 04:00:51,642] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 04:00:51,856] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 04:00:51,857] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 04:00:52,406] - [asyncio] Event loop started
+S_INFO root [2026-02-23 04:00:52,408] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 04:00:52,410] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 04:00:52,675] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 04:00:52,675] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 04:00:59,130] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:12872, extaddr:nonsupport, extport:0,  from 127.0.0.1:12883/0/0/0.
+  INFO root [2026-02-23 04:00:59,130] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 04:00:59,130] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 04:00:59,131] - TCPPacketReceiver::processPendingEvents(192.168.36.1:12884): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 04:01:00,210] - Components::process(): Found all the components!
+  WARN root [2026-02-23 04:01:39,013] - TCPPacketReceiver::processPendingEvents(127.0.0.1:12883): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 04:01:39,013] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 04:01:45,601] - 
+  INFO root [2026-02-23 04:01:45,601] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 04:01:45,602] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 04:01:45,602] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 04:01:45,602] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 04:01:45,602] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 04:01:45,613] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 04:01:45,613] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 04:01:45,614] - server-configs:
+  INFO root [2026-02-23 04:01:45,614] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 04:01:45,614] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 04:01:45,614] - 	componentID : 3000
+  INFO root [2026-02-23 04:01:45,618] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 34624 ----
+  INFO root [2026-02-23 04:01:45,618] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 04:01:45,618] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 04:01:45,619] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 04:01:45,724] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 04:01:45,928] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 04:01:45,929] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 04:01:46,434] - [asyncio] Event loop started
+S_INFO root [2026-02-23 04:01:46,435] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 04:01:46,437] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 04:01:46,711] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 04:01:46,712] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 04:01:53,139] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:14940, extaddr:nonsupport, extport:0,  from 127.0.0.1:14947/0/0/0.
+  INFO root [2026-02-23 04:01:53,139] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 04:01:53,139] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 04:01:53,140] - TCPPacketReceiver::processPendingEvents(192.168.36.1:14952): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 04:01:54,209] - Components::process(): Found all the components!
+  WARN root [2026-02-23 04:02:08,876] - TCPPacketReceiver::processPendingEvents(127.0.0.1:14947): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 04:02:08,877] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 13:51:29,514] - 
+  INFO root [2026-02-23 13:51:29,514] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 13:51:29,516] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 13:51:29,516] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 13:51:29,516] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 13:51:29,516] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 13:51:29,532] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 13:51:29,532] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 13:51:29,532] - server-configs:
+  INFO root [2026-02-23 13:51:29,533] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 13:51:29,533] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 13:51:29,533] - 	componentID : 3000
+  INFO root [2026-02-23 13:51:29,537] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 8088 ----
+  INFO root [2026-02-23 13:51:29,537] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 13:51:29,538] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 13:51:29,538] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 13:51:29,647] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 13:51:29,833] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 13:51:29,833] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 13:51:30,292] - [asyncio] Event loop started
+S_INFO root [2026-02-23 13:51:30,294] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 13:51:30,295] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 13:51:30,555] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 13:51:30,555] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 13:51:36,986] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:5475, extaddr:nonsupport, extport:0,  from 127.0.0.1:5483/0/0/0.
+  INFO root [2026-02-23 13:51:36,986] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 13:51:36,986] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 13:51:36,987] - TCPPacketReceiver::processPendingEvents(192.168.36.1:5492): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 13:51:38,018] - Components::process(): Found all the components!
+  WARN root [2026-02-23 13:51:38,261] - TCPPacketReceiver::processPendingEvents(127.0.0.1:5483): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 13:51:38,261] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 13:52:14,179] - 
+  INFO root [2026-02-23 13:52:14,180] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 13:52:14,181] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 13:52:14,181] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 13:52:14,181] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 13:52:14,181] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 13:52:14,199] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 13:52:14,199] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 13:52:14,199] - server-configs:
+  INFO root [2026-02-23 13:52:14,199] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 13:52:14,199] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 13:52:14,199] - 	componentID : 3000
+  INFO root [2026-02-23 13:52:14,204] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 10948 ----
+  INFO root [2026-02-23 13:52:14,204] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 13:52:14,204] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 13:52:14,204] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 13:52:14,308] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 13:52:14,509] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 13:52:14,509] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 13:52:15,075] - [asyncio] Event loop started
+S_INFO root [2026-02-23 13:52:15,076] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 13:52:15,078] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 13:52:15,397] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 13:52:15,397] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 13:52:21,972] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:5336, extaddr:nonsupport, extport:0,  from 127.0.0.1:5356/0/0/0.
+  INFO root [2026-02-23 13:52:21,972] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 13:52:21,972] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 13:52:21,973] - TCPPacketReceiver::processPendingEvents(192.168.36.1:5357): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 13:52:22,995] - Components::process(): Found all the components!
+  WARN root [2026-02-23 13:54:05,815] - TCPPacketReceiver::processPendingEvents(127.0.0.1:5356): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 13:54:05,815] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 13:59:56,979] - 
+  INFO root [2026-02-23 13:59:56,980] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 13:59:56,981] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 13:59:56,981] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 13:59:56,981] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 13:59:56,981] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 13:59:56,999] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 13:59:56,999] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 13:59:56,999] - server-configs:
+  INFO root [2026-02-23 13:59:56,999] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 13:59:56,999] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 13:59:56,999] - 	componentID : 3000
+  INFO root [2026-02-23 13:59:57,008] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 10916 ----
+  INFO root [2026-02-23 13:59:57,009] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 13:59:57,009] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 13:59:57,009] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 13:59:57,112] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 13:59:57,290] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 13:59:57,290] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 13:59:57,717] - [asyncio] Event loop started
+S_INFO root [2026-02-23 13:59:57,717] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 13:59:57,719] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 13:59:57,955] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 13:59:57,956] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:00:04,468] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:7383, extaddr:nonsupport, extport:0,  from 127.0.0.1:7391/0/0/0.
+  INFO root [2026-02-23 14:00:04,468] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:00:04,469] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:00:04,470] - TCPPacketReceiver::processPendingEvents(192.168.36.1:7393): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:00:05,536] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:00:05,567] - TCPPacketReceiver::processPendingEvents(127.0.0.1:7391): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:00:05,568] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:00:34,903] - 
+  INFO root [2026-02-23 14:00:34,903] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:00:34,904] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:00:34,904] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:00:34,904] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:00:34,904] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:00:34,919] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:00:34,919] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:00:34,919] - server-configs:
+  INFO root [2026-02-23 14:00:34,919] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:00:34,920] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:00:34,920] - 	componentID : 3000
+  INFO root [2026-02-23 14:00:34,928] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 37756 ----
+  INFO root [2026-02-23 14:00:34,928] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:00:34,929] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:00:34,929] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:00:35,044] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:00:35,228] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:00:35,228] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:00:35,750] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:00:35,752] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:00:35,755] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:00:35,971] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:00:35,972] - Components::process(): Request for the process of identity...
+  WARN root [2026-02-23 14:00:39,858] - BundleBroadcast::BundleBroadcast: Cannot bind to port 20485, errorno=10048
+  INFO root [2026-02-23 14:00:42,976] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:12900, extaddr:nonsupport, extport:0,  from 127.0.0.1:12909/0/0/0.
+  INFO root [2026-02-23 14:00:42,976] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:00:42,976] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:00:42,977] - TCPPacketReceiver::processPendingEvents(192.168.36.1:12910): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:00:44,013] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:01:00,962] - TCPPacketReceiver::processPendingEvents(127.0.0.1:12909): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:01:00,963] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:01:08,122] - 
+  INFO root [2026-02-23 14:01:08,123] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:01:08,125] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:01:08,125] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:01:08,125] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:01:08,125] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:01:08,145] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:01:08,145] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:01:08,145] - server-configs:
+  INFO root [2026-02-23 14:01:08,145] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:01:08,146] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:01:08,146] - 	componentID : 3000
+  INFO root [2026-02-23 14:01:08,150] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 4512 ----
+  INFO root [2026-02-23 14:01:08,150] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:01:08,151] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:01:08,151] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:01:08,265] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:01:08,461] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:01:08,461] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:01:08,988] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:01:08,989] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:01:08,990] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:01:09,259] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:01:09,260] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:01:15,718] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:4251, extaddr:nonsupport, extport:0,  from 127.0.0.1:4259/0/0/0.
+  INFO root [2026-02-23 14:01:15,718] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:01:15,719] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:01:15,720] - TCPPacketReceiver::processPendingEvents(192.168.36.1:4268): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:01:16,830] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:01:27,081] - TCPPacketReceiver::processPendingEvents(127.0.0.1:4259): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:01:27,082] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:03:19,551] - 
+  INFO root [2026-02-23 14:03:19,552] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:03:19,553] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:03:19,553] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:03:19,553] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:03:19,553] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:03:19,569] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:03:19,569] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:03:19,569] - server-configs:
+  INFO root [2026-02-23 14:03:19,569] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:03:19,570] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:03:19,570] - 	componentID : 3000
+  INFO root [2026-02-23 14:03:19,574] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 33868 ----
+  INFO root [2026-02-23 14:03:19,574] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:03:19,574] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:03:19,575] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:03:19,683] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:03:19,869] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:03:19,869] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:03:20,358] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:03:20,360] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:03:20,362] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:03:20,630] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:03:20,630] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:03:27,153] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:8890, extaddr:nonsupport, extport:0,  from 127.0.0.1:5326/0/0/0.
+  INFO root [2026-02-23 14:03:27,153] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:03:27,153] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:03:27,154] - TCPPacketReceiver::processPendingEvents(192.168.36.1:5331): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:03:28,226] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:03:41,923] - TCPPacketReceiver::processPendingEvents(127.0.0.1:5326): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:03:41,924] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:03:58,988] - 
+  INFO root [2026-02-23 14:03:58,989] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:03:58,990] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:03:58,990] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:03:58,990] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:03:58,990] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:03:59,002] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:03:59,002] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:03:59,002] - server-configs:
+  INFO root [2026-02-23 14:03:59,002] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:03:59,002] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:03:59,002] - 	componentID : 3000
+  INFO root [2026-02-23 14:03:59,006] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 13376 ----
+  INFO root [2026-02-23 14:03:59,007] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:03:59,007] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:03:59,007] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:03:59,120] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:03:59,303] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:03:59,303] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:03:59,767] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:03:59,769] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:03:59,771] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:03:59,991] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:03:59,992] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:04:06,434] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:1197, extaddr:nonsupport, extport:0,  from 127.0.0.1:1206/0/0/0.
+  INFO root [2026-02-23 14:04:06,435] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:04:06,435] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:04:06,436] - TCPPacketReceiver::processPendingEvents(192.168.36.1:1211): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:04:07,505] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:04:58,437] - TCPPacketReceiver::processPendingEvents(127.0.0.1:1206): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:04:58,437] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:05:05,139] - 
+  INFO root [2026-02-23 14:05:05,139] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:05:05,141] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:05:05,141] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:05:05,141] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:05:05,141] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:05:05,156] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:05:05,156] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:05:05,156] - server-configs:
+  INFO root [2026-02-23 14:05:05,156] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:05:05,156] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:05:05,156] - 	componentID : 3000
+  INFO root [2026-02-23 14:05:05,161] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 24008 ----
+  INFO root [2026-02-23 14:05:05,161] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:05:05,161] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:05:05,161] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:05:05,275] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:05:05,464] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:05:05,464] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:05:06,012] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:05:06,014] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:05:06,015] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:05:06,292] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:05:06,292] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:05:12,764] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:10168, extaddr:nonsupport, extport:0,  from 127.0.0.1:10183/0/0/0.
+  INFO root [2026-02-23 14:05:12,764] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:05:12,765] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:05:12,766] - TCPPacketReceiver::processPendingEvents(192.168.36.1:10184): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:05:13,845] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:06:08,147] - TCPPacketReceiver::processPendingEvents(127.0.0.1:10183): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:06:08,147] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:06:15,049] - 
+  INFO root [2026-02-23 14:06:15,050] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:06:15,051] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:06:15,051] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:06:15,051] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:06:15,051] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:06:15,063] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:06:15,063] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:06:15,063] - server-configs:
+  INFO root [2026-02-23 14:06:15,063] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:06:15,063] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:06:15,063] - 	componentID : 3000
+  INFO root [2026-02-23 14:06:15,067] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 36448 ----
+  INFO root [2026-02-23 14:06:15,067] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:06:15,068] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:06:15,068] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:06:15,180] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:06:15,369] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:06:15,369] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:06:15,922] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:06:15,923] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:06:15,925] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:06:16,200] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:06:16,200] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:06:22,730] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:11295, extaddr:nonsupport, extport:0,  from 127.0.0.1:11305/0/0/0.
+  INFO root [2026-02-23 14:06:22,731] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:06:22,731] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:06:22,732] - TCPPacketReceiver::processPendingEvents(192.168.36.1:11306): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:06:23,833] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:07:11,576] - TCPPacketReceiver::processPendingEvents(127.0.0.1:11305): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:07:11,576] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:07:19,213] - 
+  INFO root [2026-02-23 14:07:19,213] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:07:19,214] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:07:19,214] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:07:19,214] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:07:19,215] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:07:19,228] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:07:19,228] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:07:19,228] - server-configs:
+  INFO root [2026-02-23 14:07:19,228] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:07:19,229] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:07:19,229] - 	componentID : 3000
+  INFO root [2026-02-23 14:07:19,234] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 4500 ----
+  INFO root [2026-02-23 14:07:19,234] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:07:19,234] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:07:19,235] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:07:19,350] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:07:19,577] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:07:19,578] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:07:20,102] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:07:20,103] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:07:20,107] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:07:20,381] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:07:20,382] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:07:26,842] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:4494, extaddr:nonsupport, extport:0,  from 127.0.0.1:4503/0/0/0.
+  INFO root [2026-02-23 14:07:26,842] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:07:26,842] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:07:26,843] - TCPPacketReceiver::processPendingEvents(192.168.36.1:4504): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:07:27,947] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:07:47,002] - TCPPacketReceiver::processPendingEvents(127.0.0.1:4503): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:07:47,003] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:07:54,879] - 
+  INFO root [2026-02-23 14:07:54,880] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:07:54,881] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:07:54,881] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:07:54,881] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:07:54,881] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:07:54,901] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:07:54,901] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:07:54,902] - server-configs:
+  INFO root [2026-02-23 14:07:54,902] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:07:54,902] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:07:54,902] - 	componentID : 3000
+  INFO root [2026-02-23 14:07:54,906] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 32616 ----
+  INFO root [2026-02-23 14:07:54,906] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:07:54,906] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:07:54,907] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:07:55,008] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:07:55,193] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:07:55,193] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:07:55,698] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:07:55,699] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:07:55,700] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:07:55,913] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:07:55,913] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:08:02,356] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:14379, extaddr:nonsupport, extport:0,  from 127.0.0.1:14388/0/0/0.
+  INFO root [2026-02-23 14:08:02,356] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:08:02,356] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:08:02,357] - TCPPacketReceiver::processPendingEvents(192.168.36.1:14397): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:08:03,391] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:09:04,581] - TCPPacketReceiver::processPendingEvents(127.0.0.1:14388): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:09:04,581] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:09:22,678] - 
+  INFO root [2026-02-23 14:09:22,679] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:09:22,680] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:09:22,680] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:09:22,680] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:09:22,680] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:09:22,692] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:09:22,693] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:09:22,693] - server-configs:
+  INFO root [2026-02-23 14:09:22,693] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:09:22,693] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:09:22,693] - 	componentID : 3000
+  INFO root [2026-02-23 14:09:22,698] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 6992 ----
+  INFO root [2026-02-23 14:09:22,699] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:09:22,699] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:09:22,699] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:09:22,803] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:09:22,986] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:09:22,987] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:09:23,456] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:09:23,457] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:09:23,458] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:09:23,725] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:09:23,725] - Components::process(): Request for the process of identity...
+  WARN root [2026-02-23 14:09:30,172] - TCPPacketReceiver::processPendingEvents(192.168.36.1:3011): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:09:30,173] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:7587, extaddr:nonsupport, extport:0,  from 127.0.0.1:3012/0/0/0.
+  INFO root [2026-02-23 14:09:30,173] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:09:30,173] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2026-02-23 14:09:31,252] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:09:47,039] - TCPPacketReceiver::processPendingEvents(127.0.0.1:3012): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:09:47,039] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:10:11,643] - 
+  INFO root [2026-02-23 14:10:11,644] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:10:11,645] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:10:11,645] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:10:11,645] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:10:11,645] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:10:11,658] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:10:11,658] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:10:11,659] - server-configs:
+  INFO root [2026-02-23 14:10:11,659] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:10:11,659] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:10:11,659] - 	componentID : 3000
+  INFO root [2026-02-23 14:10:11,663] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 36872 ----
+  INFO root [2026-02-23 14:10:11,663] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:10:11,664] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:10:11,664] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:10:11,766] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:10:11,970] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:10:11,970] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:10:12,501] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:10:12,502] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:10:12,503] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:10:12,835] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:10:12,836] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:10:19,380] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:9405, extaddr:nonsupport, extport:0,  from 127.0.0.1:9414/0/0/0.
+  INFO root [2026-02-23 14:10:19,380] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:10:19,380] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:10:19,382] - TCPPacketReceiver::processPendingEvents(192.168.36.1:9424): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:10:20,456] - Components::process(): Found all the components!
+  WARN root [2026-02-23 14:10:30,431] - TCPPacketReceiver::processPendingEvents(127.0.0.1:9414): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 14:10:30,432] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 14:10:59,936] - 
+  INFO root [2026-02-23 14:10:59,937] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 14:10:59,939] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 14:10:59,939] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 14:10:59,939] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 14:10:59,939] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 14:10:59,955] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 14:10:59,956] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 14:10:59,956] - server-configs:
+  INFO root [2026-02-23 14:10:59,956] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 14:10:59,956] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 14:10:59,956] - 	componentID : 3000
+  INFO root [2026-02-23 14:10:59,960] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 16500 ----
+  INFO root [2026-02-23 14:10:59,960] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 14:10:59,961] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 14:10:59,961] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 14:11:00,070] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 14:11:00,243] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 14:11:00,244] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 14:11:00,661] - [asyncio] Event loop started
+S_INFO root [2026-02-23 14:11:00,662] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 14:11:00,664] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 14:11:00,877] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 14:11:00,878] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 14:11:07,397] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:1834, extaddr:nonsupport, extport:0,  from 127.0.0.1:1845/0/0/0.
+  INFO root [2026-02-23 14:11:07,397] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 14:11:07,398] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  WARN root [2026-02-23 14:11:07,399] - TCPPacketReceiver::processPendingEvents(192.168.36.1:1057): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 14:11:08,452] - Components::process(): Found all the components!
+  WARN root [2026-02-23 22:07:09,108] - TCPPacketReceiver::processPendingEvents(127.0.0.1:1845): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 22:07:09,122] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 22:21:16,465] - 
+  INFO root [2026-02-23 22:21:16,465] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 22:21:16,466] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 22:21:16,467] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 22:21:16,467] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 22:21:16,467] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 22:21:16,479] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 22:21:16,479] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 22:21:16,480] - server-configs:
+  INFO root [2026-02-23 22:21:16,480] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 22:21:16,480] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 22:21:16,480] - 	componentID : 3000
+  INFO root [2026-02-23 22:21:16,484] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 28532 ----
+  INFO root [2026-02-23 22:21:16,485] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 22:21:16,485] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 22:21:16,485] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 22:21:16,599] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 22:21:16,782] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 22:21:16,783] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 22:21:18,482] - [asyncio] Event loop started
+S_INFO root [2026-02-23 22:21:18,483] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 22:21:18,484] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 22:21:18,784] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 22:21:18,784] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-23 22:21:25,482] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:10589, extaddr:nonsupport, extport:0,  from 127.0.0.1:10607/0/0/0.
+  INFO root [2026-02-23 22:21:25,482] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 22:21:25,483] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2026-02-23 22:21:26,569] - Components::process(): Found all the components!
+S_INFO root [2026-02-23 22:22:47,129] - onRequestAccountLogin: registerName=123123
+  WARN root [2026-02-23 22:23:19,865] - TCPPacketReceiver::processPendingEvents(127.0.0.1:10607): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-23 22:23:19,865] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-23 22:23:26,991] - 
+  INFO root [2026-02-23 22:23:26,992] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-23 22:23:26,993] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-23 22:23:26,993] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-23 22:23:26,993] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-23 22:23:26,993] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-23 22:23:27,009] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-23 22:23:27,009] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-23 22:23:27,010] - server-configs:
+  INFO root [2026-02-23 22:23:27,010] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-23 22:23:27,010] - 	externalTcpAddr : %s
+  INFO root [2026-02-23 22:23:27,011] - 	componentID : 3000
+  INFO root [2026-02-23 22:23:27,015] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 34292 ----
+  INFO root [2026-02-23 22:23:27,015] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-23 22:23:27,015] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-23 22:23:27,015] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-23 22:23:27,119] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-23 22:23:27,324] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-23 22:23:27,324] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-23 22:23:27,870] - [asyncio] Event loop started
+S_INFO root [2026-02-23 22:23:27,871] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-23 22:23:27,873] - TelnetServer server is running on port 33000
+  INFO root [2026-02-23 22:23:28,151] - ---- interfaces is running ----
+ DEBUG root [2026-02-23 22:23:28,151] - Components::process(): Request for the process of identity...
+  WARN root [2026-02-23 22:23:34,720] - TCPPacketReceiver::processPendingEvents(192.168.36.1:8962): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-23 22:23:34,721] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:8937, extaddr:nonsupport, extport:0,  from 127.0.0.1:8963/0/0/0.
+  INFO root [2026-02-23 22:23:34,721] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-23 22:23:34,721] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2026-02-23 22:23:35,797] - Components::process(): Found all the components!
+S_INFO root [2026-02-23 23:31:54,821] - onRequestAccountLogin: registerName=123123
+S_INFO root [2026-02-23 23:33:37,919] - onRequestAccountLogin: registerName=123123
+S_INFO root [2026-02-23 23:33:49,761] - onRequestAccountLogin: registerName=123123
+S_INFO root [2026-02-24 00:03:53,111] - onRequestAccountLogin: registerName=666666
+S_INFO root [2026-02-24 00:05:31,798] - onRequestAccountLogin: registerName=666666
+S_INFO root [2026-02-24 00:05:46,575] - onRequestAccountLogin: registerName=777777
+S_INFO root [2026-02-24 00:14:42,639] - onRequestAccountLogin: registerName=123123
+  WARN root [2026-02-24 00:15:42,815] - TCPPacketReceiver::processPendingEvents(127.0.0.1:8963): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-24 00:15:42,825] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-24 00:15:50,771] - 
+  INFO root [2026-02-24 00:15:50,771] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-24 00:15:50,772] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-24 00:15:50,772] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-24 00:15:50,772] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-24 00:15:50,773] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-24 00:15:50,786] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-24 00:15:50,786] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-24 00:15:50,786] - server-configs:
+  INFO root [2026-02-24 00:15:50,786] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-24 00:15:50,786] - 	externalTcpAddr : %s
+  INFO root [2026-02-24 00:15:50,786] - 	componentID : 3000
+  INFO root [2026-02-24 00:15:50,791] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 8268 ----
+  INFO root [2026-02-24 00:15:50,791] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-24 00:15:50,791] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-24 00:15:50,791] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-24 00:15:50,903] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-24 00:15:51,091] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-24 00:15:51,092] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-24 00:15:51,578] - [asyncio] Event loop started
+S_INFO root [2026-02-24 00:15:51,579] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-24 00:15:51,580] - TelnetServer server is running on port 33000
+  INFO root [2026-02-24 00:15:51,832] - ---- interfaces is running ----
+ DEBUG root [2026-02-24 00:15:51,833] - Components::process(): Request for the process of identity...
+  WARN root [2026-02-24 00:15:58,490] - TCPPacketReceiver::processPendingEvents(192.168.36.1:14502): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-24 00:15:58,491] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:14492, extaddr:nonsupport, extport:0,  from 127.0.0.1:14503/0/0/0.
+  INFO root [2026-02-24 00:15:58,491] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-24 00:15:58,491] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2026-02-24 00:15:59,575] - Components::process(): Found all the components!
+S_INFO root [2026-02-24 00:17:09,931] - onRequestAccountLogin: registerName=123123
+S_INFO root [2026-02-24 00:17:55,960] - onRequestAccountLogin: registerName=222222
+S_INFO root [2026-02-24 00:18:18,372] - onRequestAccountLogin: registerName=333333
+S_INFO root [2026-02-24 01:07:50,503] - onRequestAccountLogin: registerName=123123
+S_INFO root [2026-02-24 01:10:13,883] - onRequestAccountLogin: registerName=222222
+S_INFO root [2026-02-24 01:10:34,758] - onRequestAccountLogin: registerName=888888
+S_INFO root [2026-02-24 01:11:03,353] - onRequestAccountLogin: registerName=888888
+S_INFO root [2026-02-24 01:19:56,819] - onRequestAccountLogin: registerName=999999
+  WARN root [2026-02-24 01:20:25,576] - TCPPacketReceiver::processPendingEvents(127.0.0.1:14503): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-24 01:20:25,576] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-24 01:21:56,428] - 
+  INFO root [2026-02-24 01:21:56,428] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-24 01:21:56,429] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-24 01:21:56,429] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-24 01:21:56,429] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-24 01:21:56,429] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-24 01:21:56,441] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-24 01:21:56,442] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-24 01:21:56,442] - server-configs:
+  INFO root [2026-02-24 01:21:56,442] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-24 01:21:56,442] - 	externalTcpAddr : %s
+  INFO root [2026-02-24 01:21:56,442] - 	componentID : 3000
+  INFO root [2026-02-24 01:21:56,446] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 33256 ----
+  INFO root [2026-02-24 01:21:56,446] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-24 01:21:56,446] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-24 01:21:56,446] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-24 01:21:56,549] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-24 01:21:56,759] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-24 01:21:56,759] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-24 01:21:57,232] - [asyncio] Event loop started
+S_INFO root [2026-02-24 01:21:57,233] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-24 01:21:57,235] - TelnetServer server is running on port 33000
+  INFO root [2026-02-24 01:21:57,461] - ---- interfaces is running ----
+ DEBUG root [2026-02-24 01:21:57,461] - Components::process(): Request for the process of identity...
+  WARN root [2026-02-24 01:22:04,086] - TCPPacketReceiver::processPendingEvents(192.168.36.1:14035): Throwing REASON_GENERAL_NETWORK - WSAECONNABORTED
+  INFO root [2026-02-24 01:22:04,086] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:14025, extaddr:nonsupport, extport:0,  from 127.0.0.1:14036/0/0/0.
+  INFO root [2026-02-24 01:22:04,086] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-24 01:22:04,087] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2026-02-24 01:22:05,142] - Components::process(): Found all the components!
+S_INFO root [2026-02-24 01:22:41,172] - onRequestAccountLogin: registerName=111
+S_INFO root [2026-02-24 01:23:17,495] - onRequestAccountLogin: registerName=222
+S_INFO root [2026-02-24 01:25:04,077] - onRequestAccountLogin: registerName=333
+  WARN root [2026-02-24 01:38:34,337] - TCPPacketReceiver::processPendingEvents(127.0.0.1:14036): Throwing REASON_GENERAL_NETWORK - WSAECONNRESET
+  INFO root [2026-02-24 01:38:34,338] - Components::removeComponentByChannel: dbmgr : 4000, Normal exit!
+  INFO root [2026-02-24 01:57:35,177] - 
+  INFO root [2026-02-24 01:57:35,178] - -----------------------------------------------------------------------------------------
+
+
+  INFO root [2026-02-24 01:57:35,179] - Resmgr::initialize: KBE_ROOT=D:/KBELAB/kbengine/KBEngine-Nex/
+  INFO root [2026-02-24 01:57:35,179] - Resmgr::initialize: KBE_RES_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/;D:/KBELAB/Courses/server/server_assets/;D:/KBELAB/Courses/server/server_assets/res/;D:/KBELAB/Courses/server/server_assets/
+  INFO root [2026-02-24 01:57:35,179] - Resmgr::initialize: KBE_BIN_PATH=D:/KBELAB/kbengine/KBEngine-Nex/kbe/bin/server/
+  INFO root [2026-02-24 01:57:35,179] - Resmgr::initialize: KBE_VENV_PATH=D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages
+  INFO root [2026-02-24 01:57:35,195] - NetworkInterface::initialize(INTERNAL-TCP): bound to all interfaces with default route interface on 192.168.36.1 ( 192.168.36.1:30099 )
+  INFO root [2026-02-24 01:57:35,195] - NetworkInterface::initialize(INTERNAL-TCP): address 192.168.36.1:30099, SOMAXCONN=511.
+  INFO root [2026-02-24 01:57:35,195] - server-configs:
+  INFO root [2026-02-24 01:57:35,195] - 	internalTcpAddr : 192.168.36.1:30099
+  INFO root [2026-02-24 01:57:35,195] - 	externalTcpAddr : %s
+  INFO root [2026-02-24 01:57:35,195] - 	componentID : 3000
+  INFO root [2026-02-24 01:57:35,199] - ---- interfaces Version: 2.7.1. ScriptVersion: 0.1.0. Pythoncore: 3.13.5. Protocol: 8E28F900BDACB1CF950529838420D70F. Config: Debug X64. Built: 03:11:26 Feb 10 2026. AppID: 3000. UID: 10103. PID: 2044 ----
+  INFO root [2026-02-24 01:57:35,199] - Server IvanDing: Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz with 33456864kB RAM
+  INFO root [2026-02-24 01:57:35,200] - ThreadPool::createThreadPool: creating  threadpool...
+  INFO root [2026-02-24 01:57:35,200] - ThreadPool::createThreadPool: successfully(2), newThreadCount=1, normalMaxThreadCount=2, maxThreadCount=8
+ DEBUG root [2026-02-24 01:57:35,313] - Script::install(): paths=D:/KBELAB/Courses/server/server_assets/common;D:/KBELAB/Courses/server/server_assets/data;D:/KBELAB/Courses/server/server_assets/user_type;D:/KBELAB/Courses/server/server_assets/server_common;D:/KBELAB/Courses/server/server_assets/interface;D:\KBELAB\Courses\server\server_assets\.venv\Lib\site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/lib-dynload;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/DLLs;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/PyScript;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/site-packages;D:/KBELAB/kbengine/KBEngine-Nex/kbe/res/scripts/common/Lib/dist-packages.
+  INFO root [2026-02-24 01:57:35,505] - Script::install(): is successfully, Python=(3.13.5 (heads/dev-2.6.x:4773fc90b, Jan 20 2026, 03:20:24) [MSC v.1944 64 bit (AMD64)])!
+  INFO root [2026-02-24 01:57:35,506] - Script::install(): KBExtra is successfully!
+S_INFO root [2026-02-24 01:57:36,732] - [asyncio] Event loop started
+S_INFO root [2026-02-24 01:57:36,732] - onInterfaceAppReady: bootstrapGroupIndex=0, bootstrapGlobalIndex=0
+  INFO root [2026-02-24 01:57:36,734] - TelnetServer server is running on port 33000
+  INFO root [2026-02-24 01:57:36,975] - ---- interfaces is running ----
+ DEBUG root [2026-02-24 01:57:36,975] - Components::process(): Request for the process of identity...
+  INFO root [2026-02-24 01:57:43,602] - ServerApp::onRegisterNewApp: uid:10103, username:IvanDing, componentType:dbmgr, componentID:4000, globalorderID=-1, grouporderID=-1, intaddr:192.168.36.1, intport:5619, extaddr:nonsupport, extport:0,  from 127.0.0.1:5632/0/0/0.
+  INFO root [2026-02-24 01:57:43,602] - Components::addComponent: reset orderLog, uid=10103!
+  INFO root [2026-02-24 01:57:43,603] - Components::addComponent[dbmgr], uid=10103, componentID=4000, globalorderid=1, grouporderid=1, totalcount=1
+  INFO root [2026-02-24 01:57:44,689] - Components::process(): Found all the components!
+S_INFO root [2026-02-24 01:58:10,180] - onRequestAccountLogin: registerName=111
+S_INFO root [2026-02-24 01:58:49,915] - onRequestAccountLogin: registerName=222
+S_INFO root [2026-02-24 01:58:53,930] - onRequestAccountLogin: registerName=333

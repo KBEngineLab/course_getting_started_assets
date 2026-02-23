@@ -1,0 +1,9 @@
+.vscode
+.vs
+.idea
+
+
+*.pyc
+obj
+bin
+scripts/logs

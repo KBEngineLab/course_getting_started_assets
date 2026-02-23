@@ -1,0 +1,26 @@
+<root>
+    <BaseMethods>
+        <helloBase>
+            <Exposed/>
+            <Arg>UNICODE</Arg>
+        </helloBase>
+    </BaseMethods>
+    <CellMethods>
+        <!-- say hello指令 -->
+        <say>
+            <!-- 该参数让此方法暴露给客户端 -->
+            <Exposed/>
+            <!-- 字符串，say的内容 -->
+            <Arg>UNICODE</Arg>
+        </say>
+    </CellMethods>
+    <ClientMethods>
+        <!-- 实体进入cell（世界空间），通知客户端 -->
+        <onEnter>
+        </onEnter>
+        <!-- 通知所有客户端，广播say的内容 -->
+        <onSay>
+            <Arg>UNICODE</Arg>
+        </onSay>
+    </ClientMethods>
+</root>
