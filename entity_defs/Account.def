@@ -1,11 +1,56 @@
 <root>
 	<Properties>
+		<characters>
+			<Type>			PY_LIST		</Type>
+			<Flags>			BASE					</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+		</characters>
+
 	</Properties>
 
 	<ClientMethods>
+		<!-- 获取角色列表回调 -->
+		<onReqAvatarList>
+			<Arg>			PY_LIST	</Arg>
+		</onReqAvatarList>
+
+		<!-- 创建角色 -->
+		<onReqCreateAvatar>
+			<Arg>			UINT8				</Arg>	<!-- 状态，1：成功，0：失败，2：角色达到上限 -->
+			<Arg>PY_LIST</Arg>
+		</onReqCreateAvatar>
+
+		<!-- 删除角色 -->
+		<onReqRemoveAvatar>
+			<Arg>UINT8</Arg>	<!-- 状态，1：成功，0：失败 -->
+			<Arg>INT64</Arg>	<!-- dbid -->
+		</onReqRemoveAvatar>
 	</ClientMethods>
 
 	<BaseMethods>
+		<!-- 查询角色列表 -->
+		<reqAvatarList>
+			<Exposed/>
+		</reqAvatarList>
+
+		<!-- 创建角色 -->
+		<reqCreateAvatar>
+			<Exposed/>
+			<Arg>			UNICODE				</Arg>	<!-- name -->
+		</reqCreateAvatar>
+
+		<!-- 进入游戏 -->
+		<reqAvatarEnterGame>
+			<Exposed/>
+			<Arg>			INT64				</Arg>	<!-- dbid -->
+		</reqAvatarEnterGame>
+
+		<!-- 删除角色 -->
+		<reqRemoveAvatar>
+			<Exposed/>
+			<Arg>			INT64				</Arg>	<!-- dbid -->
+		</reqRemoveAvatar>
 	</BaseMethods>
 
 	<CellMethods>

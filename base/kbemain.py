@@ -14,7 +14,7 @@ def onBaseAppReady(isBootstrap):
 	 (isBootstrap, os.getenv("KBE_COMPONENTID"), os.getenv("KBE_BOOTIDX_GROUP"), os.getenv("KBE_BOOTIDX_GLOBAL")))
 
 	# baseapp就绪时，创建一个Space空间实体
-	KBEngine.createEntityLocally("FirstSpace", {})
+	# KBEngine.createEntityLocally("FirstSpace", {})
 
 def onReadyForLogin(isBootstrap):
 	"""

@@ -34,7 +34,7 @@
 			<!-- 账号Entity的名称
 			    (Name of AccountEntity)
 			 -->
-			<accountEntityScriptType>	FirstEntity	</accountEntityScriptType>
+			<accountEntityScriptType>	Account	</accountEntityScriptType>
 
 			<!-- 账号找回密码相关
 				(Account reset password)
@@ -107,4 +107,18 @@
 	<baseapp>
 		<backupPeriod> 500 </backupPeriod>
 	</baseapp>
+
+	<bots>
+		<!-- 默认启动进程后自动添加这么多个机器人
+			(After starting the process, automatically add some robots)
+			totalCount	： 添加总数量			(Add the total-number)
+			tickTime	： 每次添加所用时间(s)	(Interval time-secs)
+			tickCount	： 每次添加数量			(Each time you add the number of)
+		-->
+		<defaultAddBots>
+			<totalCount> 1  </totalCount>								<!-- Type: Integer -->
+			<tickTime> 0.1  </tickTime>									<!-- Type: Float -->
+			<tickCount> 1  </tickCount>									<!-- Type: Integer -->
+		</defaultAddBots>
+	</bots>
 </root>

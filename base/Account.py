@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import KBEngine
 from KBEDebug import *
+import json
 
 class Account(KBEngine.Proxy):
 	def __init__(self):
@@ -38,3 +39,56 @@ class Account(KBEngine.Proxy):
 		"""
 		DEBUG_MSG("Account[%i].onClientDeath:" % self.id)
 		self.destroy()
+
+	def reqAvatarList(self):
+		"""
+		客户端请求查询角色列表
+		"""
+		DEBUG_MSG("Account[%i].reqAvatarList: size=%i." % (self.id, len(self.characters)))
+		self.client.onReqAvatarList(self.characters)
+		pass
+
+	def reqCreateAvatar(self, arg_UNICODE):
+		"""
+		客户端请求创建角色
+		"""
+
+		if len(self.characters) >= 3:
+			DEBUG_MSG("Account[%i].reqCreateAvatar:%s. character=%s.\n" % (self.id, arg_UNICODE, self.characters))
+			self.client.onReqCreateAvatar(2,"")
+			return
+
+
+		self.characters.append({
+			"dbid":KBEngine.genUUID64(),
+			"name":arg_UNICODE,
+		})
+		#
+		self.client.onReqCreateAvatar(0,self.characters)
+		pass
+
+	def reqAvatarEnterGame(self, arg_DBID):
+		"""
+		客户端请求角色进入游戏世界
+		"""
+		DEBUG_MSG("Account[%i].reqAvatarEnterGame:AvatarID:%i" % (self.id,arg_DBID))
+		pass
+
+	def reqRemoveAvatar(self, arg_DBID):
+		"""
+		客户端请求删除角色
+		"""
+		DEBUG_MSG("Account[%i].reqRemoveAvatar:%i" % (self.id, arg_DBID))
+
+		for character in self.characters:
+			if character["dbid"] == arg_DBID:
+				self.characters.remove(character)
+				self.client.onReqRemoveAvatar(1,character["dbid"])
+				return
+
+		self.client.onReqRemoveAvatar(0,0)
+
+
+
+
+
