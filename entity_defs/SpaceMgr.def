@@ -1,0 +1,25 @@
+<root>
+    <BaseMethods>
+        <loginToSpace>
+            <!-- 登录的角色 -->
+            <Arg>ENTITYCALL</Arg>
+            <!-- spaceKey -->
+            <Arg>UNICODE</Arg>
+        </loginToSpace>
+
+        <onSpaceGetCell>
+            <!-- space 的cell -->
+            <Arg>ENTITYCALL</Arg>
+            <!-- spaceKey -->
+            <Arg>UNICODE</Arg>
+        </onSpaceGetCell>
+
+        <onSpaceLoseCell>
+            <!-- spaceKey -->
+            <Arg>UNICODE</Arg>
+        </onSpaceLoseCell>
+    </BaseMethods>
+    <CellMethods>
+
+    </CellMethods>
+</root>

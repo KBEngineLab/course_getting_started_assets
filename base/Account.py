@@ -46,7 +46,7 @@ class Account(KBEngine.Proxy):
 		"""
 		DEBUG_MSG("Account[%i].reqAvatarList: size=%i." % (self.id, len(self.characters)))
 		self.client.onReqAvatarList(self.characters)
-		pass
+
 
 	def reqCreateAvatar(self, arg_UNICODE):
 		"""
@@ -65,14 +65,14 @@ class Account(KBEngine.Proxy):
 		})
 		#
 		self.client.onReqCreateAvatar(0,self.characters)
-		pass
+
 
 	def reqAvatarEnterGame(self, arg_DBID):
 		"""
 		客户端请求角色进入游戏世界
 		"""
 		DEBUG_MSG("Account[%i].reqAvatarEnterGame:AvatarID:%i" % (self.id,arg_DBID))
-		pass
+
 
 	def reqRemoveAvatar(self, arg_DBID):
 		"""

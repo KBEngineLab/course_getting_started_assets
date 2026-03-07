@@ -16,6 +16,9 @@ def onBaseAppReady(isBootstrap):
 	# baseapp就绪时，创建一个Space空间实体
 	# KBEngine.createEntityLocally("FirstSpace", {})
 
+	if isBootstrap:
+		KBEngine.createEntityLocally("SpaceMgr", {})
+
 def onReadyForLogin(isBootstrap):
 	"""
 	KBEngine method.

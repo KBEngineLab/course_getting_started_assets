@@ -9,4 +9,7 @@
 	<Account hasClient="true"></Account><!-- <Account hasCell="true" hasBase="true" hasClient="true"></Account> -->
 	<!-- <FirstEntity  hasClient="true"></FirstEntity> -->
 	<!-- <FirstSpace></FirstSpace> -->
+
+	<SpaceMgr/>
+	<Space/>
 </root>
