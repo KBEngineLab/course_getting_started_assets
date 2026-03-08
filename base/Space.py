@@ -11,7 +11,6 @@ class Space(KBEngine.Space):
 
 	def __init__(self):
 		KBEngine.Space.__init__(self)
-		print(self.spaceKey)
 
 
 	def onLoseCell(self):

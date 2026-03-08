@@ -3,6 +3,9 @@ import KBEngine
 from KBEDebug import *
 import json
 
+from data import d_spaces, d_avatar_init
+
+
 class Account(KBEngine.Proxy):
 	def __init__(self):
 		KBEngine.Proxy.__init__(self)
@@ -23,6 +26,8 @@ class Account(KBEngine.Proxy):
 		cell部分。
 		"""
 		INFO_MSG("account[%i] entities enable. entityCall:%s" % (self.id, self.client))
+
+
 			
 	def onLogOnAttempt(self, ip, port, password):
 		"""
@@ -59,12 +64,61 @@ class Account(KBEngine.Proxy):
 			return
 
 
-		self.characters.append({
-			"dbid":KBEngine.genUUID64(),
-			"name":arg_UNICODE,
-		})
-		#
-		self.client.onReqCreateAvatar(0,self.characters)
+		# self.characters.append({
+		# 	"dbid":KBEngine.genUUID64(),
+		# 	"name":arg_UNICODE,
+		# })
+		# #
+		# self.client.onReqCreateAvatar(0,self.characters)
+		spaceData = d_spaces.datas.get("xinshoucun")
+		avatarInitInfo = d_avatar_init.datas
+		props = {
+			"accountId"			: self.id,
+			"name"			: arg_UNICODE,
+			"direction"			: avatarInitInfo.get("direction", (0,0,0)),
+			"position"			: spaceData.get("spawnPos", (0,0,0)),
+			"HP":avatarInitInfo.get("HP", 100),
+			"HP_Max":avatarInitInfo.get("HP_Max", 100),
+			"MP":avatarInitInfo.get("MP", 120),
+			"MP_Max":avatarInitInfo.get("MP_Max", 120),
+		}
+
+		avatar = KBEngine.createEntityLocally('Avatar', props)
+
+		if avatar:
+			avatar.writeToDB(self._onAvatarSaved)
+
+
+	def _onAvatarSaved(self, success, avatar):
+		"""
+		新建角色写入数据库回调
+		"""
+		INFO_MSG('Account::_onAvatarSaved:(%i) create avatar state: %i, %s, %i' % (self.id, success,
+		                                                                           avatar.cellData["name"],
+		                                                                           avatar.databaseID))
+
+		# 如果此时账号已经销毁， 角色已经无法被记录则我们清除这个角色
+		if self.isDestroyed:
+			if avatar:
+				avatar.destroy(True)
+
+			return
+
+
+		if success:
+			self.characters.append({
+				"dbid":avatar.databaseID,
+				"name":avatar.cellData["name"],
+			})
+			pass
+		else:
+			ERROR_MSG('Account::_onAvatarSaved:(%i) create avatar error' % self.id)
+
+		avatar.destroy()
+
+		if self.client:
+			self.client.onReqCreateAvatar(1,self.characters)
+
 
 
 	def reqAvatarEnterGame(self, arg_DBID):

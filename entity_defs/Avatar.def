@@ -1,0 +1,132 @@
+<root>
+    <Volatile>
+        <position/>
+        <yaw/>
+        <pitch/>
+        <roll/>
+
+        <!-- 优化VolatileInfo，关于VolatileInfo可以参考API文档，优化后服务器在确定实体在地面时（navigate）将不同步实体的Y坐标，客户端需要判断实体isOnGround，如果实体在地面则需要做贴地计算。
+            在高层建筑内寻路可能需要关闭优化，让服务器同步Y，这样才能精确计算上下层位置。
+            (不填默认为true)
+        -->
+        <optimized>true</optimized>
+    </Volatile>
+    <Properties>
+        <!-- 基础信息 START -->
+        <accountId>
+            <Type>UINT32</Type>
+            <Flags>BASE</Flags>
+            <Persistent>true</Persistent>
+            <Desc>账号ID</Desc>
+        </accountId>
+        <name>
+            <Type>UNICODE</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Persistent>true</Persistent>
+            <Desc>角色姓名</Desc>
+        </name>
+
+        <state>
+            <Type>INT8</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Persistent>true</Persistent>
+            <Default>0</Default>
+            <Desc>角色状态，0：正常 ，1：死亡</Desc>
+        </state>
+
+        <!-- 基础信息 END -->
+
+        <!-- 战斗相关 START -->
+        <HP>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>100</Default>
+            <Persistent>true</Persistent>
+        </HP>
+
+        <HP_Max>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>100</Default>
+            <Persistent>true</Persistent>
+        </HP_Max>
+
+        <MP>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>120</Default>
+            <Persistent>true</Persistent>
+        </MP>
+
+        <MP_Max>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>120</Default>
+            <Persistent>true</Persistent>
+        </MP_Max>
+
+        <!-- 战斗相关 END -->
+
+
+    </Properties>
+    <CellMethods>
+
+        <!-- 攻击 -->
+        <useSkill>
+            <Exposed/>
+            <!-- 攻击对象ID -->
+            <Arg>INT32</Arg>
+            <!-- 技能，这里我们简单处理，默认传1，代表普通攻击 -->
+            <Arg>INT8</Arg>
+        </useSkill>
+
+        <!-- 受到伤害 -->
+        <recvDamage>
+            <!-- 攻击者ID -->
+            <Arg>INT32</Arg>
+            <!-- 技能，这里我们简单处理，默认传1，代表普通攻击 -->
+            <Arg>INT8</Arg>
+            <!-- 伤害值 -->
+            <Arg>INT32</Arg>
+        </recvDamage>
+
+
+        <!-- 复活 -->
+        <relive>
+            <Exposed/>
+        </relive>
+
+        <!-- 跳跃 -->
+        <jump>
+            <Exposed/>
+        </jump>
+
+
+        <setHP>
+            <Arg>INT32</Arg>
+        </setHP>
+
+        <setMP>
+            <Arg>INT32</Arg>
+        </setMP>
+
+        <setHPMax>
+            <Arg>INT32</Arg>
+        </setHPMax>
+
+        <setMPMax>
+            <Arg>INT32</Arg>
+        </setMPMax>
+    </CellMethods>
+    <BaseMethods>
+        <!-- 创建cell部分 -->
+        <createCell>
+            <Arg>ENTITYCALL</Arg>
+        </createCell>
+    </BaseMethods>
+    <ClientMethods>
+        <!-- 通知其他客户端跳跃 -->
+        <onJump/>
+
+    </ClientMethods>
+</root>
