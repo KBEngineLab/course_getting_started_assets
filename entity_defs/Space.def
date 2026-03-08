@@ -1,11 +1,11 @@
 <root>
     <CellMethods>
-
-    </CellMethods>
-    <BaseMethods>
         <loginToSpace>
             <!-- 登录的角色 -->
             <Arg>ENTITYCALL</Arg>
         </loginToSpace>
+    </CellMethods>
+    <BaseMethods>
+
     </BaseMethods>
 </root>

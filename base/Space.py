@@ -13,8 +13,6 @@ class Space(KBEngine.Space):
 		KBEngine.Space.__init__(self)
 		print(self.spaceKey)
 
-	def loginToSpace(self,avatarEntity:Account):
-		avatarEntity.createCellEntity(self.cell)
 
 	def onLoseCell(self):
 		KBEngine.globalData["SpaceMgr"].onSpaceLoseCell( self.spaceKey)

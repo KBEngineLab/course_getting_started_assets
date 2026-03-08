@@ -28,7 +28,7 @@ class SpaceMgr(KBEngine.Entity):
 		登录到某个Space
 		"""
 		spaceBase:Space = self.spaces[spaceKey]
-		spaceBase.loginToSpace(avatarEntity)
+		spaceBase.cell.loginToSpace(avatarEntity)
 
 	def createSpace(self,spaceInfoMap):
 		for key, space in spaceInfoMap.items():
