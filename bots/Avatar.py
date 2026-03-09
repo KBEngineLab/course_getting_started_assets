@@ -7,6 +7,9 @@ class Avatar(KBEngine.Entity):
 		KBEngine.Entity.__init__(self)
 		DEBUG_MSG("Avatar::__init__:%s." % (self.__dict__))
 
+	def set_HP(self, old_val):
+		DEBUG_MSG("%s::set_HP:%i->%i" % (self.__class__.__name__, old_val,self.HP))
+
 	def onEnterSpace(self):
 		"""
 		KBEngine method.

@@ -127,6 +127,29 @@ class Account(KBEngine.Proxy):
 		"""
 		DEBUG_MSG("Account[%i].reqAvatarEnterGame:AvatarID:%i" % (self.id,arg_DBID))
 
+		for character in self.characters:
+			if character["dbid"] == arg_DBID:
+				KBEngine.createEntityFromDBID("Avatar", arg_DBID, self._onAvatarCreated)
+
+	def _onAvatarCreated(self, baseRef, dbid, wasActive):
+		if wasActive:
+			ERROR_MSG("Account::_onAvatarCreated:(%i): this character is in world now!" % (self.id))
+			return
+		if baseRef is None:
+			ERROR_MSG("Account::_onAvatarCreated:(%i): the character you wanted to created is not exist!" % (self.id))
+			return
+
+		avatar = KBEngine.entities.get(baseRef.id)
+		if avatar is None:
+			ERROR_MSG("Account::_onAvatarCreated:(%i): when character was created, it died as well!" % (self.id))
+			return
+
+		if self.isDestroyed:
+			ERROR_MSG("Account::_onAvatarCreated:(%i): i dead, will the destroy of Avatar!" % (self.id))
+			avatar.destroy()
+			return
+
+		self.giveClientTo(avatar)
 
 	def reqRemoveAvatar(self, arg_DBID):
 		"""

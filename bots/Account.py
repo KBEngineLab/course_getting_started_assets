@@ -8,20 +8,22 @@ class Account(KBEngine.Entity):
 		KBEngine.Entity.__init__(self)
 		DEBUG_MSG("Account::__init__:%s." % (self.__dict__))
 
-		self.base.reqAvatarList()
+		# self.base.reqAvatarList()
 		self.base.reqCreateAvatar("test")
-		self.base.reqCreateAvatar("test222")
+		# self.base.reqCreateAvatar("test222")
 		self.dbid = 0
 
 
 	def onReqAvatarList(self,avatarList):
 		DEBUG_MSG("Account::onReqAvatarList:%s" % avatarList)
-		pass
+
+		self.base.reqAvatarEnterGame(avatarList[0]["dbid"])
+
 	def onReqCreateAvatar(self,recode,avatarList):
 		DEBUG_MSG("Account::onReqCreateAvatar:%i %s" % (recode,avatarList))
 		self.dbid = avatarList[0]["dbid"]
 		DEBUG_MSG(self.dbid)
-		self.base.reqRemoveAvatar(int(self.dbid))
+		# self.base.reqRemoveAvatar(int(self.dbid))
 		self.base.reqAvatarList()
 		pass
 	def onReqRemoveAvatar(self,recode,DBID):

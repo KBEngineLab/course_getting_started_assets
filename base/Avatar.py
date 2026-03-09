@@ -9,7 +9,7 @@ class Avatar(KBEngine.Proxy):
 
 
 	def createCell(self, arg_spaceCall):
-		self.createCellEntity(arg_spaceCall.cell)
+		self.createCellEntity(arg_spaceCall)
 
 		
 	def onTimer(self, id, userArg):
@@ -20,7 +20,8 @@ class Avatar(KBEngine.Proxy):
 		@param userArg	: addTimer 最后一个参数所给入的数据
 		"""
 		DEBUG_MSG(id, userArg)
-		
+
+
 	def onClientEnabled(self):
 		"""
 		KBEngine method.
@@ -28,7 +29,12 @@ class Avatar(KBEngine.Proxy):
 		cell部分。
 		"""
 		INFO_MSG("Avatar[%i] entities enable. entityCall:%s" % (self.id, self.client))
-			
+		if self.cell is not None:
+			return
+
+		KBEngine.globalData["SpaceMgr"].loginToSpace(self, "xinshoucun")
+
+
 	def onLogOnAttempt(self, ip, port, password):
 		"""
 		KBEngine method.

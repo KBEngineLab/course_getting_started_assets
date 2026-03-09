@@ -16,7 +16,7 @@ class Space(KBEngine.Space):
 		pass
 
 	def loginToSpace(self,avatarEntity):
-		avatarEntity.createCellEntity(self)
+		avatarEntity.createCell(self)
 
 	def onDestroy(self):
 		DEBUG_MSG("Space::onDestroy: spaceId: %i" % self.id)
