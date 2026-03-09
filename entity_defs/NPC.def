@@ -1,0 +1,33 @@
+<root>
+    <Volatile>
+        <position/>
+        <yaw/>
+        <optimized>true</optimized>
+    </Volatile>
+    <Properties>
+        <!-- NPC名称 -->
+        <name>
+            <Type>UNICODE</Type>
+            <Flags>ALL_CLIENTS</Flags>
+        </name>
+        <!-- NPC KEY -->
+        <eid>
+            <Type>UNICODE</Type>
+            <Flags>ALL_CLIENTS</Flags>
+        </eid>
+    </Properties>
+    <BaseMethods>
+
+    </BaseMethods>
+    <CellMethods>
+        <helloNPC>
+            <Exposed/>
+        </helloNPC>
+    </CellMethods>
+    <ClientMethods>
+        <onHelloNPC>
+            <!-- NPC说的话 -->
+            <Arg>UNICODE</Arg>
+        </onHelloNPC>
+    </ClientMethods>
+</root>
