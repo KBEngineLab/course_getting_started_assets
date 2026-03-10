@@ -2,6 +2,7 @@ import random
 
 import KBEngine
 
+import GlobalDefine
 from KBEDebug import *
 from data import d_npcs
 
@@ -22,7 +23,7 @@ class Avatar(KBEngine.Entity):
 			return
 
 
-		target:Avatar = KBEngine.entities.get(arg_targetID)
+		target = KBEngine.entities.get(arg_targetID)
 		if target is None:
 			ERROR_MSG("Avatar::useSkill(%i):targetID=%i not found" % (self.id, arg_targetID))
 			return
@@ -48,7 +49,8 @@ class Avatar(KBEngine.Entity):
 
 		if self.HP <= 0:
 			self.HP = 0
-			self.state = 1
+			self.MP = 0
+			self.state = GlobalDefine.ENTITY_STATE_DEAD
 
 
 	def relive(self, exposed):
@@ -62,6 +64,7 @@ class Avatar(KBEngine.Entity):
 			DEBUG_MSG("Avatar::relive: %i" % self.id)
 			self.setHP(self.HP_Max)
 			self.setMP(self.MP_Max)
+			self.state = GlobalDefine.ENTITY_STATE_FREE
 
 	def jump(self, exposed):
 		"""跳跃"""

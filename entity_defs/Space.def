@@ -8,6 +8,7 @@
             <Type>UNICODE</Type>
             <Flags>CELL_PUBLIC</Flags>
         </cellSpaceKey>
+
     </Properties>
     <CellMethods>
         <loginToSpace>
@@ -15,6 +16,10 @@
             <Arg>ENTITYCALL</Arg>
         </loginToSpace>
 
+        <onEntityDestroyed>
+            <!-- MonsterKey -->
+            <Arg>UNICODE</Arg>
+		</onEntityDestroyed>
     </CellMethods>
     <BaseMethods>
     </BaseMethods>

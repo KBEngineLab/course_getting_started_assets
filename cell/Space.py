@@ -1,8 +1,11 @@
+import math
+import random
+
 import KBEngine
 
 import GlobalDefine
 from KBEDebug import DEBUG_MSG
-from data import d_npcs
+from data import d_npcs, d_monsters_spawnpoints
 import copy
 
 class Space(KBEngine.Space):
@@ -22,8 +25,18 @@ class Space(KBEngine.Space):
 		KBEngine.globalData["spaces"] = spaces
 
 		self.tempCreateNPCs = copy.deepcopy(d_npcs.data.get(self.cellSpaceKey, None))
+		self.tempCreateMonsters = copy.deepcopy(d_monsters_spawnpoints.data.get(self.cellSpaceKey, None))
+
+		# monsters需要持续创建，所以这里保存下来，当entity被销毁后，重新创建
+		self.monsters = {}
+		# 先重置monster数量
+		for key,item in self.tempCreateMonsters.items():
+			self.monsters[key] = 0
+
+		DEBUG_MSG("Space::__init__: monsters create count: %s" % self.monsters)
 
 		self.addTimer(1, 0.1, GlobalDefine.TIMER_TYPE_NPC_CREATE)
+		self.addTimer(1, 0.5, GlobalDefine.TIMER_TYPE_MONSTER_CREATE)
 
 	def loginToSpace(self,avatarEntity):
 		DEBUG_MSG("Space::loginToSpace: spaceId: %i" % self.spaceID)
@@ -36,11 +49,44 @@ class Space(KBEngine.Space):
 		KBEngine.globalData["spaces"] = spaces
 
 	def onTimer(self, timerHandle, userData):
-		DEBUG_MSG("Space::onTimer: tid=%i, userData=%i" % (timerHandle, userData))
+		# DEBUG_MSG("Space::onTimer: tid=%i, userData=%i" % (timerHandle, userData))
 
 		if userData == GlobalDefine.TIMER_TYPE_NPC_CREATE:
 			self.createNPC(timerHandle)
 
+		if userData == GlobalDefine.TIMER_TYPE_MONSTER_CREATE:
+			self.createMonster(timerHandle)
+
+
+	def createMonster(self,tid):
+		"""
+		创建Monster
+		"""
+		for key,item in self.tempCreateMonsters.items():
+			# 如果已经创建了，则跳过
+			if self.monsters[key] >= item["createCount"]:
+				continue
+
+
+			DEBUG_MSG("Space::createMonster: %s" % item)
+
+			params = {
+				"eid":key,
+				"name": item["name"],
+				"moveSpeed": item["moveSpeed"],
+				"attack": item["attack"],
+				"HP": item["HP"],
+				"MP": item["MP"],
+				"HP_MAX": item["HP_MAX"],
+				"MP_MAX": item["MP_MAX"],
+			}
+
+			KBEngine.createEntity("Monster",self.spaceID,self.getRandomPointInRadius(item["spawnPoints"],30),(0.0,0.0,0.0),params)
+
+			self.monsters[key] += 1
+
+			# 直接return，把创建分摊到每个时钟周期
+			return
 
 	def createNPC(self,tid):
 
@@ -63,3 +109,26 @@ class Space(KBEngine.Space):
 
 		# for key,item in d_npcs.data.items():
 
+	def onEntityDestroyed(self, arg_UNICODE):
+		DEBUG_MSG("Space::onEntityDestroyed: %s" % arg_UNICODE)
+		self.monsters[arg_UNICODE] -= 1
+
+		if self.monsters[arg_UNICODE] <= 0:
+			self.monsters[arg_UNICODE] = 0
+
+	def getRandomPointInRadius(self,spawnPoints, radius):
+		"""
+		在spawnPoints为中心的radius半径内获取随机坐标
+		"""
+		x, y, z = spawnPoints
+
+		# 随机角度
+		angle = random.uniform(0, 2 * math.pi)
+
+		# 随机半径（sqrt保证分布均匀）
+		r = radius * math.sqrt(random.random())
+
+		new_x = x + r * math.cos(angle)
+		new_z = z + r * math.sin(angle)
+
+		return new_x, y, new_z

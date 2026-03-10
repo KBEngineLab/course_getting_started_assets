@@ -16,53 +16,46 @@
         <accountId>
             <Type>UINT32</Type>
             <Flags>BASE</Flags>
-            <Persistent>true</Persistent>
             <Desc>账号ID</Desc>
         </accountId>
         <name>
             <Type>UNICODE</Type>
             <Flags>ALL_CLIENTS</Flags>
-            <Persistent>true</Persistent>
             <Desc>角色姓名</Desc>
         </name>
 
-        <state>
-            <Type>INT8</Type>
-            <Flags>ALL_CLIENTS</Flags>
-            <Persistent>true</Persistent>
-            <Default>0</Default>
-            <Desc>角色状态，0：正常 ，1：死亡</Desc>
-        </state>
 
         <!-- 基础信息 END -->
 
         <!-- 战斗相关 START -->
+
+        <!-- 攻击力 -->
+        <attack>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+        </attack>
         <HP>
             <Type>INT32</Type>
             <Flags>ALL_CLIENTS</Flags>
             <Default>100</Default>
-            <Persistent>true</Persistent>
         </HP>
 
         <HP_Max>
             <Type>INT32</Type>
             <Flags>ALL_CLIENTS</Flags>
             <Default>100</Default>
-            <Persistent>true</Persistent>
         </HP_Max>
 
         <MP>
             <Type>INT32</Type>
             <Flags>ALL_CLIENTS</Flags>
             <Default>120</Default>
-            <Persistent>true</Persistent>
         </MP>
 
         <MP_Max>
             <Type>INT32</Type>
             <Flags>ALL_CLIENTS</Flags>
             <Default>120</Default>
-            <Persistent>true</Persistent>
         </MP_Max>
 
         <!-- 战斗相关 END -->

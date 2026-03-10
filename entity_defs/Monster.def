@@ -1,0 +1,86 @@
+<root>
+    <Volatile>
+        <position/>
+        <yaw/>
+        <optimized>true</optimized>
+    </Volatile>
+    <Properties>
+        <!-- Monster 名称 -->
+        <name>
+            <Type>UNICODE</Type>
+            <Flags>ALL_CLIENTS</Flags>
+        </name>
+        <!-- Monster KEY -->
+        <eid>
+            <Type>UNICODE</Type>
+            <Flags>ALL_CLIENTS</Flags>
+        </eid>
+        <!-- 战斗相关 START -->
+
+        <state>
+            <Type>INT8</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>0</Default>
+            <Desc>角色状态，0：正常 ，1：死亡</Desc>
+        </state>
+
+        <HP>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>100</Default>
+        </HP>
+
+        <HP_Max>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>100</Default>
+        </HP_Max>
+
+        <MP>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>120</Default>
+        </MP>
+
+        <MP_Max>
+            <Type>INT32</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>120</Default>
+        </MP_Max>
+
+        <!-- 战斗相关 END -->
+    </Properties>
+    <BaseMethods>
+
+    </BaseMethods>
+    <CellMethods>
+        <!-- 受到伤害 -->
+        <recvDamage>
+            <!-- 攻击者ID -->
+            <Arg>INT32</Arg>
+            <!-- 技能，这里我们简单处理，默认传1，代表普通攻击 -->
+            <Arg>INT8</Arg>
+            <!-- 伤害值 -->
+            <Arg>INT32</Arg>
+        </recvDamage>
+
+        <setHP>
+            <Arg>INT32</Arg>
+        </setHP>
+
+        <setMP>
+            <Arg>INT32</Arg>
+        </setMP>
+
+        <setHPMax>
+            <Arg>INT32</Arg>
+        </setHPMax>
+
+        <setMPMax>
+            <Arg>INT32</Arg>
+        </setMPMax>
+    </CellMethods>
+    <ClientMethods>
+
+    </ClientMethods>
+</root>
