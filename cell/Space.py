@@ -14,7 +14,7 @@ class Space(KBEngine.Space):
 		KBEngine.Space.__init__(self)
 		DEBUG_MSG("Space::__init__: created space entityID = %i, spaceKey = %s." % ( self.id, self.cellSpaceKey))
 		spaces = KBEngine.globalData["spaces"] if "spaces" in KBEngine.globalData else {}
-		spaces["space_%i" % self.id] = self.base
+		spaces["space_%i" % self.spaceID] = self.base
 		KBEngine.globalData["spaces"] = spaces
 
 		self.tempCreateNPCs = copy.deepcopy(d_npcs.data.get(self.cellSpaceKey, None))
@@ -22,10 +22,11 @@ class Space(KBEngine.Space):
 		self.addTimer(1, 0.1, GlobalDefine.TIMER_TYPE_NPC_CREATE)
 
 	def loginToSpace(self,avatarEntity):
+		DEBUG_MSG("Space::loginToSpace: spaceId: %i" % self.spaceID)
 		avatarEntity.createCell(self)
 
 	def onDestroy(self):
-		DEBUG_MSG("Space::onDestroy: spaceId: %i" % self.id)
+		DEBUG_MSG("Space::onDestroy: spaceId: %i" % self.spaceID)
 		spaces = KBEngine.globalData["spaces"]
 		del spaces["space_%i" % self.id]
 		KBEngine.globalData["spaces"] = spaces
