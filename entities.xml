@@ -13,5 +13,5 @@
 	<SpaceMgr/>
 	<Space/>
 	<Avatar hasClient="true"/>
-	<NPC/>
+	<NPC hasClient="true"/>
 </root>

@@ -17,6 +17,6 @@ class NPC(KBEngine.Entity):
 
 
 	def helloNPC(self, exposed):
-		self.client.onHelloNPC(self.dialog[random.randint(0,len(self.dialog))])
+		self.allClients.onHelloNPC(self.dialog[random.randint(0,len(self.dialog))])
 
 

@@ -9,7 +9,8 @@ class NPC(KBEngine.Entity):
 
 	def __init__(self):
 		KBEngine.Entity.__init__(self)
-		DEBUG_MSG("NPC::__init__: created entityID = %i, spaceID = %s." % ( self.id, self.spaceID))
+		DEBUG_MSG("NPC::__init__: created entityID = %i, spaceID = %s ,name = %s ." % ( self.id, self.spaceID,self.name))
+		self.cell.helloNPC()
 
 	def onEnterWorld(self):
 		"""
