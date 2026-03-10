@@ -27,6 +27,7 @@ class SpaceMgr(KBEngine.Entity):
 		"""
 		登录到某个Space
 		"""
+		DEBUG_MSG("SpaceMgr::loginToSpace: avatarEntity:%s spaceKey:%s" % (avatarEntity, spaceKey))
 		spaceBase:Space = self.spaces[spaceKey]
 		spaceBase.cell.loginToSpace(avatarEntity)
 
