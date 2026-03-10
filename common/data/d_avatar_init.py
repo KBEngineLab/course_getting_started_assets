@@ -4,6 +4,6 @@ datas = {
 	"HP_Max":100,
 	"MP":120,
 	"MP_Max":120,
-	"direction":(0,0,0),
+	"direction":(0.0,0.0,0.0),
 	# "position":(0,0,0),
 }

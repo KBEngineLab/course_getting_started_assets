@@ -75,8 +75,8 @@ class Account(KBEngine.Proxy):
 		props = {
 			"accountId"			: self.id,
 			"name"			: arg_UNICODE,
-			"direction"			: avatarInitInfo.get("direction", (0,0,0)),
-			"position"			: spaceData.get("spawnPos", (0,0,0)),
+			"direction"			: avatarInitInfo.get("direction", (0.0,0.0,0.0)),
+			"position"			: spaceData.get("spawnPos", (0.0,0.0,0.0)),
 			"HP":avatarInitInfo.get("HP", 100),
 			"HP_Max":avatarInitInfo.get("HP_Max", 100),
 			"MP":avatarInitInfo.get("MP", 120),

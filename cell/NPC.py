@@ -1,3 +1,5 @@
+import random
+
 import KBEngine
 
 from KBEDebug import DEBUG_MSG
@@ -12,6 +14,9 @@ class NPC(KBEngine.Entity):
 		KBEngine.Entity.__init__(self)
 		DEBUG_MSG("NPC::__init__: created entityID = %i, spaceID = %s." % ( self.id, self.spaceID))
 
+
+
 	def helloNPC(self, exposed):
-		pass
+		self.client.onHelloNPC(self.dialog[random.randint(0,len(self.dialog))])
+
 
