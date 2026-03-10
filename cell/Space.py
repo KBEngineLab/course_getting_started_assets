@@ -10,7 +10,7 @@ class Space(KBEngine.Space):
 
 	def __init__(self):
 		KBEngine.Space.__init__(self)
-		spaces = KBEngine.globalData["spaces"] if "spaces" in KBEngine.globalData["spaces"] else {}
+		spaces = KBEngine.globalData["spaces"] if "spaces" in KBEngine.globalData else {}
 		spaces["space_%i" % self.spaceID] = self.base
 		KBEngine.globalData["spaces"] = spaces
 		pass
