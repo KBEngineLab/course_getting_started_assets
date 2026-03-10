@@ -29,14 +29,9 @@
 
     </BaseMethods>
     <CellMethods>
-        <helloNPC>
-            <Exposed/>
-        </helloNPC>
+
     </CellMethods>
     <ClientMethods>
-        <onHelloNPC>
-            <!-- NPC说的话 -->
-            <Arg>UNICODE</Arg>
-        </onHelloNPC>
+
     </ClientMethods>
 </root>

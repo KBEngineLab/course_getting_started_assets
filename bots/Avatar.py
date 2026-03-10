@@ -27,3 +27,6 @@ class Avatar(KBEngine.Entity):
 
 	def onJump(self):
 		DEBUG_MSG("%s::onJump: %i" % (self.__class__.__name__, self.id))
+
+	def onDialog(self,entityID,content):
+		DEBUG_MSG("%s::onDialog: %i,%s" % (self.__class__.__name__, entityID,content))

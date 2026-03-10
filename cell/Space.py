@@ -13,8 +13,12 @@ class Space(KBEngine.Space):
 	def __init__(self):
 		KBEngine.Space.__init__(self)
 		DEBUG_MSG("Space::__init__: created space entityID = %i, spaceKey = %s." % ( self.id, self.cellSpaceKey))
+
 		spaces = KBEngine.globalData["spaces"] if "spaces" in KBEngine.globalData else {}
-		spaces["space_%i" % self.spaceID] = self.base
+		spaces["space_%i" % self.spaceID] = {
+			"call":self.base,
+			"space_key":self.cellSpaceKey,
+		}
 		KBEngine.globalData["spaces"] = spaces
 
 		self.tempCreateNPCs = copy.deepcopy(d_npcs.data.get(self.cellSpaceKey, None))

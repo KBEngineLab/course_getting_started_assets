@@ -117,6 +117,15 @@
         <setMPMax>
             <Arg>INT32</Arg>
         </setMPMax>
+
+        <!-- 对话 -->
+        <dialog>
+            <Exposed/>
+            <!-- ENTITY ID -->
+            <Arg>INT32</Arg>
+            <!-- eid -->
+            <Arg>UNICODE</Arg>
+        </dialog>
     </CellMethods>
     <BaseMethods>
         <!-- 创建cell部分 -->
@@ -127,6 +136,13 @@
     <ClientMethods>
         <!-- 通知其他客户端跳跃 -->
         <onJump/>
+
+        <onDialog>
+            <!-- ENTITY ID -->
+            <Arg>INT32</Arg>
+            <!-- 对话内容 -->
+            <Arg>UNICODE</Arg>
+        </onDialog>
 
     </ClientMethods>
 </root>

@@ -3,6 +3,7 @@ import random
 import KBEngine
 
 from KBEDebug import *
+from data import d_npcs
 
 
 class Avatar(KBEngine.Entity):
@@ -83,6 +84,25 @@ class Avatar(KBEngine.Entity):
 
 	def setMPMax(self, arg_INT32):
 		self.MP_Max = arg_INT32
+
+	def dialog(self, exposed, arg_entityID, arg_EID):
+		if exposed != self.id:
+			return
+
+		entity = KBEngine.entities.get(arg_entityID)
+		if entity is None:
+			ERROR_MSG("Avatar::dialog(%i):entityID=%i not found" % (self.id, arg_entityID))
+			return
+		DEBUG_MSG("Avatar::dialog: %i" % self.id)
+
+		spaceKey = KBEngine.globalData["spaces"]["space_%i" % self.spaceID]["space_key"]
+		npcs = d_npcs.data.get(spaceKey, None)
+		if npcs is None or arg_EID not in npcs:
+			ERROR_MSG("Avatar::dialog(%i):space=%s not found" % (self.id, spaceKey))
+			return
+
+		self.client.onDialog(arg_entityID,npcs[arg_EID]["dialog"][random.randint(0,len(npcs[arg_EID]["dialog"]) - 1)])
+
 
 
 
