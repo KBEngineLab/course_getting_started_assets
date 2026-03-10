@@ -10,6 +10,7 @@ class Avatar(KBEngine.Proxy):
 
 	def createCell(self, arg_spaceCall):
 		self.createCellEntity(arg_spaceCall)
+		
 
 		
 	def onTimer(self, id, userArg):

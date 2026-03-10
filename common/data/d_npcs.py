@@ -2,8 +2,8 @@ data = {
 	"xinshoucun": {
 		"npc1": {
 			"name": "新手接待员",
-			"position": (0, 0, 0),
-			"direction": (0, 0, 0),
+			"position": (0.0, 0.0, 0.0),
+			"direction": (0.0, 0.0, 0.0),
 			"moveSpeed": 0,
 			"dialog": [
 				"你好玩家，我是新手接待员",
@@ -14,8 +14,8 @@ data = {
 		},
 		"npc2": {
 			"name": "鬼鬼祟祟的人",
-			"position": (0, 0, 0),
-			"direction": (0, 0, 0),
+			"position": (0.0, 0.0, 0.0),
+			"direction": (0.0, 0.0, 0.0),
 			"moveSpeed": 5,
 			"dialog": [
 				"咳咳..",

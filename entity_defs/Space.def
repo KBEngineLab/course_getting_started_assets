@@ -1,9 +1,20 @@
 <root>
+    <Properties>
+        <spaceKey>
+            <Type>UNICODE</Type>
+            <Flags>BASE</Flags>
+        </spaceKey>
+        <cellSpaceKey>
+            <Type>UNICODE</Type>
+            <Flags>CELL_PUBLIC</Flags>
+        </cellSpaceKey>
+    </Properties>
     <CellMethods>
         <loginToSpace>
             <!-- 登录的角色 -->
             <Arg>ENTITYCALL</Arg>
         </loginToSpace>
+
     </CellMethods>
     <BaseMethods>
     </BaseMethods>

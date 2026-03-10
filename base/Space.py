@@ -1,8 +1,5 @@
 import KBEngine
 
-from Account import Account
-
-
 class Space(KBEngine.Space):
 	"""
     Space的base部分，
@@ -11,6 +8,7 @@ class Space(KBEngine.Space):
 
 	def __init__(self):
 		KBEngine.Space.__init__(self)
+		self.cellData["cellSpaceKey"] = self.spaceKey
 
 
 	def onLoseCell(self):
@@ -19,5 +17,4 @@ class Space(KBEngine.Space):
 
 	def onGetCell(self):
 		KBEngine.globalData["SpaceMgr"].onSpaceGetCell(self.cell, self.spaceKey)
-
 
