@@ -28,6 +28,7 @@ class Monster(KBEngine.Entity):
 			self.HP = 0
 			self.MP = 0
 			self.state = GlobalDefine.ENTITY_STATE_DEAD
+			self.startDestroyTimer()
 
 	def setHP(self, arg_INT32):
 		self.HP = arg_INT32
@@ -46,3 +47,20 @@ class Monster(KBEngine.Entity):
 		space = KBEngine.globalData["space_%i" % self.spaceID]
 		if space:
 			space["call"].cell.onEntityDestroyed(self.eid)
+
+	def startDestroyTimer(self):
+		"""
+		virtual method.
+
+		启动销毁entitytimer
+		"""
+		if self.isState(GlobalDefine.ENTITY_STATE_DEAD):
+			# 死亡后，延时5s销毁entity
+			self.addTimer(5, 0, GlobalDefine.TIMER_TYPE_DESTROY)
+			DEBUG_MSG("Monster::startDestroyTimer: %i running." % (self.id))
+
+	def onTimer(self, timerHandle, userData):
+		if userData == GlobalDefine.TIMER_TYPE_DESTROY:
+			DEBUG_MSG("Monster::onTimer: %i destroy." % (self.id))
+			self.destroy()
+
