@@ -54,7 +54,7 @@ class Monster(KBEngine.Entity):
 
 		启动销毁entitytimer
 		"""
-		if self.isState(GlobalDefine.ENTITY_STATE_DEAD):
+		if self.state == GlobalDefine.ENTITY_STATE_DEAD:
 			# 死亡后，延时5s销毁entity
 			self.addTimer(5, 0, GlobalDefine.TIMER_TYPE_DESTROY)
 			DEBUG_MSG("Monster::startDestroyTimer: %i running." % (self.id))
