@@ -1,0 +1,22 @@
+<root>
+    <Properties>
+        <!--移动速度-->
+        <moveSpeed>
+            <Type>UINT8</Type> <!-- 使用时要缩放10倍, 最高25.5米每秒 -->
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>5</Default>
+        </moveSpeed>
+        <!--是否正在移动-->
+        <isMoving>
+            <Type>UINT8</Type>
+            <Flags>CELL_PRIVATE</Flags>
+            <Default>0</Default>
+        </isMoving>
+    </Properties>
+    <BaseMethods>
+
+    </BaseMethods>
+    <CellMethods>
+
+    </CellMethods>
+</root>

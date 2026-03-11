@@ -16,7 +16,7 @@ data = {
 			"name": "鬼鬼祟祟的人",
 			"position": (0.0, 0.0, 0.0),
 			"direction": (0.0, 0.0, 0.0),
-			"moveSpeed": 5,
+			"moveSpeed": 6,
 			"dialog": [
 				"咳咳..",
 				"走开...."

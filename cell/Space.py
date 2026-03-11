@@ -102,8 +102,10 @@ class Space(KBEngine.Space):
 		params = {
 			"eid":key,
 			"name": npc["name"],
-			"moveSpeed": npc["moveSpeed"],
 			"dialog": npc["dialog"],
+			"motion":{
+				"moveSpeed":npc["moveSpeed"]
+			}
 		}
 		KBEngine.createEntity("NPC",self.spaceID,npc["position"],npc["direction"],params)
 

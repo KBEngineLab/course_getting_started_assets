@@ -20,11 +20,16 @@
             <Type>PY_LIST</Type>
             <Flags>CELL_PUBLIC</Flags>
         </dialog>
-        <moveSpeed>
-            <Type>UINT8</Type>
-            <Flags>ALL_CLIENTS</Flags>
-        </moveSpeed>
+
     </Properties>
+
+    <Components>
+        <!-- 移动组件 -->
+        <motion>
+            <Type>Motion</Type>
+            <Persistent>false</Persistent>
+        </motion>
+    </Components>
     <BaseMethods>
 
     </BaseMethods>
