@@ -77,8 +77,8 @@ class Space(KBEngine.Space):
 				"attack": item["attack"],
 				"HP": item["HP"],
 				"MP": item["MP"],
-				"HP_MAX": item["HP_MAX"],
-				"MP_MAX": item["MP_MAX"],
+				"HP_Max": item["HP_Max"],
+				"MP_Max": item["MP_Max"],
 			}
 
 			KBEngine.createEntity("Monster",self.spaceID,self.getRandomPointInRadius(item["spawnPoints"],30),(0.0,0.0,0.0),params)

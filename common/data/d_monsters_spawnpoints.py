@@ -10,8 +10,8 @@ data = {
 			"attack":5,
 			"HP": 100,
 			"MP": 120,
-			"HP_MAX": 100,
-			"MP_MAX": 120,
+			"HP_Max": 100,
+			"MP_Max": 120,
 		},
 		"monster2": {
 			"name": "怪物2",
@@ -21,8 +21,8 @@ data = {
 			"attack":10,
 			"HP": 110,
 			"MP": 120,
-			"HP_MAX": 110,
-			"MP_MAX": 120,
+			"HP_Max": 110,
+			"MP_Max": 120,
 		},
 	}
 }
