@@ -22,7 +22,7 @@ class NPC(KBEngine.Entity):
 
 	def onTimer(self, timerHandle, userData):
 		if userData == GlobalDefine.TIMER_TYPE_NPC_MOVE:
-			position = KBEUtil.getRandomPointInRadius(self.position, 30)
+			position = KBEUtil.getRandomPointInRadius(self.position, 10)
 			self.motion.gotoPosition(position)
 
 

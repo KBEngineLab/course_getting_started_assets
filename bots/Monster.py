@@ -27,31 +27,6 @@ class Monster(KBEngine.Entity):
 		"""
 		DEBUG_MSG("%s::onLeaveWorld: %i" % (self.__class__.__name__, self.id))
 
-	def onMove(self, controllerId, userarg):
-		"""
-		KBEngine method.
-		使用引擎的任何移动相关接口， 在entity一次移动完成时均会调用此接口
-		"""
-		DEBUG_MSG("%s::onMove: %i controllerId =%i, userarg=%s" % \
-		          (self.__class__.__name__, self.id, controllerId, userarg))
-		pass
-
-	def onMoveFailure(self, controllerId, userarg):
-		"""
-		KBEngine method.
-		使用引擎的任何移动相关接口， 在entity一次移动完成时均会调用此接口
-		"""
-		DEBUG_MSG("%s::onMoveFailure: %i controllerId =%i, userarg=%s" % \
-		          (self.__class__.__name__, self.id, controllerId, userarg))
-
-	def onMoveOver(self, controllerId, userarg):
-		"""
-		KBEngine method.
-		使用引擎的任何移动相关接口， 在entity移动结束时均会调用此接口
-		"""
-		DEBUG_MSG("%s::onMoveOver: %i controllerId =%i, userarg=%s" % \
-						(self.__class__.__name__, self.id, controllerId, userarg))
-		pass
 
 	def set_HP(self, oldValue):
 		"""
