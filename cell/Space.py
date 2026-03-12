@@ -4,6 +4,7 @@ import random
 import KBEngine
 
 import GlobalDefine
+import KBEUtil
 from KBEDebug import DEBUG_MSG
 from data import d_npcs, d_monsters_spawnpoints
 import copy
@@ -81,7 +82,7 @@ class Space(KBEngine.Space):
 				"MP_Max": item["MP_Max"],
 			}
 
-			KBEngine.createEntity("Monster",self.spaceID,self.getRandomPointInRadius(item["spawnPoints"],30),(0.0,0.0,0.0),params)
+			KBEngine.createEntity("Monster",self.spaceID,KBEUtil.getRandomPointInRadius(item["spawnPoints"],30),(0.0,0.0,0.0),params)
 
 			self.monsters[key] += 1
 
@@ -118,19 +119,3 @@ class Space(KBEngine.Space):
 		if self.monsters[arg_UNICODE] <= 0:
 			self.monsters[arg_UNICODE] = 0
 
-	def getRandomPointInRadius(self,spawnPoints, radius):
-		"""
-		在spawnPoints为中心的radius半径内获取随机坐标
-		"""
-		x, y, z = spawnPoints
-
-		# 随机角度
-		angle = random.uniform(0, 2 * math.pi)
-
-		# 随机半径（sqrt保证分布均匀）
-		r = radius * math.sqrt(random.random())
-
-		new_x = x + r * math.cos(angle)
-		new_z = z + r * math.sin(angle)
-
-		return new_x, y, new_z
