@@ -4,6 +4,13 @@
         <yaw/>
         <optimized>true</optimized>
     </Volatile>
+
+    <Components>
+        <ai>
+            <Type>AI</Type>
+            <Persistent>false</Persistent>
+        </ai>
+    </Components>
     <Properties>
         <!-- Monster 名称 -->
         <name>

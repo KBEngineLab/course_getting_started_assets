@@ -1,4 +1,6 @@
 import KBEngine
+
+import KBEUtil
 from KBEDebug import *
 import Math
 
@@ -11,6 +13,27 @@ class Motion(KBEngine.EntityComponent):
 	def __init__(self):
 		KBEngine.EntityComponent.__init__(self)
 		DEBUG_MSG("Motion::__init__: created entityID = %i, dict = %s ." % ( self.ownerID, self.__dict__))
+
+	def randomWalk(self, basePos,radius):
+		"""
+		随机移动entity
+		"""
+
+		if self.isMoving:
+			return False
+
+		# 移动半径距离在30米内
+		if self.canNavigate():
+			destPos = self.owner.getRandomPoints(basePos, radius, 1, 0)
+			if len(destPos) == 0:
+				return False
+			destPos = destPos[0]
+		else:
+			destPos = KBEUtil.getRandomPointInRadius(basePos, radius)
+
+		self.gotoPosition(destPos)
+
+		return True
 
 
 	def gotoPosition(self, position, dist=0.0):

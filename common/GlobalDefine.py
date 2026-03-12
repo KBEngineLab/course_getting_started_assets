@@ -9,6 +9,7 @@
 TIMER_TYPE_NPC_CREATE = 1  # 创建ENTITY（NPC）
 TIMER_TYPE_MONSTER_CREATE = 2  # 创建ENTITY（Monster）
 TIMER_TYPE_NPC_MOVE = 3 # NPC 移动
+TIMER_TYPE_AI_HEARTBEAT = 4 # AI 心跳
 
 TIMER_TYPE_DESTROY = 11 # 销毁ENTITY
 
@@ -22,3 +23,4 @@ TIMER_TYPE_DESTROY = 11 # 销毁ENTITY
 # ------------------------------------------------------------------------------
 ENTITY_STATE_FREE										= 0
 ENTITY_STATE_DEAD										= 1
+ENTITY_STATE_FIGHT										= 3
