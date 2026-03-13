@@ -13,7 +13,7 @@ class Monster(KBEngine.Entity):
 
 	def __init__(self):
 		KBEngine.Entity.__init__(self)
-		DEBUG_MSG("Monster::__init__: created entityID = %i, spaceID = %s , position = %s." % (self.id, self.spaceID,self.position))
+		DEBUG_MSG("Monster::__init__: created entityID = %i, spaceID = %s , dict = %s." % (self.id, self.spaceID,self.__dict__))
 
 	def recvDamage(self, arg_attackerID, arg_skillID, arg_damage):
 		"""
@@ -22,7 +22,13 @@ class Monster(KBEngine.Entity):
 		if arg_attackerID == self.id:
 			return
 
-		self.HP -= arg_damage
+
+		hp = self.HP - arg_damage
+		if hp > 0:
+			self.HP = hp
+		else:
+			self.HP = 0
+
 
 		if self.HP <= 0:
 			self.HP = 0

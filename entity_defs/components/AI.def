@@ -1,11 +1,5 @@
 <root>
     <Properties>
-        <state>
-            <Type>INT8</Type>
-            <Flags>ALL_CLIENTS</Flags>
-            <Default>0</Default>
-            <Desc>AI状态：0-正常，1-战斗，2-攻击，3-技能，4-技能</Desc>
-        </state>
     </Properties>
     <BaseMethods>
 

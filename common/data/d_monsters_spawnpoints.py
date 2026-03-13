@@ -12,6 +12,8 @@ data = {
 			"MP": 120,
 			"HP_Max": 100,
 			"MP_Max": 120,
+			# 领土面积
+			"territoryArea":30,
 		},
 		"monster2": {
 			"name": "怪物2",
@@ -23,6 +25,7 @@ data = {
 			"MP": 120,
 			"HP_Max": 110,
 			"MP_Max": 120,
+			"territoryArea":30,
 		},
 	}
 }

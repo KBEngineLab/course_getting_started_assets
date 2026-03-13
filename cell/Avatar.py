@@ -42,10 +42,15 @@ class Avatar(KBEngine.Entity):
 		"""
 		受到攻击
 		"""
+		DEBUG_MSG("Avatar::recvDamage: %i, %i, %i" % (self.id, arg_attackerID, arg_damage))
 		if arg_attackerID == self.id:
 			return
 
-		self.HP -= arg_damage
+		hp = self.HP - arg_damage
+		if hp > 0:
+			self.HP = hp
+		else:
+			self.HP = 0
 
 		if self.HP <= 0:
 			self.HP = 0

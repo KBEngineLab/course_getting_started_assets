@@ -22,8 +22,7 @@ class Motion(KBEngine.EntityComponent):
 		if self.isMoving:
 			return False
 
-		# 移动半径距离在30米内
-		if self.canNavigate():
+		if self.owner.canNavigate():
 			destPos = self.owner.getRandomPoints(basePos, radius, 1, 0)
 			if len(destPos) == 0:
 				return False
@@ -57,18 +56,18 @@ class Motion(KBEngine.EntityComponent):
 		speed = self.moveSpeed
 
 		if self.owner.canNavigate():
-			DEBUG_MSG("Motion(%s[%i])::gotoPosition: canNavigate=True" % (self.owner.__class__.__name__, self.ownerID))
+			# DEBUG_MSG("Motion(%s[%i])::gotoPosition: canNavigate=True" % (self.owner.__class__.__name__, self.ownerID))
 			self.owner.navigate(Math.Vector3(position), speed, dist, speed, 512.0, True, 0, None)
 		else:
 			if dist > 0.0:
-				dest_pos = Math.Vector3(position) - self.position
+				dest_pos = Math.Vector3(position) - self.owner.position
 				dest_pos.normalise()
 				dest_pos *= dist
 				dest_pos = position - dest_pos
 			else:
 				dest_pos = Math.Vector3(position)
 
-			WARNING_MSG("Motion(%s[%i])::gotoPosition: canNavigate=False" % (self.owner.__class__.__name__, self.ownerID))
+			# WARNING_MSG("Motion(%s[%i])::gotoPosition: canNavigate=False" % (self.owner.__class__.__name__, self.ownerID))
 
 			self.owner.moveToPoint(dest_pos, speed, 0, None, True, False)
 
@@ -108,7 +107,7 @@ class Motion(KBEngine.EntityComponent):
 		:param userarg:
 		:return:
 		"""
-		DEBUG_MSG("Motion::onMove: %i controllerId =%i, userarg=%s ,position=%s" % (self.owner.id, controllerId, userarg,self.owner.position))
+		# DEBUG_MSG("Motion(%s[%i])::onMove:  controllerId =%i, userarg=%s ,position=%s" % (self.owner.__class__.__name__,self.owner.id, controllerId, userarg,self.owner.position))
 		self.isMoving = True
 
 

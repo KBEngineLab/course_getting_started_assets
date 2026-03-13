@@ -58,6 +58,12 @@
             <Default>120</Default>
         </MP_Max>
 
+        <state>
+            <Type>INT8</Type>
+            <Flags>ALL_CLIENTS</Flags>
+            <Default>0</Default>
+            <Desc>角色状态，0：正常 ，1：死亡，2：战斗</Desc>
+        </state>
         <!-- 战斗相关 END -->
 
 
