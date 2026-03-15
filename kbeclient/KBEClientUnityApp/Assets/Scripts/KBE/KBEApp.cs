@@ -9,6 +9,12 @@ public class KBEApp : UnityKBEMain
     {
         KBELog.Init(new UnityLogProvider());
 
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+
         InstallEvents();
     }
 
@@ -80,7 +86,7 @@ public class KBEApp : UnityKBEMain
         LogMgr.Instance.AddLog("KBEApp::OnLoginBaseapp success");
     }
 
-    public void OnCreateAccountResult(UInt16 retcode)
+    public void OnCreateAccountResult(UInt16 retcode,byte[]  data)
     {
         if (retcode != 0)
         {

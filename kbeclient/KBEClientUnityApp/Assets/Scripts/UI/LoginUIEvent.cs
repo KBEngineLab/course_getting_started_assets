@@ -55,13 +55,13 @@ public class LoginUIEvent : MonoBehaviour
     public void OnLoginPanelLoginBtnClick()
     {
 
-        if (username.text.Length <= 5)
+        if (username.text.Length < 5)
         {
             LogMgr.Instance.AddLog("Username length must be at least 5 characters.");
             return;
         }
 
-        if (password.text.Length <= 5)
+        if (password.text.Length < 5)
         {
             LogMgr.Instance.AddLog("Password length must be at least 5 characters.");
         }
@@ -76,13 +76,13 @@ public class LoginUIEvent : MonoBehaviour
     /// </summary>
     public void OnLoginPanelRegisterBtnClick()
     {
-        if (username.text.Length <= 5)
+        if (username.text.Length < 5)
         {
             LogMgr.Instance.AddLog("Username length must be at least 5 characters.");
             return;
         }
 
-        if (password.text.Length <= 5)
+        if (password.text.Length < 5)
         {
             LogMgr.Instance.AddLog("Password length must be at least 5 characters.");
         }
