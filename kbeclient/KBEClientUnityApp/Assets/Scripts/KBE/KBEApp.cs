@@ -12,6 +12,12 @@ public class KBEApp : UnityKBEMain
         InstallEvents();
     }
 
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        KBEngine.Event.deregisterOut(this);
+    }
+
 
     void InstallEvents()
     {

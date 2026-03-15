@@ -80,7 +80,7 @@ public class LogMgr : MonoBehaviour
         text.text = msg;
         text.fontSize = 16;
         text.color = Color.white;
-        text.enableWordWrapping = false;
+        text.enableWordWrapping = true;
 
         RectTransform rect = text.rectTransform;
         rect.anchorMin = new Vector2(0, 1);

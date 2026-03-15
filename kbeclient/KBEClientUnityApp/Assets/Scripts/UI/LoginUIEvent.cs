@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using KBEngine;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LoginUIEvent : MonoBehaviour
 {
+    public static LoginUIEvent instance;
     public GameObject loginPanel;
     public GameObject selectAvatarPanel;
     public GameObject createAvatarPanel;
@@ -14,9 +16,9 @@ public class LoginUIEvent : MonoBehaviour
     public GameObject avatarList;
 
 
-    public InputField username;
-    public InputField password;
-    public InputField avatarName;
+    public TMP_InputField username;
+    public TMP_InputField password;
+    public TMP_InputField avatarName;
 
 
     private void Awake()
@@ -24,6 +26,27 @@ public class LoginUIEvent : MonoBehaviour
         loginPanel.SetActive(true);
         selectAvatarPanel.SetActive(false);
         createAvatarPanel.SetActive(false);
+
+
+        // KBEngine.Event.registerOut(KBECustomEventTypes.onLoginSuccessfully, this, "OnLoginSuccessfully");
+        instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        KBEngine.Event.deregisterOut(this);
+    }
+
+    /// <summary>
+    /// 登录成功
+    /// </summary>
+    /// <param name="entityId">entityId</param>
+    public void OnLoginSuccessfully(int entityId)
+    {
+        LogMgr.Instance.AddLog($"OnLoginSuccessfully:: login success, entityId:{entityId}");
+
+        loginPanel.SetActive(false);
+        selectAvatarPanel.SetActive(true);
     }
 
     /// <summary>
@@ -31,8 +54,21 @@ public class LoginUIEvent : MonoBehaviour
     /// </summary>
     public void OnLoginPanelLoginBtnClick()
     {
-        loginPanel.SetActive(false);
-        selectAvatarPanel.SetActive(true);
+
+        if (username.text.Length <= 5)
+        {
+            LogMgr.Instance.AddLog("Username length must be at least 5 characters.");
+            return;
+        }
+
+        if (password.text.Length <= 5)
+        {
+            LogMgr.Instance.AddLog("Password length must be at least 5 characters.");
+        }
+
+
+        // 调用KBE底层的login方法
+        KBEngineApp.app.login(username.text, password.text,Array.Empty<byte>());
     }
 
     /// <summary>
@@ -40,7 +76,18 @@ public class LoginUIEvent : MonoBehaviour
     /// </summary>
     public void OnLoginPanelRegisterBtnClick()
     {
+        if (username.text.Length <= 5)
+        {
+            LogMgr.Instance.AddLog("Username length must be at least 5 characters.");
+            return;
+        }
 
+        if (password.text.Length <= 5)
+        {
+            LogMgr.Instance.AddLog("Password length must be at least 5 characters.");
+        }
+
+        KBEngineApp.app.createAccount(username.text, password.text,Array.Empty<byte>());
     }
 
     /// <summary>
