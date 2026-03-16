@@ -17,14 +17,14 @@ namespace KBEngine
 		public AVATAR_INFO createFromStreamEx(MemoryStream stream)
 		{
 			AVATAR_INFO datas = new AVATAR_INFO();
-			datas.dbid = stream.readUint64();
+			datas.dbid = stream.readInt64();
 			datas.name = stream.readUnicode();
 			return datas;
 		}
 
 		public void addToStreamEx(Bundle stream, AVATAR_INFO v)
 		{
-			stream.writeUint64(v.dbid);
+			stream.writeInt64(v.dbid);
 			stream.writeUnicode(v.name);
 		}
 	}

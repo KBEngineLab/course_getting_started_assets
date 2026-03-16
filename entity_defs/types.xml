@@ -12,7 +12,7 @@
         <!-- 这个数据结构的成员 -->
         <Properties>
             <dbid>
-                <Type>DBID</Type>
+                <Type>INT64</Type>
             </dbid>
             <name>
                 <Type>UNICODE</Type>

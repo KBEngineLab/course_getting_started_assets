@@ -746,7 +746,7 @@ namespace KBEngine
 
 	public class AVATAR_INFO
 	{
-		public UInt64 dbid = 0;
+		public Int64 dbid = 0;
 		public string name = "";
 
 	}

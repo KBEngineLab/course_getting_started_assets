@@ -19,7 +19,7 @@ namespace KBEngine
             if (isPlayer()) instance = this;
 
             // Event.fireOut(KBECustomEventTypes.onLoginSuccessfully,id);
-            LoginUIEvent.instance.OnLoginSuccessfully(id);
+            LoginUIEvent.Instance.OnLoginSuccessfully(id);
 
         }
 
@@ -30,6 +30,8 @@ namespace KBEngine
             {
                 Debug.Log(avatarInfo);
             }
+
+            LoginUIEvent.Instance.UpdateAvatarList(arg1);
             
         }
 
@@ -50,11 +52,22 @@ namespace KBEngine
             {
                 Debug.Log(avatarInfo);
             }
+
+            LoginUIEvent.Instance.UpdateAvatarList(arg2);
         }
 
         public override void onReqRemoveAvatar(byte arg1, long arg2)
         {
-            throw new System.NotImplementedException();
+            if (arg1 == 1)
+            {
+                LogMgr.Instance.AddLog("Remove avatar success");
+                baseEntityCall.reqAvatarList();
+            }
+            else
+            {
+                LogMgr.Instance.AddLog("Remove avatar error");
+            }
+
         }
     }
 

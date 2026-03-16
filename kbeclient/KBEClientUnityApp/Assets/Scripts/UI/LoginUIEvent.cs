@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using KBEngine;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoginUIEvent : MonoBehaviour
 {
-    public static LoginUIEvent instance;
+    public static LoginUIEvent Instance;
     public GameObject loginPanel;
     public GameObject selectAvatarPanel;
     public GameObject createAvatarPanel;
@@ -21,6 +22,13 @@ public class LoginUIEvent : MonoBehaviour
     public TMP_InputField avatarName;
 
 
+    public GameObject avatarItemPrefab;
+
+
+
+    private Int64 selectedAvatarDBID = 0;
+
+
     private void Awake()
     {
         loginPanel.SetActive(true);
@@ -29,7 +37,7 @@ public class LoginUIEvent : MonoBehaviour
 
 
         // KBEngine.Event.registerOut(KBECustomEventTypes.onLoginSuccessfully, this, "OnLoginSuccessfully");
-        instance = this;
+        Instance = this;
     }
 
     private void OnDestroy()
@@ -40,7 +48,36 @@ public class LoginUIEvent : MonoBehaviour
 
     public void UpdateAvatarList(List<AVATAR_INFO> avatarInfos)
     {
+        // 1. 清空旧列表
+        for (int i = avatarList.transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(avatarList.transform.GetChild(i).gameObject);
+        }
 
+        // 2. 遍历 avatarInfos
+        foreach (var info in avatarInfos)
+        {
+            // 3. 创建 Button
+            GameObject obj = Instantiate(avatarItemPrefab, avatarList.transform);
+            Button btn = obj.GetComponent<Button>();
+
+            // 设置文字
+            TMP_Text txt = obj.GetComponentInChildren<TMP_Text>();
+            if (txt)
+            {
+                txt.text = info.name;
+            }
+
+            // 4. 添加点击事件
+            string name = info.name; // 防止闭包问题
+            Int64 dbid = info.dbid; // 防止闭包问题
+            btn.onClick.AddListener(() =>
+            {
+                Debug.Log("Click Avatar: " + name + "dbid:" + dbid);
+                selectedAvatarDBID = dbid;
+            });
+
+        }
     }
 
     /// <summary>
@@ -113,7 +150,9 @@ public class LoginUIEvent : MonoBehaviour
     /// </summary>
     public void OnSelectAvatarPanelRemoveAvatarBtnClick()
     {
+        if (selectedAvatarDBID == 0) return;
 
+        Account.instance.baseEntityCall.reqRemoveAvatar(selectedAvatarDBID);
     }
 
 
@@ -122,7 +161,9 @@ public class LoginUIEvent : MonoBehaviour
     /// </summary>
     public void OnSelectAvatarPanelEnterGameBtnClick()
     {
+        if (selectedAvatarDBID == 0) return;
 
+        Account.instance.baseEntityCall.reqAvatarEnterGame(selectedAvatarDBID);
     }
 
 
@@ -139,6 +180,9 @@ public class LoginUIEvent : MonoBehaviour
 
 
         Account.instance.baseEntityCall.reqCreateAvatar(avatarName.text);
+        avatarName.text = "";
+        createAvatarPanel.SetActive(false);
+
     }
 
     /// <summary>
