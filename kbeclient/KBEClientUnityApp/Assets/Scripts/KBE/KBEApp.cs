@@ -71,9 +71,9 @@ public class KBEApp : UnityKBEMain
         LogMgr.Instance.AddLog($"KBEApp::OnScriptVersionNotMatch: verInfo:{verInfo}，serVerInfo:{serVerInfo}");
     }
 
-    public void OnLoginFailed(UInt16 failedcode)
+    public void OnLoginFailed(UInt16 failedcode, byte[] serverdatas)
     {
-        LogMgr.Instance.AddLog($"KBEApp::OnLoginFailed:{KBEngineApp.app.serverErr(failedcode)}");
+        LogMgr.Instance.AddLog($"KBEApp::OnLoginFailed:{KBEngineApp.app.serverErr(failedcode)} , {System.Text.Encoding.ASCII.GetString(serverdatas)}");
     }
 
     public void OnLoginBaseappFailed(UInt16 failedcode)
