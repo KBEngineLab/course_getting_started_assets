@@ -13,7 +13,7 @@ namespace KBEngine
         {
             base.__init__();
             // Event.fireOut(KBECustomEventTypes.onLoginSuccessfully,id);
-            LoginUIEvent.instance.OnLoginSuccessfully(id);
+            LoginUIEvent.Instance.OnLoginSuccessfully(id);
         }
 
         public override void onReqAvatarList(byte[] arg1)

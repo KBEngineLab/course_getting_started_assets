@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class LoginUIEvent : MonoBehaviour
 {
-    public static LoginUIEvent instance;
+    public static LoginUIEvent Instance;
     public GameObject loginPanel;
     public GameObject selectAvatarPanel;
     public GameObject createAvatarPanel;
@@ -29,7 +29,7 @@ public class LoginUIEvent : MonoBehaviour
 
 
         // KBEngine.Event.registerOut(KBECustomEventTypes.onLoginSuccessfully, this, "OnLoginSuccessfully");
-        instance = this;
+        Instance = this;
     }
 
     private void OnDestroy()
