@@ -19,8 +19,8 @@ namespace KBEngine
 		public EntityCellEntityCall_AccountBase cellEntityCall = null;
 
 
-		public abstract void onReqAvatarList(byte[] arg1); 
-		public abstract void onReqCreateAvatar(Byte arg1, byte[] arg2); 
+		public abstract void onReqAvatarList(AVATAR_LIST arg1); 
+		public abstract void onReqCreateAvatar(Byte arg1, AVATAR_LIST arg2); 
 		public abstract void onReqRemoveAvatar(Byte arg1, Int64 arg2); 
 
 		public AccountBase()
@@ -114,12 +114,12 @@ namespace KBEngine
 			switch(method.methodUtype)
 			{
 				case 5:
-					byte[] onReqAvatarList_arg1 = stream.readPython();
+					AVATAR_LIST onReqAvatarList_arg1 = ((DATATYPE_AVATAR_LIST)method.args[0]).createFromStreamEx(stream);
 					onReqAvatarList(onReqAvatarList_arg1);
 					break;
 				case 6:
 					Byte onReqCreateAvatar_arg1 = stream.readUint8();
-					byte[] onReqCreateAvatar_arg2 = stream.readPython();
+					AVATAR_LIST onReqCreateAvatar_arg2 = ((DATATYPE_AVATAR_LIST)method.args[1]).createFromStreamEx(stream);
 					onReqCreateAvatar(onReqCreateAvatar_arg1, onReqCreateAvatar_arg2);
 					break;
 				case 7:

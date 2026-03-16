@@ -37,6 +37,12 @@ public class LoginUIEvent : MonoBehaviour
         KBEngine.Event.deregisterOut(this);
     }
 
+
+    public void UpdateAvatarList(List<AVATAR_INFO> avatarInfos)
+    {
+
+    }
+
     /// <summary>
     /// 登录成功
     /// </summary>
@@ -47,6 +53,9 @@ public class LoginUIEvent : MonoBehaviour
 
         loginPanel.SetActive(false);
         selectAvatarPanel.SetActive(true);
+
+
+        Account.instance.baseEntityCall.reqAvatarList();
     }
 
     /// <summary>
@@ -122,7 +131,14 @@ public class LoginUIEvent : MonoBehaviour
     /// </summary>
     public void OnCreateAvatarPanelCreateBtnClick()
     {
+        if (avatarName.text.Length < 1)
+        {
+            LogMgr.Instance.AddLog("Avatar name must be at least 2 characters.");
+            return;
+        }
 
+
+        Account.instance.baseEntityCall.reqCreateAvatar(avatarName.text);
     }
 
     /// <summary>

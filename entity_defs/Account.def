@@ -1,7 +1,7 @@
 <root>
 	<Properties>
 		<characters>
-			<Type>			PY_LIST		</Type>
+			<Type>			AVATAR_LIST		</Type>
 			<Flags>			BASE					</Flags>
 			<Default>								</Default>
 			<Persistent>		true				</Persistent>
@@ -12,13 +12,13 @@
 	<ClientMethods>
 		<!-- 获取角色列表回调 -->
 		<onReqAvatarList>
-			<Arg>			PY_LIST	</Arg>
+			<Arg>			AVATAR_LIST	</Arg>
 		</onReqAvatarList>
 
 		<!-- 创建角色 -->
 		<onReqCreateAvatar>
 			<Arg>			UINT8				</Arg>	<!-- 状态，1：成功，0：失败，2：角色达到上限 -->
-			<Arg>PY_LIST</Arg>
+			<Arg>AVATAR_LIST</Arg>
 		</onReqCreateAvatar>
 
 		<!-- 删除角色 -->

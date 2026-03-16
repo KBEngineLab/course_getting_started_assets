@@ -744,5 +744,17 @@ namespace KBEngine
 		}
 	}
 
+	public class AVATAR_INFO
+	{
+		public UInt64 dbid = 0;
+		public string name = "";
+
+	}
+
+	public class AVATAR_LIST : List<AVATAR_INFO>
+	{
+
+	}
+
 
 }
