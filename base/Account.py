@@ -37,11 +37,14 @@ class Account(KBEngine.Proxy):
 		"""
 		INFO_MSG(ip, port, password)
 
-		if self.activeAvatar:
-			if self.activeAvatar.client is not None:
-				self.activeAvatar.giveClientTo(self)
+		try:
+			if self.activeAvatar and not self.activeAvatar.isDestroyed:
+				if self.activeAvatar.client is not None:
+					self.activeAvatar.giveClientTo(self)
 
-			self.activeAvatar.destroyCellEntity()
+				self.activeAvatar.destroyCellEntity()
+				self.activeAvatar = None
+		except:
 			self.activeAvatar = None
 
 
