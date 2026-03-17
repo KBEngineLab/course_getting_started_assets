@@ -43,13 +43,25 @@ class Avatar(KBEngine.Proxy):
 		"""
 		INFO_MSG(ip, port, password)
 		return KBEngine.LOG_ON_ACCEPT
-		
+
+
 	def onClientDeath(self):
 		"""
 		KBEngine method.
 		客户端对应实体已经销毁
 		"""
+
 		DEBUG_MSG("Avatar[%i].onClientDeath:" % self.id)
+
+		if self.cell is not None:
+			# 销毁cell实体
+			self.destroyCellEntity()
+			return
+
+	def onLoseCell(self):
 		self.destroy()
+
+
+
 
 

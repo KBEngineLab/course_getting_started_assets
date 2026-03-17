@@ -9,6 +9,7 @@ from data import d_spaces, d_avatar_init
 class Account(KBEngine.Proxy):
 	def __init__(self):
 		KBEngine.Proxy.__init__(self)
+		self.activeAvatar = None
 		
 	def onTimer(self, id, userArg):
 		"""
@@ -35,6 +36,15 @@ class Account(KBEngine.Proxy):
 		客户端登陆失败时会回调到这里
 		"""
 		INFO_MSG(ip, port, password)
+
+		if self.activeAvatar:
+			if self.activeAvatar.client is not None:
+				self.activeAvatar.giveClientTo(self)
+
+			self.activeAvatar.destroyCellEntity()
+			self.activeAvatar = None
+
+
 		return KBEngine.LOG_ON_ACCEPT
 		
 	def onClientDeath(self):
@@ -126,15 +136,15 @@ class Account(KBEngine.Proxy):
 		客户端请求角色进入游戏世界
 		"""
 		DEBUG_MSG("Account[%i].reqAvatarEnterGame:AvatarID:%i" % (self.id,arg_DBID))
-
 		for character in self.characters:
 			if character["dbid"] == arg_DBID:
 				KBEngine.createEntityFromDBID("Avatar", arg_DBID, self._onAvatarCreated)
 
+
 	def _onAvatarCreated(self, baseRef, dbid, wasActive):
-		# if wasActive:
-		# 	ERROR_MSG("Account::_onAvatarCreated:(%i): this character is in world now!" % (self.id))
-		# 	return
+		if wasActive:
+			ERROR_MSG("Account::_onAvatarCreated:(%i): this character is in world now!" % (self.id))
+			return
 		if baseRef is None:
 			ERROR_MSG("Account::_onAvatarCreated:(%i): the character you wanted to created is not exist!" % (self.id))
 			return
@@ -151,6 +161,7 @@ class Account(KBEngine.Proxy):
 
 		# 可以从配置文件或者持久化中获取角色的地图位置，这里我们写死
 		self.client.onEnter("world")
+		self.activeAvatar = avatar
 		self.giveClientTo(avatar)
 
 	def reqRemoveAvatar(self, arg_DBID):
@@ -166,6 +177,11 @@ class Account(KBEngine.Proxy):
 				return
 
 		self.client.onReqRemoveAvatar(0,0)
+
+	def onDestroy(self):
+		if self.activeAvatar:
+			self.activeAvatar = None
+
 
 
 
