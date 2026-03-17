@@ -132,9 +132,9 @@ class Account(KBEngine.Proxy):
 				KBEngine.createEntityFromDBID("Avatar", arg_DBID, self._onAvatarCreated)
 
 	def _onAvatarCreated(self, baseRef, dbid, wasActive):
-		if wasActive:
-			ERROR_MSG("Account::_onAvatarCreated:(%i): this character is in world now!" % (self.id))
-			return
+		# if wasActive:
+		# 	ERROR_MSG("Account::_onAvatarCreated:(%i): this character is in world now!" % (self.id))
+		# 	return
 		if baseRef is None:
 			ERROR_MSG("Account::_onAvatarCreated:(%i): the character you wanted to created is not exist!" % (self.id))
 			return
@@ -149,6 +149,8 @@ class Account(KBEngine.Proxy):
 			avatar.destroy()
 			return
 
+		# 可以从配置文件或者持久化中获取角色的地图位置，这里我们写死
+		self.client.onEnter("world")
 		self.giveClientTo(avatar)
 
 	def reqRemoveAvatar(self, arg_DBID):
