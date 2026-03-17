@@ -7,11 +7,15 @@ namespace KBEngine
         public override void onHPChanged(int oldValue)
         {
             base.onHPChanged(oldValue);
+            var headInfoUI = ((GameObject)renderObj).GetComponent<HeadInfoUI>();
+            headInfoUI.SetHP(HP,HP_Max);
         }
 
         public override void onHP_MaxChanged(int oldValue)
         {
             base.onHP_MaxChanged(oldValue);
+            var headInfoUI = ((GameObject)renderObj).GetComponent<HeadInfoUI>();
+            headInfoUI.SetHP(HP,HP_Max);
         }
 
         public override void onDestroy()
