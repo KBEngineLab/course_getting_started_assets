@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using KBEngine;
 using UnityEngine;
 
 // 强制要求该物体必须挂载 CharacterController 组件
@@ -30,6 +31,12 @@ public class PlayerMoveController : MonoBehaviour
 
     void Update()
     {
+        var avatar = KBEngine.Avatar.Instance;
+        if (avatar == null) return;
+
+        // 死亡状态
+        if (avatar.state == 1) return;
+
         // 获取输入
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -59,5 +66,8 @@ public class PlayerMoveController : MonoBehaviour
 
         // 只调用一次 Move
         controller.Move(finalMove * Time.deltaTime);
+
+        avatar.position = new KBVector3(-gameObject.transform.position.x,
+            gameObject.transform.position.y, gameObject.transform.position.z);
     }
 }

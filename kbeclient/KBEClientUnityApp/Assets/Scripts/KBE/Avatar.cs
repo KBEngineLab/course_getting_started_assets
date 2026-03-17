@@ -48,6 +48,11 @@ namespace KBEngine
             var headInfoUI = player.GetComponent<HeadInfoUI>();
             headInfoUI.SetName(name);
             headInfoUI.SetHP(HP,HP_Max);
+
+            if (WorldUIEvent.Instance)
+            {
+                WorldUIEvent.Instance.UpdateReviveBtnState(state);
+            }
         }
 
 
@@ -71,6 +76,12 @@ namespace KBEngine
         public override void onStateChanged(sbyte oldValue)
         {
             base.onStateChanged(oldValue);
+
+            if (WorldUIEvent.Instance)
+            {
+                WorldUIEvent.Instance.UpdateReviveBtnState(state);
+            }
+
         }
 
         public override void onDialog(int arg1, string arg2)
