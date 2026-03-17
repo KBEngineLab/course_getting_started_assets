@@ -172,12 +172,18 @@ class Account(KBEngine.Proxy):
 		客户端请求删除角色
 		"""
 		DEBUG_MSG("Account[%i].reqRemoveAvatar:%i" % (self.id, arg_DBID))
-
-		for character in self.characters:
+		# 现遍历时 remove() 可能带来一些问题
+		for i, character in enumerate(self.characters):
 			if character["dbid"] == arg_DBID:
-				self.characters.remove(character)
-				self.client.onReqRemoveAvatar(1,character["dbid"])
+				del self.characters[i]
+				self.client.onReqRemoveAvatar(1, character["dbid"])
+				self.writeToDB()
 				return
+		# for character in self.characters:
+		# 	if character["dbid"] == arg_DBID:
+		# 		self.characters.remove(character)
+		# 		self.client.onReqRemoveAvatar(1,character["dbid"])
+		# 		return
 
 		self.client.onReqRemoveAvatar(0,0)
 
