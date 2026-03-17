@@ -28,6 +28,8 @@ namespace KBEngine
 		public virtual void onMP_MaxChanged(Int32 oldValue) {}
 		public Int32 attack = 0;
 		public virtual void onAttackChanged(Int32 oldValue) {}
+		public UInt16 moveSpeed = 6;
+		public virtual void onMoveSpeedChanged(UInt16 oldValue) {}
 		public string name = "";
 		public virtual void onNameChanged(string oldValue) {}
 		public SByte state = 0;
@@ -182,7 +184,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 7:
+					case 8:
 						Int32 oldval_HP = HP;
 						HP = stream.readInt32();
 
@@ -198,7 +200,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 8:
+					case 9:
 						Int32 oldval_HP_Max = HP_Max;
 						HP_Max = stream.readInt32();
 
@@ -214,7 +216,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 9:
+					case 10:
 						Int32 oldval_MP = MP;
 						MP = stream.readInt32();
 
@@ -230,7 +232,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 10:
+					case 11:
 						Int32 oldval_MP_Max = MP_Max;
 						MP_Max = stream.readInt32();
 
@@ -246,7 +248,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 6:
+					case 7:
 						Int32 oldval_attack = attack;
 						attack = stream.readInt32();
 
@@ -275,6 +277,22 @@ namespace KBEngine
 						{
 							if(inWorld)
 								onDirectionChanged(oldval_direction);
+						}
+
+						break;
+					case 6:
+						UInt16 oldval_moveSpeed = moveSpeed;
+						moveSpeed = stream.readUint16();
+
+						if(prop.isBase())
+						{
+							if(inited)
+								onMoveSpeedChanged(oldval_moveSpeed);
+						}
+						else
+						{
+							if(inWorld)
+								onMoveSpeedChanged(oldval_moveSpeed);
 						}
 
 						break;
@@ -313,7 +331,7 @@ namespace KBEngine
 					case 40002:
 						stream.readUint32();
 						break;
-					case 11:
+					case 12:
 						SByte oldval_state = state;
 						state = stream.readInt8();
 
@@ -466,8 +484,29 @@ namespace KBEngine
 				}
 			}
 
+			UInt16 oldval_moveSpeed = moveSpeed;
+			Property prop_moveSpeed = pdatas[9];
+			if(prop_moveSpeed.isBase())
+			{
+				if(inited && !inWorld)
+					onMoveSpeedChanged(oldval_moveSpeed);
+			}
+			else
+			{
+				if(inWorld)
+				{
+					if(prop_moveSpeed.isOwnerOnly() && !isPlayer())
+					{
+					}
+					else
+					{
+						onMoveSpeedChanged(oldval_moveSpeed);
+					}
+				}
+			}
+
 			string oldval_name = name;
-			Property prop_name = pdatas[9];
+			Property prop_name = pdatas[10];
 			if(prop_name.isBase())
 			{
 				if(inited && !inWorld)
@@ -509,7 +548,7 @@ namespace KBEngine
 			}
 
 			SByte oldval_state = state;
-			Property prop_state = pdatas[10];
+			Property prop_state = pdatas[11];
 			if(prop_state.isBase())
 			{
 				if(inited && !inWorld)

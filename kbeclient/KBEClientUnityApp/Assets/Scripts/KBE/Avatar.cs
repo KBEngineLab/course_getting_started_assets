@@ -49,6 +49,8 @@ namespace KBEngine
             headInfoUI.SetName(name);
             headInfoUI.SetHP(HP,HP_Max);
 
+            var playerMoveController = player.GetComponent<PlayerMoveController>();
+            playerMoveController.moveSpeed = moveSpeed;
             if (WorldUIEvent.Instance)
             {
                 WorldUIEvent.Instance.UpdateReviveBtnState(state);

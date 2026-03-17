@@ -2,7 +2,7 @@ data = {
 	"xinshoucun": {
 		"monster1": {
 			"name": "怪物1",
-			"moveSpeed": 6,
+			"moveSpeed": 4,
 			# 创建的数量
 			"createCount": 10,
 			# 出生点
@@ -17,7 +17,7 @@ data = {
 		},
 		"monster2": {
 			"name": "怪物2",
-			"moveSpeed": 6,
+			"moveSpeed": 4,
 			"createCount": 15,
 			"spawnPoints":(0.0, 0.0, 0.0),
 			"attack":10,

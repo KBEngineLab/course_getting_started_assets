@@ -18,7 +18,7 @@ namespace KBEngine
 
 		public EntityBaseEntityCall_MonsterBase(Int32 eid, string ename) : base(eid, ename)
 		{
-			motion = new EntityBaseEntityCall_MotionBase(26, id);
+			motion = new EntityBaseEntityCall_MotionBase(27, id);
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_BASE;
 		}
 
@@ -30,7 +30,7 @@ namespace KBEngine
 
 		public EntityCellEntityCall_MonsterBase(Int32 eid, string ename) : base(eid, ename)
 		{
-			motion = new EntityCellEntityCall_MotionBase(26, id);
+			motion = new EntityCellEntityCall_MotionBase(27, id);
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_CELL;
 		}
 

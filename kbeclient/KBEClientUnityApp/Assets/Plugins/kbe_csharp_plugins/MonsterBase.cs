@@ -44,7 +44,7 @@ namespace KBEngine
 				{
 					motion = (MotionBase)Activator.CreateInstance(entityComponentScript);
 					motion.owner = this;
-					motion.entityComponentPropertyID = 26;
+					motion.entityComponentPropertyID = 27;
 					motion.name_ = "Motion";
 				}
 			}
@@ -152,7 +152,7 @@ namespace KBEngine
 				Property pComponentPropertyDescription = sm.idpropertys[componentPropertyUType];
 				switch(pComponentPropertyDescription.properUtype)
 				{
-					case 26:
+					case 27:
 						motion.onRemoteMethodCall(methodUtype, stream);
 						break;
 					default:
@@ -203,7 +203,7 @@ namespace KBEngine
 					Property pComponentPropertyDescription = pdatas[_t_utype];
 					switch(pComponentPropertyDescription.properUtype)
 					{
-						case 26:
+						case 27:
 							motion.onUpdatePropertys(_t_child_utype, stream, -1);
 							break;
 						default:
@@ -215,7 +215,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 21:
+					case 22:
 						Int32 oldval_HP = HP;
 						HP = stream.readInt32();
 
@@ -231,7 +231,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 22:
+					case 23:
 						Int32 oldval_HP_Max = HP_Max;
 						HP_Max = stream.readInt32();
 
@@ -247,7 +247,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 23:
+					case 24:
 						Int32 oldval_MP = MP;
 						MP = stream.readInt32();
 
@@ -263,7 +263,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 24:
+					case 25:
 						Int32 oldval_MP_Max = MP_Max;
 						MP_Max = stream.readInt32();
 
@@ -295,7 +295,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 19:
+					case 20:
 						string oldval_eid = eid;
 						eid = stream.readUnicode();
 
@@ -311,10 +311,10 @@ namespace KBEngine
 						}
 
 						break;
-					case 26:
+					case 27:
 						motion.createFromStream(stream);
 						break;
-					case 18:
+					case 19:
 						string oldval_name = name;
 						name = stream.readUnicode();
 
@@ -349,7 +349,7 @@ namespace KBEngine
 					case 40002:
 						stream.readUint32();
 						break;
-					case 20:
+					case 21:
 						SByte oldval_state = state;
 						state = stream.readInt8();
 

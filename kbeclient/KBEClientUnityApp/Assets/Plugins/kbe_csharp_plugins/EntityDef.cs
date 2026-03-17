@@ -295,7 +295,7 @@ namespace KBEngine
 
 			Property pAvatar_HP = new Property();
 			pAvatar_HP.name = "HP";
-			pAvatar_HP.properUtype = 7;
+			pAvatar_HP.properUtype = 8;
 			pAvatar_HP.properFlags = 4;
 			pAvatar_HP.aliasID = 4;
 			Int32 Avatar_HP_defval;
@@ -306,11 +306,11 @@ namespace KBEngine
 			pAvatarModule.usePropertyDescrAlias = true;
 			pAvatarModule.idpropertys[(UInt16)pAvatar_HP.aliasID] = pAvatar_HP;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(HP / 7).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(HP / 8).");
 
 			Property pAvatar_HP_Max = new Property();
 			pAvatar_HP_Max.name = "HP_Max";
-			pAvatar_HP_Max.properUtype = 8;
+			pAvatar_HP_Max.properUtype = 9;
 			pAvatar_HP_Max.properFlags = 4;
 			pAvatar_HP_Max.aliasID = 5;
 			Int32 Avatar_HP_Max_defval;
@@ -321,11 +321,11 @@ namespace KBEngine
 			pAvatarModule.usePropertyDescrAlias = true;
 			pAvatarModule.idpropertys[(UInt16)pAvatar_HP_Max.aliasID] = pAvatar_HP_Max;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(HP_Max / 8).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(HP_Max / 9).");
 
 			Property pAvatar_MP = new Property();
 			pAvatar_MP.name = "MP";
-			pAvatar_MP.properUtype = 9;
+			pAvatar_MP.properUtype = 10;
 			pAvatar_MP.properFlags = 4;
 			pAvatar_MP.aliasID = 6;
 			Int32 Avatar_MP_defval;
@@ -336,11 +336,11 @@ namespace KBEngine
 			pAvatarModule.usePropertyDescrAlias = true;
 			pAvatarModule.idpropertys[(UInt16)pAvatar_MP.aliasID] = pAvatar_MP;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(MP / 9).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(MP / 10).");
 
 			Property pAvatar_MP_Max = new Property();
 			pAvatar_MP_Max.name = "MP_Max";
-			pAvatar_MP_Max.properUtype = 10;
+			pAvatar_MP_Max.properUtype = 11;
 			pAvatar_MP_Max.properFlags = 4;
 			pAvatar_MP_Max.aliasID = 7;
 			Int32 Avatar_MP_Max_defval;
@@ -351,11 +351,11 @@ namespace KBEngine
 			pAvatarModule.usePropertyDescrAlias = true;
 			pAvatarModule.idpropertys[(UInt16)pAvatar_MP_Max.aliasID] = pAvatar_MP_Max;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(MP_Max / 10).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(MP_Max / 11).");
 
 			Property pAvatar_attack = new Property();
 			pAvatar_attack.name = "attack";
-			pAvatar_attack.properUtype = 6;
+			pAvatar_attack.properUtype = 7;
 			pAvatar_attack.properFlags = 4;
 			pAvatar_attack.aliasID = 8;
 			Int32 Avatar_attack_defval;
@@ -366,13 +366,28 @@ namespace KBEngine
 			pAvatarModule.usePropertyDescrAlias = true;
 			pAvatarModule.idpropertys[(UInt16)pAvatar_attack.aliasID] = pAvatar_attack;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(attack / 6).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(attack / 7).");
+
+			Property pAvatar_moveSpeed = new Property();
+			pAvatar_moveSpeed.name = "moveSpeed";
+			pAvatar_moveSpeed.properUtype = 6;
+			pAvatar_moveSpeed.properFlags = 16;
+			pAvatar_moveSpeed.aliasID = 9;
+			UInt16 Avatar_moveSpeed_defval;
+			UInt16.TryParse("6", out Avatar_moveSpeed_defval);
+			pAvatar_moveSpeed.defaultVal = Avatar_moveSpeed_defval;
+			pAvatarModule.propertys["moveSpeed"] = pAvatar_moveSpeed; 
+
+			pAvatarModule.usePropertyDescrAlias = true;
+			pAvatarModule.idpropertys[(UInt16)pAvatar_moveSpeed.aliasID] = pAvatar_moveSpeed;
+
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(moveSpeed / 6).");
 
 			Property pAvatar_name = new Property();
 			pAvatar_name.name = "name";
 			pAvatar_name.properUtype = 5;
 			pAvatar_name.properFlags = 4;
-			pAvatar_name.aliasID = 9;
+			pAvatar_name.aliasID = 10;
 			string Avatar_name_defval = "";
 			pAvatar_name.defaultVal = Avatar_name_defval;
 			pAvatarModule.propertys["name"] = pAvatar_name; 
@@ -384,9 +399,9 @@ namespace KBEngine
 
 			Property pAvatar_state = new Property();
 			pAvatar_state.name = "state";
-			pAvatar_state.properUtype = 11;
+			pAvatar_state.properUtype = 12;
 			pAvatar_state.properFlags = 4;
-			pAvatar_state.aliasID = 10;
+			pAvatar_state.aliasID = 11;
 			SByte Avatar_state_defval;
 			SByte.TryParse("0", out Avatar_state_defval);
 			pAvatar_state.defaultVal = Avatar_state_defval;
@@ -395,7 +410,7 @@ namespace KBEngine
 			pAvatarModule.usePropertyDescrAlias = true;
 			pAvatarModule.idpropertys[(UInt16)pAvatar_state.aliasID] = pAvatar_state;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(state / 11).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), property(state / 12).");
 
 			List<DATATYPE_BASE> pAvatar_onDialog_args = new List<DATATYPE_BASE>();
 			pAvatar_onDialog_args.Add(EntityDef.id2datatypes[8]);
@@ -540,7 +555,7 @@ namespace KBEngine
 
 			Property pNPC_eid = new Property();
 			pNPC_eid.name = "eid";
-			pNPC_eid.properUtype = 13;
+			pNPC_eid.properUtype = 14;
 			pNPC_eid.properFlags = 4;
 			pNPC_eid.aliasID = 4;
 			string NPC_eid_defval = "";
@@ -550,11 +565,11 @@ namespace KBEngine
 			pNPCModule.usePropertyDescrAlias = true;
 			pNPCModule.idpropertys[(UInt16)pNPC_eid.aliasID] = pNPC_eid;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(eid / 13).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(eid / 14).");
 
 			Property pNPC_motion = new Property();
 			pNPC_motion.name = "motion";
-			pNPC_motion.properUtype = 15;
+			pNPC_motion.properUtype = 16;
 			pNPC_motion.properFlags = 157;
 			pNPC_motion.aliasID = 5;
 			pNPCModule.propertys["motion"] = pNPC_motion; 
@@ -562,11 +577,11 @@ namespace KBEngine
 			pNPCModule.usePropertyDescrAlias = true;
 			pNPCModule.idpropertys[(UInt16)pNPC_motion.aliasID] = pNPC_motion;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(motion / 15).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(motion / 16).");
 
 			Property pNPC_name = new Property();
 			pNPC_name.name = "name";
-			pNPC_name.properUtype = 12;
+			pNPC_name.properUtype = 13;
 			pNPC_name.properFlags = 4;
 			pNPC_name.aliasID = 6;
 			string NPC_name_defval = "";
@@ -576,7 +591,7 @@ namespace KBEngine
 			pNPCModule.usePropertyDescrAlias = true;
 			pNPCModule.idpropertys[(UInt16)pNPC_name.aliasID] = pNPC_name;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(name / 12).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(NPC), property(name / 13).");
 
 			pNPCModule.useMethodDescrAlias = true;
 			ScriptModule pMotionModule = new ScriptModule("Motion");
@@ -628,7 +643,7 @@ namespace KBEngine
 
 			Property pMotion_moveSpeed = new Property();
 			pMotion_moveSpeed.name = "moveSpeed";
-			pMotion_moveSpeed.properUtype = 16;
+			pMotion_moveSpeed.properUtype = 17;
 			pMotion_moveSpeed.properFlags = 4;
 			pMotion_moveSpeed.aliasID = 4;
 			Byte Motion_moveSpeed_defval;
@@ -639,7 +654,7 @@ namespace KBEngine
 			pMotionModule.usePropertyDescrAlias = true;
 			pMotionModule.idpropertys[(UInt16)pMotion_moveSpeed.aliasID] = pMotion_moveSpeed;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Motion), property(moveSpeed / 16).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Motion), property(moveSpeed / 17).");
 
 			pMotionModule.useMethodDescrAlias = true;
 			ScriptModule pMonsterModule = new ScriptModule("Monster");
@@ -691,7 +706,7 @@ namespace KBEngine
 
 			Property pMonster_HP = new Property();
 			pMonster_HP.name = "HP";
-			pMonster_HP.properUtype = 21;
+			pMonster_HP.properUtype = 22;
 			pMonster_HP.properFlags = 4;
 			pMonster_HP.aliasID = 4;
 			Int32 Monster_HP_defval;
@@ -702,11 +717,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_HP.aliasID] = pMonster_HP;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(HP / 21).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(HP / 22).");
 
 			Property pMonster_HP_Max = new Property();
 			pMonster_HP_Max.name = "HP_Max";
-			pMonster_HP_Max.properUtype = 22;
+			pMonster_HP_Max.properUtype = 23;
 			pMonster_HP_Max.properFlags = 4;
 			pMonster_HP_Max.aliasID = 5;
 			Int32 Monster_HP_Max_defval;
@@ -717,11 +732,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_HP_Max.aliasID] = pMonster_HP_Max;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(HP_Max / 22).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(HP_Max / 23).");
 
 			Property pMonster_MP = new Property();
 			pMonster_MP.name = "MP";
-			pMonster_MP.properUtype = 23;
+			pMonster_MP.properUtype = 24;
 			pMonster_MP.properFlags = 4;
 			pMonster_MP.aliasID = 6;
 			Int32 Monster_MP_defval;
@@ -732,11 +747,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_MP.aliasID] = pMonster_MP;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(MP / 23).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(MP / 24).");
 
 			Property pMonster_MP_Max = new Property();
 			pMonster_MP_Max.name = "MP_Max";
-			pMonster_MP_Max.properUtype = 24;
+			pMonster_MP_Max.properUtype = 25;
 			pMonster_MP_Max.properFlags = 4;
 			pMonster_MP_Max.aliasID = 7;
 			Int32 Monster_MP_Max_defval;
@@ -747,11 +762,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_MP_Max.aliasID] = pMonster_MP_Max;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(MP_Max / 24).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(MP_Max / 25).");
 
 			Property pMonster_eid = new Property();
 			pMonster_eid.name = "eid";
-			pMonster_eid.properUtype = 19;
+			pMonster_eid.properUtype = 20;
 			pMonster_eid.properFlags = 4;
 			pMonster_eid.aliasID = 8;
 			string Monster_eid_defval = "";
@@ -761,11 +776,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_eid.aliasID] = pMonster_eid;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(eid / 19).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(eid / 20).");
 
 			Property pMonster_motion = new Property();
 			pMonster_motion.name = "motion";
-			pMonster_motion.properUtype = 26;
+			pMonster_motion.properUtype = 27;
 			pMonster_motion.properFlags = 157;
 			pMonster_motion.aliasID = 9;
 			pMonsterModule.propertys["motion"] = pMonster_motion; 
@@ -773,11 +788,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_motion.aliasID] = pMonster_motion;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(motion / 26).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(motion / 27).");
 
 			Property pMonster_name = new Property();
 			pMonster_name.name = "name";
-			pMonster_name.properUtype = 18;
+			pMonster_name.properUtype = 19;
 			pMonster_name.properFlags = 4;
 			pMonster_name.aliasID = 10;
 			string Monster_name_defval = "";
@@ -787,11 +802,11 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_name.aliasID] = pMonster_name;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(name / 18).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(name / 19).");
 
 			Property pMonster_state = new Property();
 			pMonster_state.name = "state";
-			pMonster_state.properUtype = 20;
+			pMonster_state.properUtype = 21;
 			pMonster_state.properFlags = 4;
 			pMonster_state.aliasID = 11;
 			SByte Monster_state_defval;
@@ -802,7 +817,7 @@ namespace KBEngine
 			pMonsterModule.usePropertyDescrAlias = true;
 			pMonsterModule.idpropertys[(UInt16)pMonster_state.aliasID] = pMonster_state;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(state / 20).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Monster), property(state / 21).");
 
 			pMonsterModule.useMethodDescrAlias = true;
 		}

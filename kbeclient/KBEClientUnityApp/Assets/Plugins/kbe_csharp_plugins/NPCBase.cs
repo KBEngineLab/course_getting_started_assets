@@ -34,7 +34,7 @@ namespace KBEngine
 				{
 					motion = (MotionBase)Activator.CreateInstance(entityComponentScript);
 					motion.owner = this;
-					motion.entityComponentPropertyID = 15;
+					motion.entityComponentPropertyID = 16;
 					motion.name_ = "Motion";
 				}
 			}
@@ -142,7 +142,7 @@ namespace KBEngine
 				Property pComponentPropertyDescription = sm.idpropertys[componentPropertyUType];
 				switch(pComponentPropertyDescription.properUtype)
 				{
-					case 15:
+					case 16:
 						motion.onRemoteMethodCall(methodUtype, stream);
 						break;
 					default:
@@ -193,7 +193,7 @@ namespace KBEngine
 					Property pComponentPropertyDescription = pdatas[_t_utype];
 					switch(pComponentPropertyDescription.properUtype)
 					{
-						case 15:
+						case 16:
 							motion.onUpdatePropertys(_t_child_utype, stream, -1);
 							break;
 						default:
@@ -221,7 +221,7 @@ namespace KBEngine
 						}
 
 						break;
-					case 13:
+					case 14:
 						string oldval_eid = eid;
 						eid = stream.readUnicode();
 
@@ -237,10 +237,10 @@ namespace KBEngine
 						}
 
 						break;
-					case 15:
+					case 16:
 						motion.createFromStream(stream);
 						break;
-					case 12:
+					case 13:
 						string oldval_name = name;
 						name = stream.readUnicode();
 
