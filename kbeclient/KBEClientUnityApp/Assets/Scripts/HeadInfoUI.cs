@@ -125,6 +125,13 @@ public class HeadInfoUI : MonoBehaviour
         UpdateUI();
     }
 
+    public void SetHP(int value,int maxHp)
+    {
+        hp = Mathf.Clamp(value, 0, maxHp);
+        this.maxHp = maxHp;
+        UpdateUI();
+    }
+
     // ====== 更新名字 ======
     public void SetName(string name)
     {

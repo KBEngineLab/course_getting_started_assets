@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8560426755163759662}
   - component: {fileID: 6327169716271083287}
   - component: {fileID: 8075613138829246796}
+  - component: {fileID: 284894008406794712}
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: Player
@@ -181,6 +182,22 @@ MonoBehaviour:
   moveSpeed: 5
   gravity: -9.8
   jumpHeight: 2
+--- !u!114 &284894008406794712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301100993259820123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514f1614bbc5714499689f4cbe6478e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: player
+  hp: 50
+  maxHp: 100
+  showHp: 1
 --- !u!1 &2865410382528380517
 GameObject:
   m_ObjectHideFlags: 0

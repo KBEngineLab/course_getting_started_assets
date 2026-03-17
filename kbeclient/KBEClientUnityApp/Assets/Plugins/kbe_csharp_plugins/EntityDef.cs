@@ -121,13 +121,28 @@ namespace KBEngine
 
 			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(spaceID / 40002).");
 
+			List<DATATYPE_BASE> pAccount_onEnter_args = new List<DATATYPE_BASE>();
+			pAccount_onEnter_args.Add(EntityDef.id2datatypes[12]);
+
+			Method pAccount_onEnter = new Method();
+			pAccount_onEnter.name = "onEnter";
+			pAccount_onEnter.methodUtype = 8;
+			pAccount_onEnter.aliasID = 1;
+			pAccount_onEnter.args = pAccount_onEnter_args;
+
+			pAccountModule.methods["onEnter"] = pAccount_onEnter; 
+			pAccountModule.useMethodDescrAlias = true;
+			pAccountModule.idmethods[(UInt16)pAccount_onEnter.aliasID] = pAccount_onEnter;
+
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Account), method(onEnter / 8).");
+
 			List<DATATYPE_BASE> pAccount_onReqAvatarList_args = new List<DATATYPE_BASE>();
 			pAccount_onReqAvatarList_args.Add(EntityDef.id2datatypes[23]);
 
 			Method pAccount_onReqAvatarList = new Method();
 			pAccount_onReqAvatarList.name = "onReqAvatarList";
 			pAccount_onReqAvatarList.methodUtype = 5;
-			pAccount_onReqAvatarList.aliasID = 1;
+			pAccount_onReqAvatarList.aliasID = 2;
 			pAccount_onReqAvatarList.args = pAccount_onReqAvatarList_args;
 
 			pAccountModule.methods["onReqAvatarList"] = pAccount_onReqAvatarList; 
@@ -143,7 +158,7 @@ namespace KBEngine
 			Method pAccount_onReqCreateAvatar = new Method();
 			pAccount_onReqCreateAvatar.name = "onReqCreateAvatar";
 			pAccount_onReqCreateAvatar.methodUtype = 6;
-			pAccount_onReqCreateAvatar.aliasID = 2;
+			pAccount_onReqCreateAvatar.aliasID = 3;
 			pAccount_onReqCreateAvatar.args = pAccount_onReqCreateAvatar_args;
 
 			pAccountModule.methods["onReqCreateAvatar"] = pAccount_onReqCreateAvatar; 
@@ -159,7 +174,7 @@ namespace KBEngine
 			Method pAccount_onReqRemoveAvatar = new Method();
 			pAccount_onReqRemoveAvatar.name = "onReqRemoveAvatar";
 			pAccount_onReqRemoveAvatar.methodUtype = 7;
-			pAccount_onReqRemoveAvatar.aliasID = 3;
+			pAccount_onReqRemoveAvatar.aliasID = 4;
 			pAccount_onReqRemoveAvatar.args = pAccount_onReqRemoveAvatar_args;
 
 			pAccountModule.methods["onReqRemoveAvatar"] = pAccount_onReqRemoveAvatar; 
@@ -388,7 +403,7 @@ namespace KBEngine
 
 			Method pAvatar_onDialog = new Method();
 			pAvatar_onDialog.name = "onDialog";
-			pAvatar_onDialog.methodUtype = 24;
+			pAvatar_onDialog.methodUtype = 25;
 			pAvatar_onDialog.aliasID = 1;
 			pAvatar_onDialog.args = pAvatar_onDialog_args;
 
@@ -396,13 +411,13 @@ namespace KBEngine
 			pAvatarModule.useMethodDescrAlias = true;
 			pAvatarModule.idmethods[(UInt16)pAvatar_onDialog.aliasID] = pAvatar_onDialog;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(onDialog / 24).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(onDialog / 25).");
 
 			List<DATATYPE_BASE> pAvatar_onJump_args = new List<DATATYPE_BASE>();
 
 			Method pAvatar_onJump = new Method();
 			pAvatar_onJump.name = "onJump";
-			pAvatar_onJump.methodUtype = 23;
+			pAvatar_onJump.methodUtype = 24;
 			pAvatar_onJump.aliasID = 2;
 			pAvatar_onJump.args = pAvatar_onJump_args;
 
@@ -410,7 +425,7 @@ namespace KBEngine
 			pAvatarModule.useMethodDescrAlias = true;
 			pAvatarModule.idmethods[(UInt16)pAvatar_onJump.aliasID] = pAvatar_onJump;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(onJump / 23).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(onJump / 24).");
 
 			List<DATATYPE_BASE> pAvatar_dialog_args = new List<DATATYPE_BASE>();
 			pAvatar_dialog_args.Add(EntityDef.id2datatypes[8]);
@@ -418,7 +433,7 @@ namespace KBEngine
 
 			Method pAvatar_dialog = new Method();
 			pAvatar_dialog.name = "dialog";
-			pAvatar_dialog.methodUtype = 21;
+			pAvatar_dialog.methodUtype = 22;
 			pAvatar_dialog.aliasID = -1;
 			pAvatar_dialog.args = pAvatar_dialog_args;
 
@@ -427,13 +442,13 @@ namespace KBEngine
 
 			pAvatarModule.idcell_methods[pAvatar_dialog.methodUtype] = pAvatar_dialog;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(dialog / 21).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(dialog / 22).");
 
 			List<DATATYPE_BASE> pAvatar_jump_args = new List<DATATYPE_BASE>();
 
 			Method pAvatar_jump = new Method();
 			pAvatar_jump.name = "jump";
-			pAvatar_jump.methodUtype = 16;
+			pAvatar_jump.methodUtype = 17;
 			pAvatar_jump.aliasID = -1;
 			pAvatar_jump.args = pAvatar_jump_args;
 
@@ -442,13 +457,13 @@ namespace KBEngine
 
 			pAvatarModule.idcell_methods[pAvatar_jump.methodUtype] = pAvatar_jump;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(jump / 16).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(jump / 17).");
 
 			List<DATATYPE_BASE> pAvatar_relive_args = new List<DATATYPE_BASE>();
 
 			Method pAvatar_relive = new Method();
 			pAvatar_relive.name = "relive";
-			pAvatar_relive.methodUtype = 15;
+			pAvatar_relive.methodUtype = 16;
 			pAvatar_relive.aliasID = -1;
 			pAvatar_relive.args = pAvatar_relive_args;
 
@@ -457,7 +472,7 @@ namespace KBEngine
 
 			pAvatarModule.idcell_methods[pAvatar_relive.methodUtype] = pAvatar_relive;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(relive / 15).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(relive / 16).");
 
 			List<DATATYPE_BASE> pAvatar_useSkill_args = new List<DATATYPE_BASE>();
 			pAvatar_useSkill_args.Add(EntityDef.id2datatypes[8]);
@@ -465,7 +480,7 @@ namespace KBEngine
 
 			Method pAvatar_useSkill = new Method();
 			pAvatar_useSkill.name = "useSkill";
-			pAvatar_useSkill.methodUtype = 13;
+			pAvatar_useSkill.methodUtype = 14;
 			pAvatar_useSkill.aliasID = -1;
 			pAvatar_useSkill.args = pAvatar_useSkill_args;
 
@@ -474,7 +489,7 @@ namespace KBEngine
 
 			pAvatarModule.idcell_methods[pAvatar_useSkill.methodUtype] = pAvatar_useSkill;
 
-			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(useSkill / 13).");
+			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Avatar), method(useSkill / 14).");
 
 			ScriptModule pNPCModule = new ScriptModule("NPC");
 			EntityDef.moduledefs["NPC"] = pNPCModule;

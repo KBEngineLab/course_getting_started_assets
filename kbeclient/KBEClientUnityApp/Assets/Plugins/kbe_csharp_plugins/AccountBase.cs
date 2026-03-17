@@ -19,6 +19,7 @@ namespace KBEngine
 		public EntityCellEntityCall_AccountBase cellEntityCall = null;
 
 
+		public abstract void onEnter(string arg1); 
 		public abstract void onReqAvatarList(AVATAR_LIST arg1); 
 		public abstract void onReqCreateAvatar(Byte arg1, AVATAR_LIST arg2); 
 		public abstract void onReqRemoveAvatar(Byte arg1, Int64 arg2); 
@@ -113,6 +114,10 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
+				case 8:
+					string onEnter_arg1 = stream.readUnicode();
+					onEnter(onEnter_arg1);
+					break;
 				case 5:
 					AVATAR_LIST onReqAvatarList_arg1 = ((DATATYPE_AVATAR_LIST)method.args[0]).createFromStreamEx(stream);
 					onReqAvatarList(onReqAvatarList_arg1);
