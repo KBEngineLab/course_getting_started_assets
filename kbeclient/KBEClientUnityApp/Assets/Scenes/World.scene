@@ -329,6 +329,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1087534403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6881291271981571541, guid: 771e08c46907a2b45905abafb21248db, type: 3}
+  m_PrefabInstance: {fileID: 1326382226263276892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1087534408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087534403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514f1614bbc5714499689f4cbe6478e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: NPC
+  hp: 0
+  maxHp: 0
+  showHp: 0
+--- !u!1 &1282805619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5984123262738582040, guid: 52f8c6a115bfd084ba503f353c21c8e3, type: 3}
+  m_PrefabInstance: {fileID: 5470451470958169146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1282805624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282805619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514f1614bbc5714499689f4cbe6478e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Monster
+  hp: 100
+  maxHp: 100
+  showHp: 1
 --- !u!1 &1301236126
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +539,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 301100993259820123, guid: 513afab4825833048991d9b6e4a8826f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 910219789622957947}
   m_SourcePrefab: {fileID: 100100000, guid: 513afab4825833048991d9b6e4a8826f, type: 3}
+--- !u!1 &910219789622957946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 301100993259820123, guid: 513afab4825833048991d9b6e4a8826f, type: 3}
+  m_PrefabInstance: {fileID: 910219789622957945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &910219789622957947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910219789622957946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514f1614bbc5714499689f4cbe6478e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: player
+  hp: 50
+  maxHp: 100
+  showHp: 1
 --- !u!1001 &1326382226263276892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -554,7 +620,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6881291271981571541, guid: 771e08c46907a2b45905abafb21248db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1087534408}
   m_SourcePrefab: {fileID: 100100000, guid: 771e08c46907a2b45905abafb21248db, type: 3}
 --- !u!1001 &5470451470958169146
 PrefabInstance:
@@ -611,7 +680,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5984123262738582040, guid: 52f8c6a115bfd084ba503f353c21c8e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1282805624}
   m_SourcePrefab: {fileID: 100100000, guid: 52f8c6a115bfd084ba503f353c21c8e3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
