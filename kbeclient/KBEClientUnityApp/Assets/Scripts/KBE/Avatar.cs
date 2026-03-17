@@ -4,9 +4,12 @@ namespace KBEngine
 {
     public class Avatar : AvatarBase
     {
+        public static Avatar Instance;
         public override void __init__()
         {
             base.__init__();
+            if (isPlayer()) Instance = this;
+
             LogMgr.Instance.AddLog($"Avatar()");
             Event.registerOut("Avatar_onEnterSpaceCallback_"+this.id, this, "OnEnterSpaceCallback");
         }
@@ -51,6 +54,7 @@ namespace KBEngine
         public override void onHPChanged(int oldValue)
         {
             base.onHPChanged(oldValue);
+            if (renderObj  == null) return;
             var headInfoUI = ((GameObject)renderObj).GetComponent<HeadInfoUI>();
             headInfoUI.SetHP(HP,HP_Max);
         }
@@ -58,6 +62,7 @@ namespace KBEngine
         public override void onHP_MaxChanged(int oldValue)
         {
             base.onHP_MaxChanged(oldValue);
+            if (renderObj  == null) return;
             var headInfoUI = ((GameObject)renderObj).GetComponent<HeadInfoUI>();
             headInfoUI.SetHP(HP,HP_Max);
         }
