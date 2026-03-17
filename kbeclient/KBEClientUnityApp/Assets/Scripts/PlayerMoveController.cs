@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// 强制要求该物体必须挂载 CharacterController 组件
+// 如果没有，Unity 会自动添加
+[RequireComponent(typeof(CharacterController))]
+public class PlayerMoveController : MonoBehaviour
+{
+    // 移动速度（单位：米/秒）
+    public float moveSpeed = 5f;
+
+    // 重力加速度（负值表示向下）
+    public float gravity = -9.8f;
+
+    // 跳跃高度（单位：米）
+    public float jumpHeight = 2f;
+
+    // CharacterController 组件引用
+    private CharacterController controller;
+
+    // 当前角色的速度（主要用于处理垂直方向：跳跃 + 重力）
+    private Vector3 velocity;
+
+    void Start()
+    {
+        // 获取当前物体上的 CharacterController 组件
+        controller = GetComponent<CharacterController>();
+    }
+
+    void Update()
+    {
+        // 获取输入
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
+        // 方向（基于角色朝向）
+        Vector3 move = transform.right * h + transform.forward * v;
+
+        // ===== 地面检测 & 贴地 =====
+        if (controller.isGrounded && velocity.y < 0)
+        {
+            // 轻微向下，保证贴地稳定
+            velocity.y = -2f;
+        }
+
+        // ===== 跳跃 =====
+        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
+        {
+            // 起跳速度
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        // ===== 重力 =====
+        velocity.y += gravity * Time.deltaTime;
+
+        // ===== 合并移动=====
+        Vector3 finalMove = move * moveSpeed + velocity;
+
+        // 只调用一次 Move
+        controller.Move(finalMove * Time.deltaTime);
+    }
+}
