@@ -25,6 +25,10 @@ class AI(KBEngine.EntityComponent):
 
 		# 下次移动时间
 		self.nextMoveTime = 0
+
+		# 下次攻击时间,cd你可以写进配置里，这里我们默认为2s
+		self.nextAttackTime = 0
+
 		# 敌人列表
 		self.enemyList = []
 		self.territoryControllerID = 0
@@ -224,7 +228,10 @@ class AI(KBEngine.EntityComponent):
 			return
 		else:
 			# 攻击
+			if time.time() < self.nextAttackTime:
+				return
 			entity.recvDamage(self.owner.id,1,self.owner.attack)
+			self.nextAttackTime = int(time.time() + 2)
 			pass
 
-		DEBUG_MSG("AI(%s[%i])::onThinkFight: enemyList=%s" % (self.owner.__class__.__name__, self.ownerID, self.enemyList))
+		DEBUG_MSG("AI(%s[%i])::onThinkFight: enemyList=%s" % (self.owner.__class__.__name__, self.ownerID,len(self.enemyList)))
