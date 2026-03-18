@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: By4ZvHutUX9c+VW7qWfkDTv9BWH9O5Q6xMg2zNWKEQstzc5QaICYVL8=
+ModelImporter:
+  serializedVersion: 22361
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    aCLCompressionLevel: 3
+    aCLCurvePrecision: 0.01
+    aCLFastSampleMode: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+    tuanjieGIEnable: 0
+    tuanjieGIGenSDFFactor: 1
+    tuanjieGIGenSDFBias: 0.25
+    tuanjieGIDoubleSidedMode: 0
+    tuanjieGIGenFacetNums: 12
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    totalVerticesCount: 19261
+    totalTrianglesCount: 9746
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  virtualGeometry:
+    virtualGeometry: 0
+    hasBoneWeight: 0
+    useTransparent: 0
+    setVGForeachMesh: 0
+    isFirstUse: 1
+    virtualGeometrySettings:
+      generateGeometryBuffer: 0
+      surfaceCompensation: 0
+      allMeshUse: 1
+      ignoreSimpleMesh: 0
+      transformScaleState: 0
+      isPossibleOverflow: 0
+    virtualGeometryPlatformSettings: []
+    selectedVGMeshes:
+    - index: 0
+      meshName: Env_Billboard_Small_2
+      meshGeometryBuffer: 0
+    - index: 1
+      meshName: Bld_5_Floor_2_Porch_House_1
+      meshGeometryBuffer: 0
+    - index: 2
+      meshName: Road_Turn_90_1
+      meshGeometryBuffer: 0
+    - index: 3
+      meshName: Road_With_Band_Half_Without_Border_2
+      meshGeometryBuffer: 0
+    - index: 4
+      meshName: Road_Pedastrian_Half__16_
+      meshGeometryBuffer: 0
+    - index: 5
+      meshName: Road__1_
+      meshGeometryBuffer: 0
+    - index: 6
+      meshName: Road_Home__1_
+      meshGeometryBuffer: 0
+    - index: 7
+      meshName: Road_Grass__1_
+      meshGeometryBuffer: 0
+    - index: 8
+      meshName: Road_Grass_Porch
+      meshGeometryBuffer: 0
+    - index: 9
+      meshName: Road_Path_Sand__5_
+      meshGeometryBuffer: 0
+    - index: 10
+      meshName: Road_Sand__1_
+      meshGeometryBuffer: 0
+    - index: 11
+      meshName: Env_Speed_Bump__52_
+      meshGeometryBuffer: 0
+    - index: 12
+      meshName: Env_Road_Barrier__12_
+      meshGeometryBuffer: 0
+    - index: 13
+      meshName: Env_Trash_Can_3__9_
+      meshGeometryBuffer: 0
+    - index: 14
+      meshName: Env_Bench__22_
+      meshGeometryBuffer: 0
+    - index: 15
+      meshName: Env_Playground_Fence_Turn_90__1_
+      meshGeometryBuffer: 0
+    - index: 16
+      meshName: Env_Playground_Fence__1_
+      meshGeometryBuffer: 0
+    - index: 17
+      meshName: Env_Playground_6__1_
+      meshGeometryBuffer: 0
+    - index: 18
+      meshName: Env_Playground_4__1_
+      meshGeometryBuffer: 0
+    - index: 19
+      meshName: Env_Playground__1_
+      meshGeometryBuffer: 0
+    - index: 20
+      meshName: Props_Rocks_1__55_
+      meshGeometryBuffer: 0
+    - index: 21
+      meshName: Env_Grass_2__110_
+      meshGeometryBuffer: 0
+    - index: 22
+      meshName: Env_Bush_1__49_
+      meshGeometryBuffer: 0
+    - index: 23
+      meshName: Env_Type2_Tree_2__2_
+      meshGeometryBuffer: 0
+    - index: 24
+      meshName: Env_Type3_Tree_2__4_
+      meshGeometryBuffer: 0
+    - index: 25
+      meshName: Car_Hatch_Back_Left_Wheels
+      meshGeometryBuffer: 0
+    - index: 26
+      meshName: Car_Hatch_Back_Right_Wheels
+      meshGeometryBuffer: 0
+    - index: 27
+      meshName: Car_Hatch_Body
+      meshGeometryBuffer: 0
+    - index: 28
+      meshName: Car_Hatch_Front_Left_Wheel
+      meshGeometryBuffer: 0
+    - index: 29
+      meshName: Car_Hatch_Front_Right_Wheel
+      meshGeometryBuffer: 0
+    - index: 30
+      meshName: Env_Road_Column__1_
+      meshGeometryBuffer: 0
+    - index: 31
+      meshName: Env_Road_Sign_7__53_
+      meshGeometryBuffer: 0
+    supportVGMeshes:
+    - index: 0
+      meshName: Env_Billboard_Small_2
+      meshGeometryBuffer: 0
+    - index: 1
+      meshName: Bld_5_Floor_2_Porch_House_1
+      meshGeometryBuffer: 0
+    - index: 2
+      meshName: Road_Turn_90_1
+      meshGeometryBuffer: 0
+    - index: 3
+      meshName: Road_With_Band_Half_Without_Border_2
+      meshGeometryBuffer: 0
+    - index: 4
+      meshName: Road_Pedastrian_Half__16_
+      meshGeometryBuffer: 0
+    - index: 5
+      meshName: Road__1_
+      meshGeometryBuffer: 0
+    - index: 6
+      meshName: Road_Home__1_
+      meshGeometryBuffer: 0
+    - index: 7
+      meshName: Road_Grass__1_
+      meshGeometryBuffer: 0
+    - index: 8
+      meshName: Road_Grass_Porch
+      meshGeometryBuffer: 0
+    - index: 9
+      meshName: Road_Path_Sand__5_
+      meshGeometryBuffer: 0
+    - index: 10
+      meshName: Road_Sand__1_
+      meshGeometryBuffer: 0
+    - index: 11
+      meshName: Env_Speed_Bump__52_
+      meshGeometryBuffer: 0
+    - index: 12
+      meshName: Env_Road_Barrier__12_
+      meshGeometryBuffer: 0
+    - index: 13
+      meshName: Env_Trash_Can_3__9_
+      meshGeometryBuffer: 0
+    - index: 14
+      meshName: Env_Bench__22_
+      meshGeometryBuffer: 0
+    - index: 15
+      meshName: Env_Playground_Fence_Turn_90__1_
+      meshGeometryBuffer: 0
+    - index: 16
+      meshName: Env_Playground_Fence__1_
+      meshGeometryBuffer: 0
+    - index: 17
+      meshName: Env_Playground_6__1_
+      meshGeometryBuffer: 0
+    - index: 18
+      meshName: Env_Playground_4__1_
+      meshGeometryBuffer: 0
+    - index: 19
+      meshName: Env_Playground__1_
+      meshGeometryBuffer: 0
+    - index: 20
+      meshName: Props_Rocks_1__55_
+      meshGeometryBuffer: 0
+    - index: 21
+      meshName: Env_Grass_2__110_
+      meshGeometryBuffer: 0
+    - index: 22
+      meshName: Env_Bush_1__49_
+      meshGeometryBuffer: 0
+    - index: 23
+      meshName: Env_Type2_Tree_2__2_
+      meshGeometryBuffer: 0
+    - index: 24
+      meshName: Env_Type3_Tree_2__4_
+      meshGeometryBuffer: 0
+    - index: 25
+      meshName: Car_Hatch_Back_Left_Wheels
+      meshGeometryBuffer: 0
+    - index: 26
+      meshName: Car_Hatch_Back_Right_Wheels
+      meshGeometryBuffer: 0
+    - index: 27
+      meshName: Car_Hatch_Body
+      meshGeometryBuffer: 0
+    - index: 28
+      meshName: Car_Hatch_Front_Left_Wheel
+      meshGeometryBuffer: 0
+    - index: 29
+      meshName: Car_Hatch_Front_Right_Wheel
+      meshGeometryBuffer: 0
+    - index: 30
+      meshName: Env_Road_Column__1_
+      meshGeometryBuffer: 0
+    - index: 31
+      meshName: Env_Road_Sign_7__53_
+      meshGeometryBuffer: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  overrideDefaultPose: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    namedPoseList:
+    - name: Default
+      skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    defaultPoseIndex: -1
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
