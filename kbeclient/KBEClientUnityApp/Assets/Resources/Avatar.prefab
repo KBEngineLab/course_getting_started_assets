@@ -12,13 +12,11 @@ GameObject:
   - component: {fileID: 695188615251473727}
   - component: {fileID: 1495708163955209860}
   - component: {fileID: 3405670129131670122}
-  - component: {fileID: 8560426755163759662}
-  - component: {fileID: 6327169716271083287}
-  - component: {fileID: 8075613138829246796}
   - component: {fileID: 284894008406794712}
-  m_Layer: 0
+  - component: {fileID: 8115778997108610237}
+  m_Layer: 8
   m_HasEditorInfo: 1
-  m_Name: Player
+  m_Name: Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,74 +115,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8560426755163759662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301100993259820123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3d6db10ad3226147a9c0820839a2f84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraPivot: {fileID: 6363837601172603876}
-  mainCamera: {fileID: 4366239049002663645}
-  mouseSensitivity: 3.5
-  minPitch: -40
-  maxPitch: 70
-  defaultDistance: 20
-  minDistance: 1.2
-  collisionRadius: 0.2
-  zoomSmoothSpeed: 12
-  collisionMask:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!143 &6327169716271083287
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301100993259820123}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8075613138829246796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301100993259820123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed2abebc32630d4c9412aca36aa2178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  gravity: -9.8
-  jumpHeight: 2
-  attackLayer:
-    serializedVersion: 2
-    m_Bits: 384
 --- !u!114 &284894008406794712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +131,19 @@ MonoBehaviour:
   hp: 50
   maxHp: 100
   showHp: 1
+--- !u!114 &8115778997108610237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301100993259820123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6ef5fb17fa6284599391b01646d92b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &2865410382528380517
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +156,7 @@ GameObject:
   - component: {fileID: 7529544259395987744}
   - component: {fileID: 6206638785188430038}
   - component: {fileID: 5922730422923778239}
-  m_Layer: 0
+  m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: Cube
   m_TagString: Untagged
@@ -319,7 +262,7 @@ GameObject:
   serializedVersion: 7
   m_Component:
   - component: {fileID: 6363837601172603876}
-  m_Layer: 0
+  m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: CameraPivot
   m_TagString: Untagged
@@ -354,7 +297,7 @@ GameObject:
   - component: {fileID: 4366239049002663645}
   - component: {fileID: 1083363190863980720}
   - component: {fileID: 666738365744915489}
-  m_Layer: 0
+  m_Layer: 8
   m_HasEditorInfo: 1
   m_Name: Main Camera
   m_TagString: MainCamera

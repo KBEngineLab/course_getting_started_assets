@@ -4,6 +4,7 @@ namespace KBEngine
 {
     public class NPC : NPCBase
     {
+        private EntityController _entityController;
         public override void __init__()
         {
             base.__init__();
@@ -27,7 +28,6 @@ namespace KBEngine
         {
             GameObject npcPrefab = Resources.Load<GameObject>("NPC");
             GameObject npc = Object.Instantiate(npcPrefab);
-            npc.transform.position = this.position;
             npc.name = "npc_" + id;
 
             renderObj = npc;
@@ -36,6 +36,15 @@ namespace KBEngine
             // 设置头顶信息
             var headInfoUI = npc.GetComponent<HeadInfoUI>();
             headInfoUI.SetName(name);
+
+
+
+
+            _entityController = npc.GetComponent<EntityController>();
+            _entityController.entity = this;
+            _entityController.moveSpeed = motion.moveSpeed;
+
+            _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
         }
 
         public override void onLeaveWorld()
@@ -48,7 +57,8 @@ namespace KBEngine
             base.onPositionChanged(oldValue);
             if (renderObj != null)
             {
-                ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
             }
         }
 
@@ -58,6 +68,7 @@ namespace KBEngine
             if (renderObj != null)
             {
                 ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),false);
             }
         }
 

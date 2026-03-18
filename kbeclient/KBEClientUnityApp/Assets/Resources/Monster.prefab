@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 2606900245877725082}
   - component: {fileID: 1039794089732574011}
   - component: {fileID: 6021499415566979005}
-  m_Layer: 0
+  - component: {fileID: 3941200392372674425}
+  m_Layer: 7
   m_HasEditorInfo: 1
   m_Name: Monster
   m_TagString: Untagged
@@ -107,7 +108,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -129,6 +130,19 @@ MonoBehaviour:
   hp: 100
   maxHp: 100
   showHp: 1
+--- !u!114 &3941200392372674425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984123262738582040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6ef5fb17fa6284599391b01646d92b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &7414346848634048812
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +155,7 @@ GameObject:
   - component: {fileID: 7507798132384081220}
   - component: {fileID: 6729388744982518886}
   - component: {fileID: 330015706360923226}
-  m_Layer: 0
+  m_Layer: 7
   m_HasEditorInfo: 1
   m_Name: Cube
   m_TagString: Untagged

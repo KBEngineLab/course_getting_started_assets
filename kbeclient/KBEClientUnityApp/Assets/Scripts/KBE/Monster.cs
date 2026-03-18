@@ -4,6 +4,7 @@ namespace KBEngine
 {
     public class Monster : MonsterBase
     {
+        private EntityController _entityController;
         public override void onHPChanged(int oldValue)
         {
             base.onHPChanged(oldValue);
@@ -42,7 +43,6 @@ namespace KBEngine
         {
             GameObject monsterPrefab = Resources.Load<GameObject>("Monster");
             GameObject monster = Object.Instantiate(monsterPrefab);
-            monster.transform.position = this.position;
             monster.name = "monster_" + id;
 
             renderObj = monster;
@@ -52,6 +52,12 @@ namespace KBEngine
             var headInfoUI = monster.GetComponent<HeadInfoUI>();
             headInfoUI.SetName(name);
             headInfoUI.SetHP(HP,HP_Max);
+
+
+            _entityController = monster.GetComponent<EntityController>();
+            _entityController.entity = this;
+            _entityController.moveSpeed = motion.moveSpeed;
+            _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
         }
 
         public override void onLeaveWorld()
@@ -64,7 +70,8 @@ namespace KBEngine
             base.onPositionChanged(oldValue);
             if (renderObj != null)
             {
-                ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
             }
         }
 
@@ -73,7 +80,8 @@ namespace KBEngine
             base.onSmoothPositionChanged(oldValue);
             if (renderObj != null)
             {
-                ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),false);
             }
         }
 

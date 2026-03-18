@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9221290810874507520}
   - component: {fileID: 8503168572539180098}
   - component: {fileID: 4972418669989061356}
+  - component: {fileID: 5053469752071413462}
   m_Layer: 0
   m_HasEditorInfo: 1
   m_Name: NPC
@@ -129,6 +130,19 @@ MonoBehaviour:
   hp: 0
   maxHp: 0
   showHp: 0
+--- !u!114 &5053469752071413462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881291271981571541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e6ef5fb17fa6284599391b01646d92b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &7848687855600054057
 GameObject:
   m_ObjectHideFlags: 0
