@@ -177,7 +177,7 @@ class Account(KBEngine.Proxy):
 			if character["dbid"] == arg_DBID:
 				del self.characters[i]
 				self.client.onReqRemoveAvatar(1, character["dbid"])
-				self.writeToDB()
+				# self.writeToDB()
 				return
 		# for character in self.characters:
 		# 	if character["dbid"] == arg_DBID:
