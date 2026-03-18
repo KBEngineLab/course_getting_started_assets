@@ -89,7 +89,7 @@ class Account(KBEngine.Proxy):
 			"accountId"			: self.id,
 			"name"			: arg_UNICODE,
 			"direction"			: avatarInitInfo.get("direction", (0.0,0.0,0.0)),
-			"position"			: spaceData.get("spawnPos", (0.0,0.0,0.0)),
+			"position"			: spaceData.get("spawnPos", (-208.96118369030341, 2, 165.40979875473195)),
 			"HP":avatarInitInfo.get("HP", 100),
 			"HP_Max":avatarInitInfo.get("HP_Max", 100),
 			"MP":avatarInitInfo.get("MP", 120),
