@@ -57,7 +57,7 @@ class Monster(KBEngine.Entity):
 
 	def onDestroy(self):
 		# KBEngine.entities.get(self.spaceID)
-		space = KBEngine.globalData["space_%i" % self.spaceID]
+		space = KBEngine.globalData["spaces"]["space_%i" % self.spaceID]
 		if space:
 			space["call"].cell.onEntityDestroyed(self.eid)
 
