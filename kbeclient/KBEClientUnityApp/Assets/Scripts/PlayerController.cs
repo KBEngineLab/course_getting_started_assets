@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("1111111");
+                    Debug.Log("找不到Entity");
                 }
 
             }
@@ -85,6 +85,21 @@ public class PlayerController : MonoBehaviour
         // 获取输入
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+
+
+        // ===== 无输入直接返回（关键）=====
+        if (Mathf.Approximately(h, 0f) && Mathf.Approximately(v, 0f))
+        {
+            // 仍然要处理重力，否则角色会悬空
+            if (!controller.isGrounded)
+            {
+                velocity.y += gravity * Time.deltaTime;
+                controller.Move(velocity * Time.deltaTime);
+            }
+
+            return;
+        }
+
 
         // 方向（基于角色朝向）
         Vector3 move = transform.right * h + transform.forward * v;

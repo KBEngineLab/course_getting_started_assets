@@ -42,9 +42,14 @@ namespace KBEngine
         public void OnEnterSpaceCallback()
         {
             GameObject playerPrefab = Resources.Load<GameObject>(isPlayer() ? "Player":"Avatar");
-            GameObject player = Object.Instantiate(playerPrefab);
+            GameObject player = Object.Instantiate(
+                playerPrefab,
+                new Vector3(-position.x, position.y, position.z),
+                Quaternion.identity
+            );
             player.name = (isPlayer() ? "Player_":"Avatar_") + id;
             renderObj = player;
+
 
 
             // 设置头顶信息
@@ -58,7 +63,7 @@ namespace KBEngine
                 _playerController = player.GetComponent<PlayerController>();
                 _playerController.moveSpeed = moveSpeed;
                 _playerController.avatar = this;
-                _playerController.transform.position = new Vector3(-position.x,position.y,position.z);
+                // player.transform.position = new Vector3(-position.x,position.y,position.z);
                 if (WorldUIEvent.Instance)
                 {
                     WorldUIEvent.Instance.UpdateReviveBtnState(state);
