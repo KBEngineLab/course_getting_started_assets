@@ -212,6 +212,12 @@ class AI(KBEngine.EntityComponent):
 
 		#or entity.state == GlobalDefine.ENTITY_STATE_DEAD
 
+		entity.checkState()
+
+		if entity.state == GlobalDefine.ENTITY_STATE_DEAD:
+			return
+
+
 
 		# 当两者间的距离大于15后移除，当然，你也可以设置一个原点，让entity回到原点
 		if entity.position.distTo(self.owner.position) > 15:

@@ -29,12 +29,19 @@ class Monster(KBEngine.Entity):
 		else:
 			self.HP = 0
 
+		self.checkState()
 
+
+	def checkState(self):
 		if self.HP <= 0:
-			self.HP = 0
-			self.MP = 0
-			self.state = GlobalDefine.ENTITY_STATE_DEAD
-			self.startDestroyTimer()
+			self.die()
+
+	def die(self):
+		self.HP = 0
+		self.MP = 0
+		self.state = GlobalDefine.ENTITY_STATE_DEAD
+		self.startDestroyTimer()
+
 
 	def setHP(self, arg_INT32):
 		self.HP = arg_INT32
