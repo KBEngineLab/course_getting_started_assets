@@ -51,17 +51,16 @@ public class PlayerController : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100f, attackLayer))
             {
                 // GameObject target = hit.collider.gameObject;
-                EntityController monster = hit.collider.GetComponentInParent<EntityController>();
+                EntityController entity = hit.collider.GetComponentInParent<EntityController>();
 
-                if (monster)
+                if (entity)
                 {
                     // 计算距离
-                    float distance = Vector3.Distance(transform.position, monster.transform.position);
-                    Debug.Log(distance);
+                    float distance = Vector3.Distance(transform.position, entity.transform.position);
                     if (distance <= 8f)
                     {
                         // avatar.cellEntityCall.
-                        Debug.Log(monster);
+                        avatar.cellEntityCall.useSkill(entity.entity.id,1);
                     }
                     else
                     {
