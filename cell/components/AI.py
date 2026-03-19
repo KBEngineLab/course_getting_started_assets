@@ -29,7 +29,7 @@ class AI(KBEngine.EntityComponent):
 		self.enemyList = []
 		self.territoryControllerID = 0
 
-		self.addTimer(1, 0.1, GlobalDefine.TIMER_TYPE_AI_HEARTBEAT)
+		self.addTimer(1, 1, GlobalDefine.TIMER_TYPE_AI_HEARTBEAT)
 
 	def addTerritory(self):
 		"""
