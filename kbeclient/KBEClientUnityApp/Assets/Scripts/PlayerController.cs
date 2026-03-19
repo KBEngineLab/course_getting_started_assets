@@ -28,10 +28,14 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask attackLayer; // 限制可攻击层
 
+    private float _objHeight = 0f;
+
     void Start()
     {
         // 获取当前物体上的 CharacterController 组件
         controller = GetComponent<CharacterController>();
+
+        _objHeight = GetComponent<Collider>().bounds.size.y;
     }
 
     void Update()
@@ -128,6 +132,6 @@ public class PlayerController : MonoBehaviour
         controller.Move(finalMove * Time.deltaTime);
 
         avatar.position = new KBVector3(-gameObject.transform.position.x,
-            gameObject.transform.position.y, gameObject.transform.position.z);
+            gameObject.transform.position.y - (_objHeight / 2), gameObject.transform.position.z);
     }
 }

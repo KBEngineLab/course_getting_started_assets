@@ -5,6 +5,7 @@ namespace KBEngine
     public class NPC : NPCBase
     {
         private EntityController _entityController;
+        private float _objHeight = 0f;
         public override void __init__()
         {
             base.__init__();
@@ -28,6 +29,8 @@ namespace KBEngine
         {
             GameObject npcPrefab = Resources.Load<GameObject>("NPC");
             GameObject npc = Object.Instantiate(npcPrefab);
+            _objHeight = npcPrefab.GetComponent<CapsuleCollider>().height ;
+            Debug.Log(_objHeight);
             npc.name = "npc_" + id;
 
             renderObj = npc;
@@ -44,7 +47,7 @@ namespace KBEngine
             _entityController.entity = this;
             _entityController.moveSpeed = motion.moveSpeed;
 
-            _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
+            _entityController.SetPosition(new Vector3(-position.x,position.y + (_objHeight / 2),position.z),true);
         }
 
         public override void onLeaveWorld()
@@ -58,7 +61,7 @@ namespace KBEngine
             if (renderObj != null)
             {
                 // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
-                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
+                _entityController.SetPosition(new Vector3(-position.x,position.y+ (_objHeight / 2),position.z),true);
             }
         }
 
@@ -67,8 +70,8 @@ namespace KBEngine
             base.onSmoothPositionChanged(oldValue);
             if (renderObj != null)
             {
-                ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
-                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),false);
+                // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
+                _entityController.SetPosition(new Vector3(-position.x,position.y+ (_objHeight / 2),position.z),false);
             }
         }
 
