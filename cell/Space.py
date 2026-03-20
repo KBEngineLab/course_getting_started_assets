@@ -88,8 +88,11 @@ class Space(KBEngine.Space):
 					"moveSpeed":item["moveSpeed"]
 				},
 			}
-
-			KBEngine.createEntity("Monster",self.spaceID,KBEUtil.getRandomPointInRadius(item["spawnPoints"],30),(0.0,0.0,0.0),params)
+			destPos = self.getRandomPoints(item["spawnPoints"], 30, 1, 0)
+			if len(destPos) == 0:
+				continue
+			destPos = destPos[0]
+			KBEngine.createEntity("Monster",self.spaceID,destPos,(0.0,0.0,0.0),params)
 
 			self.monsters[key] += 1
 
