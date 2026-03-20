@@ -57,7 +57,7 @@ class Motion(KBEngine.EntityComponent):
 
 		if self.owner.canNavigate():
 			# DEBUG_MSG("Motion(%s[%i])::gotoPosition: canNavigate=True" % (self.owner.__class__.__name__, self.ownerID))
-			self.owner.navigate(Math.Vector3(position), speed, dist, speed, 512.0, True, 0, None)
+			self.owner.navigateToDetour(Math.Vector3(position), speed, dist, speed, 512.0, True, 0, None)
 		else:
 			if dist > 0.0:
 				dest_pos = Math.Vector3(position) - self.owner.position

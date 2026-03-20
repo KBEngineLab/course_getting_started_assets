@@ -30,7 +30,6 @@ namespace KBEngine
             GameObject npcPrefab = Resources.Load<GameObject>("NPC");
             GameObject npc = Object.Instantiate(npcPrefab);
             _objHeight = npcPrefab.GetComponent<CapsuleCollider>().height ;
-            Debug.Log(_objHeight);
             npc.name = "npc_" + id;
 
             renderObj = npc;
