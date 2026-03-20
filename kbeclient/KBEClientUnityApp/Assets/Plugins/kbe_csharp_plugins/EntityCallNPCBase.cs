@@ -18,7 +18,7 @@ namespace KBEngine
 
 		public EntityBaseEntityCall_NPCBase(Int32 eid, string ename) : base(eid, ename)
 		{
-			motion = new EntityBaseEntityCall_MotionBase(15, id);
+			motion = new EntityBaseEntityCall_MotionBase(16, id);
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_BASE;
 		}
 
@@ -30,7 +30,7 @@ namespace KBEngine
 
 		public EntityCellEntityCall_NPCBase(Int32 eid, string ename) : base(eid, ename)
 		{
-			motion = new EntityCellEntityCall_MotionBase(15, id);
+			motion = new EntityCellEntityCall_MotionBase(16, id);
 			type = ENTITYCALL_TYPE.ENTITYCALL_TYPE_CELL;
 		}
 

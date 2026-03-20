@@ -52,11 +52,16 @@ class Avatar(KBEngine.Entity):
 		else:
 			self.HP = 0
 
-		if self.HP <= 0:
-			self.HP = 0
-			self.MP = 0
-			self.state = GlobalDefine.ENTITY_STATE_DEAD
+		self.checkState()
 
+	def checkState(self):
+		if self.HP <= 0:
+			self.die()
+
+	def die(self):
+		self.HP = 0
+		self.MP = 0
+		self.state = GlobalDefine.ENTITY_STATE_DEAD
 
 	def relive(self, exposed):
 		"""

@@ -90,7 +90,7 @@ namespace KBEngine
 
 				switch(prop.properUtype)
 				{
-					case 16:
+					case 17:
 						Byte oldval_moveSpeed = moveSpeed;
 						moveSpeed = stream.readUint8();
 

@@ -25,6 +25,10 @@ class AI(KBEngine.EntityComponent):
 
 		# 下次移动时间
 		self.nextMoveTime = 0
+
+		# 下次攻击时间,cd你可以写进配置里，这里我们默认为2s
+		self.nextAttackTime = 0
+
 		# 敌人列表
 		self.enemyList = []
 		self.territoryControllerID = 0
@@ -59,6 +63,7 @@ class AI(KBEngine.EntityComponent):
 		KBEngine method.
 		有entity进入trap
 		"""
+
 		if controllerID != self.territoryControllerID:
 			return
 
@@ -124,6 +129,21 @@ class AI(KBEngine.EntityComponent):
 		if self.territoryControllerID <= 0:
 			self.addTerritory()
 
+		# 闲置时，有可能有玩家复活了，所以这里要检查一下
+		for _id in self.enemyList:
+			item = KBEngine.entities.get(_id)
+			if item is None:
+				self.enemyList.remove(_id)
+				continue
+			if item.isDestroyed:
+				self.enemyList.remove(item.id)
+				continue
+			if item.state == GlobalDefine.ENTITY_STATE_DEAD:
+				continue
+			# 进入战斗
+			self.owner.state = GlobalDefine.ENTITY_STATE_FIGHT
+			break
+
 
 		motion:Motion = self.owner.motion
 
@@ -147,22 +167,60 @@ class AI(KBEngine.EntityComponent):
 		战斗时think
 		"""
 
+		if self.territoryControllerID > 0:
+			self.delTerritory()
+
+
 		# 如果仇恨列表为空
 		if len(self.enemyList) <= 0:
 			self.owner.state = GlobalDefine.ENTITY_STATE_FREE
 			return
 
-		if self.territoryControllerID > 0:
-			self.delTerritory()
 
-		entity:Avatar = KBEngine.entities.get(self.enemyList[0])
+		entity = None
+
+		for _id in self.enemyList:
+			item = KBEngine.entities.get(_id)
+			if item is None:
+				self.enemyList.remove(_id)
+				continue
+			if item.isDestroyed:
+				self.enemyList.remove(item.id)
+				continue
+			if item.state == GlobalDefine.ENTITY_STATE_DEAD:
+				continue
+
+			entity = item
+			break
 
 
+		# 如果没有获取到entity，就重置状态
 		if entity is None:
-			self.enemyList.remove(self.enemyList[0])
+			self.owner.state = GlobalDefine.ENTITY_STATE_FREE
 			return
 
-		if entity.isDestroyed or entity.state == GlobalDefine.ENTITY_STATE_DEAD:
+		# KBEngine.entities.get(self.enemyList[0])
+
+
+		# if entity is None:
+		# 	self.enemyList.remove(entityId)
+		# 	return
+
+		# if entity.isDestroyed :
+		# 	self.enemyList.remove(entity.id)
+		# 	return
+
+		#or entity.state == GlobalDefine.ENTITY_STATE_DEAD
+
+		entity.checkState()
+
+		if entity.state == GlobalDefine.ENTITY_STATE_DEAD:
+			return
+
+
+
+		# 当两者间的距离大于15后移除，当然，你也可以设置一个原点，让entity回到原点
+		if entity.position.distTo(self.owner.position) > 15:
 			self.enemyList.remove(entity.id)
 			return
 
@@ -176,7 +234,10 @@ class AI(KBEngine.EntityComponent):
 			return
 		else:
 			# 攻击
+			if time.time() < self.nextAttackTime:
+				return
 			entity.recvDamage(self.owner.id,1,self.owner.attack)
+			self.nextAttackTime = int(time.time() + 2)
 			pass
 
-		DEBUG_MSG("AI(%s[%i])::onThinkFight: enemyList=%s" % (self.owner.__class__.__name__, self.ownerID, self.enemyList))
+		DEBUG_MSG("AI(%s[%i])::onThinkFight: enemyList=%s" % (self.owner.__class__.__name__, self.ownerID,len(self.enemyList)))

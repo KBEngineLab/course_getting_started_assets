@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using KBEngine;
 using UnityEngine;
 
 // 强制要求该物体必须挂载 CharacterController 组件
 // 如果没有，Unity 会自动添加
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMoveController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    public KBEngine.Avatar avatar;
+
     // 移动速度（单位：米/秒）
     public float moveSpeed = 5f;
 
@@ -22,6 +26,8 @@ public class PlayerMoveController : MonoBehaviour
     // 当前角色的速度（主要用于处理垂直方向：跳跃 + 重力）
     private Vector3 velocity;
 
+    public LayerMask attackLayer; // 限制可攻击层
+
     void Start()
     {
         // 获取当前物体上的 CharacterController 组件
@@ -30,6 +36,52 @@ public class PlayerMoveController : MonoBehaviour
 
     void Update()
     {
+        PlayerMove();
+        PlayerAttack();
+    }
+
+    void PlayerAttack()
+    {
+        if (Input.GetMouseButtonDown(0)) // 鼠标左键
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            // 发射射线
+            if (Physics.Raycast(ray, out hit, 100f, attackLayer))
+            {
+                // GameObject target = hit.collider.gameObject;
+                EntityController entity = hit.collider.GetComponentInParent<EntityController>();
+
+                if (entity)
+                {
+                    // 计算距离
+                    float distance = Vector3.Distance(transform.position, entity.transform.position);
+                    if (distance <= 8f)
+                    {
+                        // avatar.cellEntityCall.
+                        avatar.cellEntityCall.useSkill(entity.entity.id,1);
+                    }
+                    else
+                    {
+                        Debug.Log("目标太远");
+                    }
+                }
+                else
+                {
+                    Debug.Log("1111111");
+                }
+
+            }
+        }
+    }
+
+    void PlayerMove()
+    {
+        if (avatar == null) return;
+        // 死亡状态
+        if (avatar.state == 1) return;
+
         // 获取输入
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -59,5 +111,8 @@ public class PlayerMoveController : MonoBehaviour
 
         // 只调用一次 Move
         controller.Move(finalMove * Time.deltaTime);
+
+        avatar.position = new KBVector3(-gameObject.transform.position.x,
+            gameObject.transform.position.y, gameObject.transform.position.z);
     }
 }

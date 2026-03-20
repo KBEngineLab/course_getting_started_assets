@@ -2,7 +2,7 @@ data = {
 	"xinshoucun": {
 		"monster1": {
 			"name": "怪物1",
-			"moveSpeed": 6,
+			"moveSpeed": 4,
 			# 创建的数量
 			"createCount": 10,
 			# 出生点
@@ -13,11 +13,11 @@ data = {
 			"HP_Max": 100,
 			"MP_Max": 120,
 			# 领土面积
-			"territoryArea":30,
+			"territoryArea":20,
 		},
 		"monster2": {
 			"name": "怪物2",
-			"moveSpeed": 6,
+			"moveSpeed": 4,
 			"createCount": 15,
 			"spawnPoints":(0.0, 0.0, 0.0),
 			"attack":10,
@@ -25,7 +25,7 @@ data = {
 			"MP": 120,
 			"HP_Max": 110,
 			"MP_Max": 120,
-			"territoryArea":30,
+			"territoryArea":20,
 		},
 	}
 }

@@ -26,6 +26,13 @@
             <Persistent>true</Persistent>
         </name>
 
+        <moveSpeed>
+            <Type>UINT16</Type>
+            <Flags>OWN_CLIENT</Flags>
+            <Default>6</Default>
+            <Persistent>true</Persistent>
+        </moveSpeed>
+
 
         <!-- 基础信息 END -->
 
