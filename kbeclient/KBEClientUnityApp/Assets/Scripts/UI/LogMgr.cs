@@ -82,6 +82,8 @@ public class LogMgr : MonoBehaviour
         text.color = Color.white;
         text.enableWordWrapping = true;
 
+        text.font = Resources.Load<TMP_FontAsset>("Fonts/SourceHanSansSC-Normal SDF");
+
         RectTransform rect = text.rectTransform;
         rect.anchorMin = new Vector2(0, 1);
         rect.anchorMax = new Vector2(1, 1);

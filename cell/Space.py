@@ -6,7 +6,7 @@ import KBEngine
 import GlobalDefine
 import KBEUtil
 from KBEDebug import DEBUG_MSG
-from data import d_npcs, d_monsters_spawnpoints
+from data import d_npcs, d_monsters_spawnpoints, d_spaces
 import copy
 
 class Space(KBEngine.Space):
@@ -24,6 +24,9 @@ class Space(KBEngine.Space):
 			"space_key":self.cellSpaceKey,
 		}
 		KBEngine.globalData["spaces"] = spaces
+
+		resPath = d_spaces.datas.get(self.cellSpaceKey)['resPath']
+		KBEngine.addSpaceGeometryMapping(self.spaceID, None, resPath)
 
 		self.tempCreateNPCs = copy.deepcopy(d_npcs.data.get(self.cellSpaceKey, None))
 		self.tempCreateMonsters = copy.deepcopy(d_monsters_spawnpoints.data.get(self.cellSpaceKey, None))
@@ -85,8 +88,11 @@ class Space(KBEngine.Space):
 					"moveSpeed":item["moveSpeed"]
 				},
 			}
-
-			KBEngine.createEntity("Monster",self.spaceID,KBEUtil.getRandomPointInRadius(item["spawnPoints"],30),(0.0,0.0,0.0),params)
+			destPos = self.getRandomPoints(item["spawnPoints"], 30, 1, 0)
+			if len(destPos) == 0:
+				continue
+			destPos = destPos[0]
+			KBEngine.createEntity("Monster",self.spaceID,destPos,(0.0,0.0,0.0),params)
 
 			self.monsters[key] += 1
 

@@ -7,6 +7,8 @@ namespace KBEngine
         public static Avatar Instance;
         private EntityController _entityController;
         private PlayerController _playerController;
+
+        private float _objHeight = 0f;
         public override void __init__()
         {
             base.__init__();
@@ -42,9 +44,21 @@ namespace KBEngine
         public void OnEnterSpaceCallback()
         {
             GameObject playerPrefab = Resources.Load<GameObject>(isPlayer() ? "Player":"Avatar");
-            GameObject player = Object.Instantiate(playerPrefab);
+            if (isPlayer())
+            {
+                _objHeight = playerPrefab.GetComponent<CharacterController>().height ;
+            }else
+            {
+                _objHeight = playerPrefab.GetComponent<CapsuleCollider>().height;
+            }
+            GameObject player = Object.Instantiate(
+                playerPrefab,
+                new Vector3(-position.x, position.y + (_objHeight / 2), position.z),
+                Quaternion.identity
+            );
             player.name = (isPlayer() ? "Player_":"Avatar_") + id;
             renderObj = player;
+
 
 
             // 设置头顶信息
@@ -58,7 +72,7 @@ namespace KBEngine
                 _playerController = player.GetComponent<PlayerController>();
                 _playerController.moveSpeed = moveSpeed;
                 _playerController.avatar = this;
-                _playerController.transform.position = new Vector3(-position.x,position.y,position.z);
+                // player.transform.position = new Vector3(-position.x,position.y,position.z);
                 if (WorldUIEvent.Instance)
                 {
                     WorldUIEvent.Instance.UpdateReviveBtnState(state);
@@ -69,7 +83,7 @@ namespace KBEngine
                 _entityController = player.GetComponent<EntityController>();
                 _entityController.entity = this;
                 _entityController.moveSpeed = moveSpeed;
-                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
+                _entityController.SetPosition(new Vector3(-position.x,position.y+ (_objHeight / 2),position.z),true);
             }
 
 
@@ -128,12 +142,12 @@ namespace KBEngine
 
             if (isPlayer())
             {
-                if (_playerController) _playerController.transform.position = new Vector3(-position.x,position.y,position.z);
+                if (_playerController) _playerController.transform.position = new Vector3(-position.x,position.y+ (_objHeight / 2),position.z);
 
             }
             else
             {
-                if (_entityController)  _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
+                if (_entityController)  _entityController.SetPosition(new Vector3(-position.x,position.y+ (_objHeight / 2),position.z),true);
             }
         }
 
@@ -142,7 +156,7 @@ namespace KBEngine
             base.onSmoothPositionChanged(oldValue);
             if (!isPlayer())
             {
-                if (_entityController) _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),false);
+                if (_entityController) _entityController.SetPosition(new Vector3(-position.x,position.y+ (_objHeight / 2),position.z),false);
             }
         }
 

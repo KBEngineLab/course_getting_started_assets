@@ -5,6 +5,7 @@ namespace KBEngine
     public class Monster : MonsterBase
     {
         private EntityController _entityController;
+        private float _objHeight = 0f;
         public override void onHPChanged(int oldValue)
         {
             base.onHPChanged(oldValue);
@@ -43,6 +44,7 @@ namespace KBEngine
         {
             GameObject monsterPrefab = Resources.Load<GameObject>("Monster");
             GameObject monster = Object.Instantiate(monsterPrefab);
+            _objHeight = monsterPrefab.GetComponent<CapsuleCollider>().height;
             monster.name = "monster_" + id;
 
             renderObj = monster;
@@ -57,7 +59,7 @@ namespace KBEngine
             _entityController = monster.GetComponent<EntityController>();
             _entityController.entity = this;
             _entityController.moveSpeed = motion.moveSpeed;
-            _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
+            _entityController.SetPosition(new Vector3(-position.x,position.y + (_objHeight / 2),position.z),true);
         }
 
         public override void onLeaveWorld()
@@ -71,7 +73,7 @@ namespace KBEngine
             if (renderObj != null)
             {
                 // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
-                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),true);
+                _entityController.SetPosition(new Vector3(-position.x,position.y + (_objHeight / 2),position.z),true);
             }
         }
 
@@ -81,7 +83,7 @@ namespace KBEngine
             if (renderObj != null)
             {
                 // ((GameObject)renderObj).transform.position = new Vector3(-position.x,position.y,position.z);
-                _entityController.SetPosition(new Vector3(-position.x,position.y,position.z),false);
+                _entityController.SetPosition(new Vector3(-position.x,position.y + (_objHeight / 2),position.z),false);
             }
         }
 
