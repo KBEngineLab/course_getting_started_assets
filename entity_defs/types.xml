@@ -1,3 +1,28 @@
 <root>
-    <DBID>				UINT64		</DBID>
+    <DBID>UINT64</DBID>
+
+    <AVATAR_INFO>FIXED_DICT
+
+        <!-- (可选实现)
+        使用此模块(xxx.inst)允许用户重定义该数据结构在内存中存在的形式，
+        当引擎进行数据存储或进行网络传输时必须还原成引擎原本的数据结构，
+        引擎才可以识别和进行相关操作。 -->
+        <implementedBy>AVATAR_INFO.avatar_info_inst</implementedBy>
+
+        <!-- 这个数据结构的成员 -->
+        <Properties>
+            <dbid>
+                <Type>INT64</Type>
+            </dbid>
+            <name>
+                <Type>UNICODE</Type>
+                <DatabaseLength>256</DatabaseLength>
+            </name>
+        </Properties>
+    </AVATAR_INFO>
+
+    <AVATAR_LIST>
+        ARRAY
+        <of>AVATAR_INFO</of>
+    </AVATAR_LIST>
 </root>

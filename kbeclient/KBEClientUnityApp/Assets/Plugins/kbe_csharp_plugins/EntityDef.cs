@@ -122,7 +122,7 @@ namespace KBEngine
 			//KBELog.DEBUG_MSG("EntityDef::initScriptModules: add(Account), property(spaceID / 40002).");
 
 			List<DATATYPE_BASE> pAccount_onReqAvatarList_args = new List<DATATYPE_BASE>();
-			pAccount_onReqAvatarList_args.Add(EntityDef.id2datatypes[10]);
+			pAccount_onReqAvatarList_args.Add(EntityDef.id2datatypes[23]);
 
 			Method pAccount_onReqAvatarList = new Method();
 			pAccount_onReqAvatarList.name = "onReqAvatarList";
@@ -138,7 +138,7 @@ namespace KBEngine
 
 			List<DATATYPE_BASE> pAccount_onReqCreateAvatar_args = new List<DATATYPE_BASE>();
 			pAccount_onReqCreateAvatar_args.Add(EntityDef.id2datatypes[2]);
-			pAccount_onReqCreateAvatar_args.Add(EntityDef.id2datatypes[10]);
+			pAccount_onReqCreateAvatar_args.Add(EntityDef.id2datatypes[23]);
 
 			Method pAccount_onReqCreateAvatar = new Method();
 			pAccount_onReqCreateAvatar.name = "onReqCreateAvatar";
@@ -1027,22 +1027,18 @@ namespace KBEngine
 
 			{
 				UInt16 utype = 22;
-				string typeName = "AnonymousArray_22";
-				string name = "ENTITY_COMPONENT";
-				DATATYPE_BASE val = null;
-				EntityDef.datatypes.TryGetValue(name, out val);
-				EntityDef.datatypes[typeName] = val;
+				string typeName = "AVATAR_INFO";
+				DATATYPE_AVATAR_INFO datatype = new DATATYPE_AVATAR_INFO();
+				EntityDef.datatypes[typeName] = datatype;
 				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
 				EntityDef.datatype2id[typeName] = utype;
 			}
 
 			{
 				UInt16 utype = 23;
-				string typeName = "AnonymousArray_23";
-				string name = "ENTITY_COMPONENT";
-				DATATYPE_BASE val = null;
-				EntityDef.datatypes.TryGetValue(name, out val);
-				EntityDef.datatypes[typeName] = val;
+				string typeName = "AVATAR_LIST";
+				DATATYPE_AVATAR_LIST datatype = new DATATYPE_AVATAR_LIST();
+				EntityDef.datatypes[typeName] = datatype;
 				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
 				EntityDef.datatype2id[typeName] = utype;
 			}
@@ -1050,6 +1046,28 @@ namespace KBEngine
 			{
 				UInt16 utype = 24;
 				string typeName = "AnonymousArray_24";
+				string name = "ENTITY_COMPONENT";
+				DATATYPE_BASE val = null;
+				EntityDef.datatypes.TryGetValue(name, out val);
+				EntityDef.datatypes[typeName] = val;
+				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
+				EntityDef.datatype2id[typeName] = utype;
+			}
+
+			{
+				UInt16 utype = 25;
+				string typeName = "AnonymousArray_25";
+				string name = "ENTITY_COMPONENT";
+				DATATYPE_BASE val = null;
+				EntityDef.datatypes.TryGetValue(name, out val);
+				EntityDef.datatypes[typeName] = val;
+				EntityDef.id2datatypes[utype] = EntityDef.datatypes[typeName];
+				EntityDef.datatype2id[typeName] = utype;
+			}
+
+			{
+				UInt16 utype = 26;
+				string typeName = "AnonymousArray_26";
 				string name = "ENTITY_COMPONENT";
 				DATATYPE_BASE val = null;
 				EntityDef.datatypes.TryGetValue(name, out val);

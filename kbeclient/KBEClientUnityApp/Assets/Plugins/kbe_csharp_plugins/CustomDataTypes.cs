@@ -11,4 +11,53 @@ namespace KBEngine
 	using System.Collections.Generic;
 
 
+
+	public class DATATYPE_AVATAR_INFO : DATATYPE_BASE
+	{
+		public AVATAR_INFO createFromStreamEx(MemoryStream stream)
+		{
+			AVATAR_INFO datas = new AVATAR_INFO();
+			datas.dbid = stream.readInt64();
+			datas.name = stream.readUnicode();
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, AVATAR_INFO v)
+		{
+			stream.writeInt64(v.dbid);
+			stream.writeUnicode(v.name);
+		}
+	}
+
+
+
+	public class DATATYPE_AVATAR_LIST : DATATYPE_BASE
+	{
+		private DATATYPE_AVATAR_INFO itemType = new DATATYPE_AVATAR_INFO();
+
+		public AVATAR_LIST createFromStreamEx(MemoryStream stream)
+		{
+			UInt32 size = stream.readUint32();
+			AVATAR_LIST datas = new AVATAR_LIST();
+
+			while(size > 0)
+			{
+				--size;
+				datas.Add(itemType.createFromStreamEx(stream));
+			};
+
+			return datas;
+		}
+
+		public void addToStreamEx(Bundle stream, AVATAR_LIST v)
+		{
+			stream.writeUint32((UInt32)v.Count);
+			for(int i=0; i<v.Count; ++i)
+			{
+				itemType.addToStreamEx(stream, v[i]);
+			};
+		}
+	}
+
+
 }
