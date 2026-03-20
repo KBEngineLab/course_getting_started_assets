@@ -2,7 +2,7 @@
     <Volatile>
         <position/>
         <yaw/>
-        <optimized>true</optimized>
+        <optimized>false</optimized>
     </Volatile>
     <Properties>
         <!-- NPC名称 -->
