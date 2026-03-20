@@ -149,6 +149,7 @@ class AI(KBEngine.EntityComponent):
 
 		# 如果仇恨列表为空
 		if len(self.enemyList) <= 0:
+			self.owner.state = GlobalDefine.ENTITY_STATE_FREE
 			return
 
 		if self.territoryControllerID > 0:

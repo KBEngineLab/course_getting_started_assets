@@ -26,6 +26,10 @@
 			<Arg>UINT8</Arg>	<!-- 状态，1：成功，0：失败 -->
 			<Arg>INT64</Arg>	<!-- dbid -->
 		</onReqRemoveAvatar>
+
+		<onEnter>
+			<Arg>UNICODE</Arg>
+		</onEnter>
 	</ClientMethods>
 
 	<BaseMethods>

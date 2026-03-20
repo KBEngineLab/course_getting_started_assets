@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace KBEngine
 {
@@ -13,6 +14,8 @@ namespace KBEngine
         }
 
 
+
+
         public override void __init__()
         {
             base.__init__();
@@ -22,6 +25,21 @@ namespace KBEngine
             LoginUIEvent.Instance.OnLoginSuccessfully(id);
         }
 
+
+        public override void onEnter(string arg1)
+        {
+            if (arg1 == "world")
+            {
+                //暂停所有事件的派发
+                LogMgr.Instance.AddLog("Event pause");
+                SceneManager.LoadScene("Scenes/World");
+                Event.pause();
+            }
+            else
+            {
+                LogMgr.Instance.AddLog("Scene does not exist!");
+            }
+        }
 
         public override void onReqAvatarList(AVATAR_LIST arg1)
         {

@@ -126,12 +126,12 @@ namespace KBEngine
 
 			switch(method.methodUtype)
 			{
-				case 24:
+				case 25:
 					Int32 onDialog_arg1 = stream.readInt32();
 					string onDialog_arg2 = stream.readUnicode();
 					onDialog(onDialog_arg1, onDialog_arg2);
 					break;
-				case 23:
+				case 24:
 					onJump();
 					break;
 				default:
