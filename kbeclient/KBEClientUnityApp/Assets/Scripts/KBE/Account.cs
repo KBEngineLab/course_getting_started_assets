@@ -4,6 +4,17 @@ namespace KBEngine
 
     public class Account : AccountBase
     {
+        public Account()
+        {
+            LogMgr.Instance.AddLog("Account()");
+        }
+
+        public override void __init__()
+        {
+            base.__init__();
+            // Event.fireOut(KBECustomEventTypes.onLoginSuccessfully,id);
+            LoginUIEvent.Instance.OnLoginSuccessfully(id);
+        }
 
         public override void onReqAvatarList(byte[] arg1)
         {
