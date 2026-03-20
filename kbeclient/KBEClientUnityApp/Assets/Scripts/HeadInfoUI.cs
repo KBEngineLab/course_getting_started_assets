@@ -70,6 +70,7 @@ public class HeadInfoUI : MonoBehaviour
         nameText = nameObj.AddComponent<TextMeshProUGUI>();
         nameText.alignment = TextAlignmentOptions.Center;
         nameText.fontSize = 32;
+        nameText.font = Resources.Load<TMP_FontAsset>("Fonts/SourceHanSansSC-Normal SDF");
 
         RectTransform nameRect = nameText.GetComponent<RectTransform>();
         nameRect.anchorMin = new Vector2(0, 0.5f);
