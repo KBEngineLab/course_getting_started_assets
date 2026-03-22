@@ -151,6 +151,6 @@ public class PlayerController : MonoBehaviour
         if (unityYaw > 180f)
             unityYaw -= 360f;
 
-        avatar.direction = new Vector3(0f, 0f, -unityYaw * Mathf.Deg2Rad);
+        avatar.direction = new Vector3(0f, 0f, -unityYaw );
     }
 }
