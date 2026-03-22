@@ -101,6 +101,8 @@ public class PlayerController : MonoBehaviour
                 controller.Move(velocity * Time.deltaTime);
             }
 
+            SyncToServer();
+
             return;
         }
 
@@ -131,15 +133,24 @@ public class PlayerController : MonoBehaviour
         // 只调用一次 Move
         controller.Move(finalMove * Time.deltaTime);
 
-        avatar.position = new KBVector3(-gameObject.transform.position.x,
-            gameObject.transform.position.y - (_objHeight / 2), gameObject.transform.position.z);
+        SyncToServer();
+    }
 
+    void SyncToServer()
+    {
+        // 位置同步
+        avatar.position = new KBVector3(
+            -transform.position.x,
+            transform.position.y - (_objHeight / 2),
+            transform.position.z
+        );
 
+        // 方向同步
         float unityYaw = transform.eulerAngles.y;
 
         if (unityYaw > 180f)
             unityYaw -= 360f;
 
-        avatar.direction = new Vector3(0f, 0f, -unityYaw);
+        avatar.direction = new Vector3(0f, 0f, -unityYaw * Mathf.Deg2Rad);
     }
 }
