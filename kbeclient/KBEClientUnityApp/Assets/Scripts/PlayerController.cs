@@ -133,5 +133,13 @@ public class PlayerController : MonoBehaviour
 
         avatar.position = new KBVector3(-gameObject.transform.position.x,
             gameObject.transform.position.y - (_objHeight / 2), gameObject.transform.position.z);
+
+
+        float unityYaw = transform.eulerAngles.y;
+
+        if (unityYaw > 180f)
+            unityYaw -= 360f;
+
+        avatar.direction = new Vector3(0f, 0f, -unityYaw);
     }
 }
