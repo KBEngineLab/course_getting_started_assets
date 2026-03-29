@@ -128,4 +128,7 @@ class Motion(KBEngine.EntityComponent):
 		当owner回调onMoveOver时调用本组件的方法
 		使用引擎的任何移动相关接口， 在entity移动结束时均会调用此接口
 		"""
+		# DEBUG_MSG(
+		# 	"Motion(%s[%i])::onMoveOver: controllerId =%i, userarg=%s" % (
+		# 		self.owner.__class__.__name__, self.ownerID, controllerId, userarg))
 		self.isMoving = False
